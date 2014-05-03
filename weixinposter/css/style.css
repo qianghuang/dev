@@ -1,0 +1,120 @@
+html{font-size: 16px; height:100%}
+body,p,h1,h2,dl,dt,dd{margin: 0;padding: 0;font-size: 100%;color: #fff;}
+section {
+	display:block;
+}
+body {
+	height:100%;
+}
+.wrap h1,.sec01 h2{display: none;}
+
+.wrap {
+	position: relative;
+	width:100%;height:100%;overflow:hidden;
+}
+.sec {
+	z-index: 1;
+	position: absolute;
+	left: 0;top: 0;
+	width: 100%;height: 100%;
+	background:#fef6e7;
+	-webkit-transition:all 0.3s linear;
+	-webkit-transform:translateY(0px);
+	transition:all 0.3s linear;
+	transform:translateY(0px);
+	-webkit-backface-visibility:hidden;
+}
+.dia-alert {
+	position:absolute;left:50%;top:50%;z-index:10;
+	width:200px;height:80px;padding-top:20px;
+	margin:-50px 0 0 -100px;
+	border-radius:5px;
+	background:rgba(0,0,0,0.5);
+	color:#fff;text-align:center;
+}
+.drag{-webkit-transition:none;transition:none;}
+.sec01,
+.sec02 {
+	position: relative;
+}
+.sec01 {
+	width:100%;height:100%;
+	background:#fef6e7 url(../img/poster_01.jpg) no-repeat;
+	background-size:100%;
+	/*opacity: 0;*/
+}
+.sec02 {
+	width:100%;height:100%;
+	background:#fef6e7 url(../img/poster_02.jpg) no-repeat;
+	background-size:100%;
+	/*opacity: 0;*/
+}
+.sec-r {
+	width:100%;height:100%;
+}
+.sec-r1 {
+	background:#fef6e7 url(../img/r1.jpg) no-repeat;
+	background-size:100%;
+}
+.sec-r2 {
+	background:#fef6e7 url(../img/r2.jpg) no-repeat;
+	background-size:100%;
+}
+.sec-r3 {
+	background:#fef6e7 url(../img/r3.jpg) no-repeat;
+	background-size:100%;
+}
+.sec-r4 {
+	background:#fef6e7 url(../img/r4.jpg) no-repeat;
+	background-size:100%;
+}
+/*
+.sec01_show,
+.sec02_show {
+	opacity: 1;
+	-webkit-transition:all 0.5s ease-in-out;
+	        transition:all 0.5s ease-in-out;
+}
+*/
+.btn-begin {
+	position:absolute;left:50%;bottom:5%;
+	width:156px;height:89px;margin-left:-70px;overflow:hidden;
+	display:block;background:url(../img/btn_begin.png) no-repeat;
+	text-indent:-1000px;
+}
+/**game**/
+.sec-game {
+	background:#fef6e7;
+}
+.sec-game .game-light {
+	position:absolute;right:0;top:0;z-index:1;
+	width:40%;height:67.3%;
+	background:url(../img/light.png) no-repeat;
+	background-size:100%;
+}
+.sec-game .list {
+	margin:14% 0 0;padding:0;
+	border-top:1px solid #93caef;
+	list-style-position: inside;
+}
+.sec-game li {
+	padding:0 10px;
+	border-bottom:1px solid #93caef;
+	line-height: 2em;color:#333;
+}
+.sec-game .love-text {
+	position:absolute;left:50px;z-index:2;
+	line-height:2.1em;color:#333;
+}
+.sec-game .line_y {
+	position:absolute;left:35px;top:0;bottom:0;
+	width:6px;
+	border-left:1px solid #ea9dc0;border-right:1px solid #ea9dc0;
+}
+.sec-game .btn-love {
+	position:absolute;left:50%;bottom:5%;
+	width:178px;height:121px;margin-left:-70px;overflow:hidden;
+	border:0;
+	display:block;background:url(../img/btn_love.png) no-repeat;
+	text-indent:-1000px;
+}

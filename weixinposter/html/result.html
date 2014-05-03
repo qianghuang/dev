@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="Description" content="来吧孩子">
+	<meta name="Keywords" content="来吧孩子">
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<title>来吧孩子</title>
+</head>
+<body>
+	<div class="wrap">
+		<h1>来吧孩子</h1>
+		<div class="sec">
+			<section class="sec-r" id="js-result"></section>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript">
+	function resultInit(){
+		var search = location.search;
+		if(search == "") {
+			location.href = "../index.html";
+			return ;
+		}
+		var pageN = search.slice(1).split("=");
+		$("#js-result").addClass("sec-r" + pageN[1]);
+		
+	}
+	resultInit();
+</script>
+</html>
