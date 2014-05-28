@@ -1,0 +1,126 @@
+/*
+ * reset css
+ * qiang.huang
+ */
+html,body {
+	margin:0;padding:0;
+	background:#fff;
+}
+body {
+	font:14px/1.5 tahoma,Arial,"微软雅黑","Microsoft Yahei";
+}
+h1,h2,h3,h4,h5,h6,
+div,ul,ol,dl,li,dt,dd,
+p,em,i,b,cite,del,strong,pre,code,address,
+form,fieldset,legend,input,textarea,select,
+table,caption,thead,th,tbody,td,tfoot,
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+	margin:0;padding:0;
+	font-size:100%;font-style:normal;font-weight:normal;word-wrap:break-word;
+	outline:none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+	display:block;
+}
+table {
+	border-collapse:collapse;
+	table-layout:fixed;
+}
+li {
+	list-style:none;
+}
+img {
+	border:0;
+}
+input,textarea,select {
+	background:#fff;
+}
+a {
+	color:#333;text-decoration:none;outline:none;
+}
+a:hover {
+	color:#2072e9;text-decoration:underline;
+}
+/*
+ * 常用的一些样式
+ * 兼容原先的公用样式的定义
+ */
+.g-clearfix {
+	*zoom:1;
+}
+.g-clearfix:after {
+  content: "";
+  height: 0;overflow:hidden;
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+.g-f12 {font-size:12px !important;}
+.g-f14 {font-size:14px !important;}
+.g-f16 {font-size:16px !important;}
+.g-f18 {font-size:18px !important;}
+.g-f20 {font-size:20px !important;}
+.g-f22 {font-size:22px !important;}
+.g-f24 {font-size:24px !important;}
+.g-f26 {font-size:26px !important;}
+
+.g-g3 {color: #333 !important;}
+.g-g4 {color: #444 !important;}
+.g-g6 {color: #666 !important;}
+.g-g9 {color: #999 !important;}
+.g-hl-1 {color:#2072e9 !important;}
+.g-hl-2 {color:#48af44 !important;}
+.g-relative {
+	position:relative;
+}
+.g-absolute {
+	position:absolute;
+}
+.g-floatleft {
+	float: left;
+}
+.g-floatright {
+	float: right;
+}
+/*
+ * header
+ * 
+ */
+.g-header {
+	height:50px;
+	background:#333;
+}
+.g-header .inner {
+	width:980px;margin:0 auto;
+}
+.g-header .ct-logo {
+	width:120px;height:50px;float:left;margin-right:44px;
+	background:#c9c9c9;
+	text-align:center;
+}
+.g-header .ct-logo .logo {
+	overflow:hidden;
+	display:block;
+	line-height:50px;
+}
+.g-header .nav {
+	float:left;
+}
+.g-header .nav li {
+	float:left;height:50px;overflow:hidden;margin-right:50px;
+}
+.g-header .nav a {
+	color:#fff; line-height:50px;
+}
+.g-wraper {
+	position:relative;z-index:2;
+	height:100%;width:860px;margin: 0 auto;
+	padding-left:120px;
+}
+.g-wraper .asidecol {
+	float:left;width:120px;margin-left:-120px;
+	background:#e7ebf0;
+}
+.g-wraper .maincol {
+	width:80%;
+}

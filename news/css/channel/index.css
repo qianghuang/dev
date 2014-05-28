@@ -1,0 +1,34 @@
+/*
+ * news module
+ * 
+ * 
+ */
+.s-news-item {
+	border-bottom:1px solid #d7dde3;margin-bottom: 16px;
+}
+.s-news-item .title {
+	margin-bottom:12px;
+}
+.s-news-item .news-content {
+	margin-bottom:16px;
+}
+.s-news-item .rel-info {
+	padding-bottom:20px;
+	color:#9fa3a7;font-family:simsun;
+}
+.s-news-item .rel-info a {
+	color:#9fa3a7;
+}
+.s-news-item .rel-info .rel-op {
+	float:left;
+}
+.s-news-item .rel-info .update-info {
+	float:right;
+	text-align:right; white-space:nowrap; word-wrap: normal;
+}
+.s-news-item-text .news-content .pic {
+	float:left;margin-right:16px;
+}
+.s-news-item-pic .news-content .pic {
+	float:left;margin-right:8px;
+}

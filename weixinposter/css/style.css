@@ -34,16 +34,22 @@ body {
 }
 .drag{-webkit-transition:none;transition:none;}
 .sec01,
-.sec02 {
+.sec02,
+.sec03 {
 	position: relative;
 }
 .sec01 {
+	width:100%;height:100%;
+	background:#fef6e7 url(../img/poster_00.jpg) no-repeat;
+	background-size:100%;
+}
+.sec02 {
 	width:100%;height:100%;
 	background:#fef6e7 url(../img/poster_01.jpg) no-repeat;
 	background-size:100%;
 	/*opacity: 0;*/
 }
-.sec02 {
+.sec03 {
 	width:100%;height:100%;
 	background:#fef6e7 url(../img/poster_02.jpg) no-repeat;
 	background-size:100%;
