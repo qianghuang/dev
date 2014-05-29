@@ -83,44 +83,10 @@ a:hover {
 	float: right;
 }
 /*
- * header
- * 
+ * ico
  */
-.g-header {
-	height:50px;
-	background:#333;
-}
-.g-header .inner {
-	width:980px;margin:0 auto;
-}
-.g-header .ct-logo {
-	width:120px;height:50px;float:left;margin-right:44px;
-	background:#c9c9c9;
-	text-align:center;
-}
-.g-header .ct-logo .logo {
+.g-icobg {
 	overflow:hidden;
-	display:block;
-	line-height:50px;
-}
-.g-header .nav {
-	float:left;
-}
-.g-header .nav li {
-	float:left;height:50px;overflow:hidden;margin-right:50px;
-}
-.g-header .nav a {
-	color:#fff; line-height:50px;
-}
-.g-wraper {
-	position:relative;z-index:2;
-	height:100%;width:860px;margin: 0 auto;
-	padding-left:120px;
-}
-.g-wraper .asidecol {
-	float:left;width:120px;margin-left:-120px;
-	background:#e7ebf0;
-}
-.g-wraper .maincol {
-	width:80%;
+	background:url("../img/common-ico.png") no-repeat;display:inline-block;
+	vertical-align: middle;
 }
