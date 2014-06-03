@@ -63,13 +63,14 @@ a:hover {
 .g-f22 {font-size:22px !important;}
 .g-f24 {font-size:24px !important;}
 .g-f26 {font-size:26px !important;}
+.g-f28 {font-size:28px !important;}
 
 .g-g3 {color: #333 !important;}
 .g-g4 {color: #444 !important;}
 .g-g6 {color: #666 !important;}
 .g-g9 {color: #999 !important;}
 .g-hl-1 {color:#2072e9 !important;}
-.g-hl-2 {color:#48af44 !important;}
+.g-hl-2 {color:#cc1b1b !important;}
 .g-relative {
 	position:relative;
 }
@@ -82,6 +83,7 @@ a:hover {
 .g-floatright {
 	float: right;
 }
+.g-b {font-weight:bold;}
 /*
  * ico
  */

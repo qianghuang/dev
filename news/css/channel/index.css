@@ -8,12 +8,17 @@ body {
  * header
  * 
  */
-.g-header {
-	height:50px;
+.g-header-outer {
 	background:#333;
+	height:50px;
+}
+.g-header {
+	max-width:980px;margin:0 auto;
 }
 .g-header .inner {
-	max-width:980px;margin:0 auto;
+	position:relative;
+	padding:0 210px 0 120px;
+	box-sizing: border-box;
 }
 .g-header .ct-logo {
 	width:120px;height:50px;float:left;margin-right:44px;
@@ -38,13 +43,13 @@ body {
  * layout
  */
 .s-home-wraper .g-header {
-	position:absolute;left:0;top:0;right:0;
-	width:100%;
+	/*position:absolute;left:0;top:0;right:0;*/
+	/*width:100%;*/
 }
 .g-wraper-inner {
 	max-width:980px;margin:0 auto;
 	background:url(../img/homebg.png) repeat-y -1880px 0;
-	padding-top:70px;
+	padding-top:20px;
 }
 .g-wraper {
 	position:relative;
