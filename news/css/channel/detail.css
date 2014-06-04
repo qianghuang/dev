@@ -73,6 +73,10 @@ body {
 }
 .g-anim {
 	-webkit-transition:all 0.3s ease-out;
+	   -moz-transition:all 0.3s ease-out;
+	    -ms-transition:all 0.3s ease-out;
+	     -o-transition:all 0.3s ease-out;
+	        transition:all 0.3s ease-out;
 }
 /*
  * 
@@ -80,42 +84,81 @@ body {
 .s-hot-menu {
 	margin-bottom:24px;
 }
-.s-hot-menu a {
+.s-aside-nav a {
 	width:28px;height:36px;overflow:hidden;padding-left:12px;
-	display:block;
+	display:block;background:#e7ebf0;
 	line-height:36px;font-weight:bold;
-	-webkit-transition:width 0.3s ease-in;
+	-webkit-transition:all 0.25s ease-in;
+	   -moz-transition:all 0.25s ease-in;
+	    -ms-transition:all 0.25s ease-in;
+	     -o-transition:all 0.25s ease-in;
+	        transition:all 0.25s ease-in;
 }
-.s-hot-menu .menu-text {
+.s-aside-nav .menu-text {
 	display:none;
 	white-space:nowrap;word-wrap:normal;
-	-webkit-transition:all 0.3s ease-in;
 }
-.s-hot-menu .internation {
+.s-aside-nav .internation,
+.s-aside-nav .current:hover .internation {
 	width:17px;height:15px;margin-right:8px;
 	background-position:0 -124px;
 }
-.s-hot-menu a:hover {
+.s-aside-nav .current .internation {
+	background-position:-23px -124px;
+}
+.s-aside-nav .phone,
+.s-aside-nav .current:hover .phone {
+	width:17px;height:16px;margin-right:8px;
+	background-position:0 -166px;
+}
+.s-aside-nav .current .phone {
+	background-position:-23px -166px;
+}
+.s-aside-nav .net,
+.s-aside-nav .current:hover .net {
+	width:17px;height:16px;margin-right:8px;
+	background-position:0 -144px;
+}
+.s-aside-nav .current .net {
+	background-position:-23px -144px;
+}
+.s-aside-nav .economy,
+.s-aside-nav .current:hover .economy {
+	width:17px;height:14px;margin-right:8px;
+	background-position:0 -189px;
+}
+.s-aside-nav .current .economy {
+	background-position:-23px -189px;
+}
+.s-aside-nav .entertainment,
+.s-aside-nav .current:hover .entertainment {
+	width:17px;height:14px;margin-right:8px;
+	background-position:0 -212px;
+}
+.s-aside-nav .current .entertainment {
+	background-position:-23px -212px;
+}
+.s-aside-nav .house,
+.s-aside-nav .current:hover .house {
+	width:17px;height:14px;margin-right:8px;
+	background-position:0 -230px;
+}
+.s-aside-nav .current .house {
+	background-position:-23px -230px;
+}
+.s-aside-nav a:hover {
 	width:108px;
 	text-decoration:none;
 	background:#454648;
 	background-color:rgba(0,0,0,0.7);
 	color:#fff;
 }
-.s-hot-menu a:hover .menu-text {
+.s-aside-nav a:hover .menu-text {
 	display: inline;
 }
-.s-hot-menu .current {
+.s-aside-nav .current {
 	border-right:4px solid #f36119;
 	background:#d2d8df;
-}
-.s-aside-nav a {
-	display:block;
-	width:84px;height:36px;padding-left:36px;
-	line-height:36px;
-}
-.s-aside-nav .menu-text {
-	display:none;
 }
 /*
  * 正文部分
@@ -209,6 +252,8 @@ body {
 	background:#f36119;display:inline-block;
 	line-height: 44px;color:#fff;white-space:nowrap;word-wrap:normal;
 	-webkit-transition: opacity 0.2s ease-in-out;
+	   -moz-transition: opacity 0.2s ease-in-out;
+	        transition: opacity 0.2s ease-in-out;
 }
 .s-detail .news-comment .comment-edit .btn-normal:hover {
 	opacity: 0.8;
@@ -238,7 +283,8 @@ body {
 	max-width:980px;margin:0 auto;
 }
 .s-footer .footer-inner {
-	padding:0 305px 0 70px;
+	position:relative;
+	padding:0 305px 0 70px;height:180px;
 }
 .s-footer .read-next {
 	padding:18px 0 24px;
@@ -247,4 +293,12 @@ body {
 .s-footer .next-title {
 	padding-bottom:5px;
 	color:#fff;
+}
+.s-footer .next-news {
+	position:absolute;right:20px;top:50%;
+	width:64px;height:64px;margin-top:-32px;
+	background-position:-71px -124px;display:block;
+}
+.s-footer .next-news:hover {
+	right:10px;
 }

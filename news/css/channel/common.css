@@ -92,3 +92,11 @@ a:hover {
 	background:url("../img/common-ico.png") no-repeat;display:inline-block;
 	vertical-align: middle;
 }
+.g-ico-comment {
+	width:15px;height:15px;margin-right:5px;
+	background-position:-14px -49px;
+}
+.g-ico-fav {
+	width:10px;height:15px;margin-right:5px;
+	background-position:0 -49px;
+}
