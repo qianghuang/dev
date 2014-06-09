@@ -59,7 +59,7 @@ body {
 }
 .g-wraper .aside-left {
 	position:absolute;left:0;top:0;
-	width:120px;
+	width:40px;
 }
 .g-wraper .aside-right {
 	position:absolute;right:0;top:0;
@@ -70,13 +70,6 @@ body {
 }
 .g-wraper-outer .maincol {
 	border-right:1px solid #d7dde3;
-}
-.g-anim {
-	-webkit-transition:all 0.3s ease-out;
-	   -moz-transition:all 0.3s ease-out;
-	    -ms-transition:all 0.3s ease-out;
-	     -o-transition:all 0.3s ease-out;
-	        transition:all 0.3s ease-out;
 }
 /*
  * 
@@ -97,54 +90,6 @@ body {
 .s-aside-nav .menu-text {
 	display:none;
 	white-space:nowrap;word-wrap:normal;
-}
-.s-aside-nav .internation,
-.s-aside-nav .current:hover .internation {
-	width:17px;height:15px;margin-right:8px;
-	background-position:0 -124px;
-}
-.s-aside-nav .current .internation {
-	background-position:-23px -124px;
-}
-.s-aside-nav .phone,
-.s-aside-nav .current:hover .phone {
-	width:17px;height:16px;margin-right:8px;
-	background-position:0 -166px;
-}
-.s-aside-nav .current .phone {
-	background-position:-23px -166px;
-}
-.s-aside-nav .net,
-.s-aside-nav .current:hover .net {
-	width:17px;height:16px;margin-right:8px;
-	background-position:0 -144px;
-}
-.s-aside-nav .current .net {
-	background-position:-23px -144px;
-}
-.s-aside-nav .economy,
-.s-aside-nav .current:hover .economy {
-	width:17px;height:14px;margin-right:8px;
-	background-position:0 -189px;
-}
-.s-aside-nav .current .economy {
-	background-position:-23px -189px;
-}
-.s-aside-nav .entertainment,
-.s-aside-nav .current:hover .entertainment {
-	width:17px;height:14px;margin-right:8px;
-	background-position:0 -212px;
-}
-.s-aside-nav .current .entertainment {
-	background-position:-23px -212px;
-}
-.s-aside-nav .house,
-.s-aside-nav .current:hover .house {
-	width:17px;height:14px;margin-right:8px;
-	background-position:0 -230px;
-}
-.s-aside-nav .current .house {
-	background-position:-23px -230px;
 }
 .s-aside-nav a:hover {
 	width:108px;
@@ -202,7 +147,7 @@ body {
 	color:#9fa3a7;
 }
 .s-detail .rel-news .share {
-	float:left:
+	float:left;
 	color:#9fa3a7;
 }
 .s-detail .rel-news .keyword {

@@ -34,6 +34,7 @@ img {
 }
 input,textarea,select {
 	background:#fff;
+	font-size:14px;font-family:arial,"microsoft Yahei";
 }
 a {
 	color:#333;text-decoration:none;outline:none;
@@ -84,6 +85,13 @@ a:hover {
 	float: right;
 }
 .g-b {font-weight:bold;}
+.g-anim {
+	-webkit-transition:all 0.3s ease-out;
+	   -moz-transition:all 0.3s ease-out;
+	    -ms-transition:all 0.3s ease-out;
+	     -o-transition:all 0.3s ease-out;
+	        transition:all 0.3s ease-out;
+}
 /*
  * ico
  */
@@ -99,4 +107,147 @@ a:hover {
 .g-ico-fav {
 	width:10px;height:15px;margin-right:5px;
 	background-position:0 -49px;
+}
+/*
+ * 导航ico
+ * 
+ */
+.s-aside-nav .internation {
+	width:17px;height:15px;margin-right:8px;
+	background-position:0 -124px;
+}
+.s-aside-nav a:hover .internation,
+.s-aside-nav .current .internation {
+	background-position:-23px -124px;
+}
+.s-aside-nav .phone {
+	width:17px;height:16px;margin-right:8px;
+	background-position:0 -166px;
+}
+.s-aside-nav a:hover .phone,
+.s-aside-nav .current .phone {
+	background-position:-23px -166px;
+}
+.s-aside-nav .net {
+	width:17px;height:17px;margin-right:8px;
+	background-position:0 -144px;
+}
+.s-aside-nav a:hover .net,
+.s-aside-nav .current .net {
+	background-position:-23px -144px;
+}
+.s-aside-nav .economy {
+	width:17px;height:14px;margin-right:8px;
+	background-position:0 -189px;
+}
+.s-aside-nav a:hover .economy,
+.s-aside-nav .current .economy {
+	background-position:-23px -189px;
+}
+.s-aside-nav .entertainment {
+	width:17px;height:14px;margin-right:8px;
+	background-position:0 -212px;
+}
+.s-aside-nav a:hover .entertainment,
+.s-aside-nav .current .entertainment {
+	background-position:-23px -212px;
+}
+
+.s-aside-nav .house {
+	width:17px;height:14px;margin-right:8px;
+	background-position:0 -230px;
+}
+.s-aside-nav a:hover .house,
+.s-aside-nav .current .house {
+	background-position:-23px -230px;
+}
+
+.s-aside-nav .headlines {
+	width:17px;height:14px;margin-right:8px;
+	background-position:0 -248px;
+}
+.s-aside-nav a:hover .headlines,
+.s-aside-nav .current .headlines {
+	background-position:-23px -248px;
+}
+
+.s-aside-nav .allnews {
+	width:17px;height:14px;margin-right:8px;
+	background-position:0 -265px;
+}
+.s-aside-nav a:hover .allnews,
+.s-aside-nav .current .allnews {
+	background-position:-23px -265px;
+}
+
+.s-aside-nav .cnnews {
+	width:17px;height:14px;margin-right:8px;
+	background-position:0 -285px;
+}
+.s-aside-nav a:hover .cnnews,
+.s-aside-nav .current .cnnews {
+	background-position:-23px -285px;
+}
+
+.s-aside-nav .society {
+	width:17px;height:16px;margin-right:8px;
+	background-position:0 -305px;
+}
+.s-aside-nav a:hover .society,
+.s-aside-nav .current .society {
+	background-position:-23px -305px;
+}
+
+.s-aside-nav .sport {
+	width:17px;height:16px;margin-right:8px;
+	background-position:0 -327px;
+}
+.s-aside-nav a:hover .sport,
+.s-aside-nav .current .sport {
+	background-position:-23px -327px;
+}
+
+.s-aside-nav .pic {
+    width:17px;height:16px;margin-right:8px;
+    background-position:0 -349px;
+}
+.s-aside-nav a:hover .pic,
+.s-aside-nav .current .pic {
+    background-position:-23px -349px;
+}
+
+.s-aside-nav .car {
+    width:17px;height:14px;margin-right:8px;
+    background-position:0 -369px;
+}
+.s-aside-nav a:hover .car,
+.s-aside-nav .current .car {
+    background-position:-23px -369px;
+}
+
+.s-aside-nav .female {
+    width:17px;height:16px;margin-right:8px;
+    background-position:0 -387px;
+}
+.s-aside-nav a:hover .female,
+.s-aside-nav .current .female {
+    background-position:-23px -387px;
+}
+
+.s-aside-nav .military {
+    width:17px;height:16px;margin-right:8px;
+    background-position:0 -407px;
+}
+.s-aside-nav a:hover .military,
+.s-aside-nav .current .military {
+    background-position:-23px -407px;
+}
+
+.s-aside-nav .history {
+    width:17px;height:16px;margin-right:8px;
+    background-position:0 -427px;
+}
+.s-aside-nav a:hover .history,
+.s-aside-nav .current .history {
+    background-position:-23px -427px;
 }
