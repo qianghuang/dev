@@ -5,41 +5,6 @@ body {
 	background:url(../img/homebg.png) repeat center top;
 }
 /*
- * header
- * 
- */
-.g-header-outer {
-	background:#333;
-	height:50px;
-}
-.g-header {
-	max-width:980px;margin:0 auto;
-}
-.g-header .inner {
-	position:relative;
-	padding:0 210px 0 120px;
-	box-sizing: border-box;
-}
-.g-header .ct-logo {
-	width:120px;height:50px;float:left;margin-right:44px;
-	background:#c9c9c9;
-	text-align:center;
-}
-.g-header .ct-logo .logo {
-	overflow:hidden;
-	display:block;
-	line-height:50px;
-}
-.g-header .nav {
-	float:left;
-}
-.g-header .nav li {
-	float:left;height:50px;overflow:hidden;margin-right:50px;
-}
-.g-header .nav a {
-	color:#fff; line-height:50px;
-}
-/*
  * layout
  */
 .g-wraper-inner {
@@ -94,8 +59,8 @@ body {
 .s-aside-nav a:hover {
 	width:108px;
 	text-decoration:none;
-	background:#454648;
-	background-color:rgba(0,0,0,0.7);
+	background:#f60;
+	background-color:rgba(255,102,0,0.8);
 	color:#fff;
 }
 .s-aside-nav a:hover .menu-text {
@@ -132,7 +97,7 @@ body {
 	text-align:right; white-space:nowrap; word-wrap: normal;
 }
 .s-news-article {
-	padding-bottom:40px;border-bottom:4px solid #333;
+	padding-bottom:30px;border-bottom:4px solid #333;
 	margin-bottom:16px;
 }
 .s-news-article p {
@@ -183,14 +148,25 @@ body {
 	margin-bottom:20px;
 }
 .s-detail .news-comment .comment-edit .in-username {
-	width:50%;padding:10px 0 10px 12px;
+	width:50%;padding:10px 0 10px 12px;border:0;
+    border:1px solid #e7ebf0;
+	background:#e7ebf0;
 	box-sizing:border-box;
 }
+.s-detail .news-comment .comment-edit .in-username:focus {
+    background:#fff;
+    border:1px solid #74abe8;
+}
 .s-detail .news-comment .comment-edit .in-edit {
-	width:100%;border:1px solid #74abe8;padding:10px 0 10px 12px;
-	height:180px;
+	width:100%; height:180px;
+	border:1px solid #e7ebf0;padding:10px 0 10px 12px;
+	background:#e7ebf0;
 	box-sizing:border-box;
 	resize:none;
+}
+.s-detail .news-comment .comment-edit .in-edit:focus {
+    border:1px solid #74abe8;
+    background:#fff;
 }
 .s-detail .news-comment .comment-edit .btn-normal {
 	height:44px;overflow:hidden;padding:0 25px;
@@ -208,8 +184,11 @@ body {
  * 侧边新闻
  * 
  */
+.s-aside-news {
+    margin-bottom:30px;
+}
 .s-aside-news .title {
-	margin-bottom:12px;
+	margin-bottom:13px;
 	font-weight:bold; font-size:16px;
 }
 .s-aside-news li {
