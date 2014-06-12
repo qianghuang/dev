@@ -141,6 +141,10 @@ body {
 .s-weibo .platlist .g-icobg {
 	width:24px;height:24px;margin-right:22px;
 	text-indent:-1000px;
+	opacity: 0.8;
+}
+.s-weibo .platlist .g-icobg:hover {
+    opacity: 1;
 }
 .s-weibo .platlist .weibo {
 	background-position:0 -69px;

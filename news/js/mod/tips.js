@@ -1,5 +1,5 @@
-var kmfTips = (function($) {
-	var $container = $('<div class="g-kmf-tips"><div class="tips-content"></div><div class="arrow arrow-up"></div></div>');
+var kmfTips = (function() {
+	var $container = $('<div class="g-news-tips"><div class="tips-content"></div><div class="arrow arrow-up"></div></div>');
 	var $content = $container.find(".tips-content");
 	var $arrow = $container.find(".arrow");
 	var arrowSty = {
@@ -63,17 +63,23 @@ var kmfTips = (function($) {
 			$container.show();
 		}
 	};
-})($);
+})();
 
 $.fn.extend({
 	kmfTips:kmfTips
 });
-//全站tips的调用
-$(document).delegate(".js-news-tips",{
-	"mouseenter":function(){
-		$(this).kmfTips("open");
-	},
-	"mouseleave":function(){
-		$(this).kmfTips("close");
-	}
+
+
+$(function(){
+	
+	//全站tips的调用
+	$(document).delegate(".js-news-tips",{
+		"mouseenter":function(){
+			$(this).kmfTips("open");
+		},
+		"mouseleave":function(){
+			$(this).kmfTips("close");
+		}
+	});
+	
 });

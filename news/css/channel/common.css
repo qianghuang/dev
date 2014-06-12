@@ -396,3 +396,41 @@ a:hover {
 .s-aside-nav .current .history {
     background-position:-23px -427px;
 }
+/*
+ * common tips
+ */
+.g-news-tips {
+    position:absolute;
+    background:#000;
+    background-color:rgba(0,0,0,0.9);
+    color:#fff;
+}
+/*
+ * platform
+ * share
+ */
+.g-news-share .g-icobg {
+    width:24px;height:24px;
+    opacity:0.5;
+}
+.g-news-share .g-icobg:hover {
+    opacity: 1;
+}
+.g-news-share .weibo {
+    background-position:-142px 0;
+}
+.g-news-share .qq {
+    background-position:-142px -29px;
+}
+.g-news-share .tencent {
+    background-position:-142px -57px;
+}
+.g-news-share .weixin {
+    background-position:-142px -86px;
+}
+.g-news-share .renren {
+    background-position:-142px -114px;
+}
+.g-news-share .kaixin {
+    background-position:-142px -143px;
+}
