@@ -157,5 +157,4 @@ NUI.share = {
 
 $(function(){
 	NUI.share.init(".js-newsShare");
-	NUI.share.init(".js-newsShare2");
 });
