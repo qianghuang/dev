@@ -409,6 +409,9 @@ a:hover {
  * platform
  * share
  */
+.g-news-share {
+	overflow:hidden;
+}
 .g-news-share .g-icobg {
     width:24px;height:24px;
     opacity:0.5;
