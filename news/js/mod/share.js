@@ -2,6 +2,7 @@ var NUI = window.NUI || {};
 NUI.share = {
 	config:{
 		$container: $('<div class="g-news-share"></div>'),
+		$outer: $('<div class="outer"></div>'),
 		$inner:$('<div class="inner"></div>')
 	},
 	containerWidth:0,
@@ -9,15 +10,31 @@ NUI.share = {
 		var self = this
 		,	$container = this.config.$container
 		,	$inner = this.config.$inner
+		,	$outer = this.config.$outer
 		,	timmer = null
+		,	outerClass = {
+				left : "outer outer-left",
+				right: "outer outer-right" 
+			}
+		,	innerClass = {
+				left : "inner inner-left",
+				right: "inner inner-right" 
+			}
+		,	opts
 		;
 		
+		opts = {
+			direction: "right"
+		};
+		
+		opts = $.extend({}, opts, options);
 		
 		this.initShare();
-		
+		console.info(this.shareCount);
 		$(document).delegate(ele, {
 			"mouseenter": function(){
-				var pos = self.getPos($(this))
+				var direction = $(this).data("direction") || opts.direction
+				,	pos = self.getPos($(this), direction)
 				,	tpl = self.tpl()
 				;
 				
@@ -27,18 +44,21 @@ NUI.share = {
 				}
 				
 				$inner.html(tpl);
-				$container.css({
-					left:pos.left,
-					top:pos.top,
-					width:0
-				}).show();
+				$outer.removeClass().addClass(outerClass[direction]);
+				$inner.removeClass().addClass(innerClass[direction]);
+				$container.css(pos).show();
 				
-				self.anim($container);
+				self.anim($outer);
 				
 			},
 			"mouseleave": function(){
 				timmer = setTimeout(function(){
-					$container.hide();
+					self.anim($outer, {
+						end: {
+							width:0
+						}
+					});
+					// $container.hide().css({width:0});
 				}, 100);
 			}
 		});
@@ -52,55 +72,83 @@ NUI.share = {
 			},
 			"mouseleave": function(){
 				timmer = setTimeout(function(){
-					$container.hide();
+					self.anim($outer, {
+						end: {
+							width:0
+						}
+					});
 				}, 100);
 			}
 		});
 		
 	},
-	anim: function($ele, callBack) {
+	anim: function($ele, options) {
 		var _width = this.containerWidth;
+		var def = {
+			end: {
+				width:_width
+			}
+		};
+		var opts = $.extend({}, def);
 		
-		console.info(_width);
+		if(typeof options == "object") {
+			opts = $.extend({}, def, options);
+			if(typeof options.end == "object") {
+				opts.end = $.extend({}, def.end, options.end);
+			}
+		}
 		
-		$ele.stop(true,false).animate({
-			width:_width
-		},300);
+		
+		$ele.stop(true,false).animate(opts.end,300);
 	},
 	getPos: function($ele, direction){
 		var _offset = $ele.offset()
 		,	_left = _offset.left
 		,	_top = _offset.top
 		,	_width = $ele.width()
-		,	_direct = direction ? direction : "right"
+		,	_height = $ele.height()
+		,	_shareWidth = this.containerWidth
+		,	_shareHeight = this.config.$container.height()
+		,	_margin = 6
+		,	_position = {}
 		;
 		
-		switch(_direct) {
+		
+		switch(direction) {
 			case "right":
-				 _left = _left + _width;
+				 _left = _left + _width + _margin;
+				 _position = {
+				 	left:_left,
+				 	top:_top + (_height - _shareHeight)/2 
+				 };
+				 break;
+			case "left":
+				 _left = _left - _margin;
+				 _position = {
+				 	left:_left,
+				 	top:_top + (_height - _shareHeight)/2 
+				 };
 				 break;
 		}
 		
-		return {
-			left:_left,
-			top:_top
-		};
+		return _position;
 		
 	},
 	initShare:function(){
 		var $container = this.config.$container
 		,	$inner = this.config.$inner
+		,	$outer = this.config.$outer
 		,	tpl = this.tpl()
 		;
 		
-		$inner.html(tpl);
-		$container.html($inner).css({
-			"position": "absolute",
-			"display": "none"
-		}).appendTo('body');
+		$inner.html(tpl).appendTo($outer);
+		$container.html($outer).appendTo('body');
 		
-		$inner.css({width:$container.width()+30});
 		this.containerWidth = $container.width();
+		$inner.css({
+			width:$container.width()+30
+		});
+		$outer.css({width:0});
 	},
 	tpl: function() {
 		return '<a href="#" class="g-icobg weibo g-anim"></a><a href="#" class="g-icobg qq g-anim"></a><a href="#" class="g-icobg tencent g-anim"></a>';
@@ -109,4 +157,5 @@ NUI.share = {
 
 $(function(){
 	NUI.share.init(".js-newsShare");
+	NUI.share.init(".js-newsShare2");
 });
