@@ -409,8 +409,27 @@ a:hover {
  * platform
  * share
  */
+.g-news-share {
+	position:absolute;
+	height:24px;
+	display:none;
+}
+.g-news-share .outer {
+	overflow:hidden;
+}
+.g-news-share .outer-left {
+	position:absolute;right:0;top:0;
+	height:24px;
+}
+.g-news-share .outer-right {
+	position: absolute;left:0;top:0;
+	height:24px;
+}
+.g-news-share .inner-right {
+	position:absolute;top:0;right:-30px;
+}
 .g-news-share .g-icobg {
-    width:24px;height:24px;
+    width:24px;height:24px;margin-right:10px;
     opacity:0.5;
 }
 .g-news-share .g-icobg:hover {
