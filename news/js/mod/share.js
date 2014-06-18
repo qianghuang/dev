@@ -30,7 +30,6 @@ NUI.share = {
 		opts = $.extend({}, opts, options);
 		
 		this.initShare();
-		console.info(this.shareCount);
 		$(document).delegate(ele, {
 			"mouseenter": function(){
 				var direction = $(this).data("direction") || opts.direction

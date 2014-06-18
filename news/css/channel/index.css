@@ -186,6 +186,16 @@ body {
 .s-hot-top .sn-1 {
 	background-position:0 -29px;
 }
+.s-newslist-loading {
+    width:100%;height:56px;overflow:hidden;
+    background:#ebeef2;
+    text-align:center;line-height:56px;
+}
+.s-newslist-loading .loading {
+    padding-left:54px;height:54px;
+    display:inline-block;background:url(../img/loading.gif) no-repeat left center;
+    white-space: nowrap;word-wrap:normal;font-size:18px;color:#c0cad5;
+}
 /*
  * index-2
  * 

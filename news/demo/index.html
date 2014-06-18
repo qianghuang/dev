@@ -167,7 +167,7 @@
 				</div>
 				
 				<div class="maincol js-justify-col">
-					<div class="s-news-list">
+					<div class="s-news-list" id="js-home-newlist">
 						
 						<div class="s-news-item s-news-item-text">
 							<h2 class="title g-f18">泰国军方扣留英拉及其家人 称不会超过一周</h2>
@@ -307,6 +307,16 @@
 	<script type="text/javascript" src="../js/libs/jquery/1.11/jquery.js"></script>
 	<script type="text/javascript" src="../js/mod/tips.js"></script>
 	<script type="text/javascript" src="../js/mod/share.js"></script>
+	<!--
 	<script type="text/javascript" src="../js/mod/justify.js"></script>
+	-->
+	<script type="text/javascript" src="../js/mod/newslist.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			NUI.newList.init($("#js-home-newlist"), {
+				url:"test/newslist2.html"
+			});
+		});
+	</script>
 </body>
 </html>
