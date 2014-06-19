@@ -1,6 +1,6 @@
 var NUI = window.NUI || {};
 NUI.newList = {
-	curPage: 0,
+	curPage: 1,
 	loading: false,
 	$load: $('<div class="s-newslist-loading"><span class="loading">加载中…</span></div>'),
 	$ele:null,
@@ -17,10 +17,12 @@ NUI.newList = {
 		
 		$(window).scroll(function(){
 			var isLoad = self.isScrollLoad();
-			if(isLoad) {
-				self.loadNews(opts.url , function(data){
-					$ele.append(data);
-				});
+			var getUrl;
+			
+			if(isLoad && !self.loading) {
+				self.curPage++;
+				getUrl = opts.url + self.curPage;
+				self.loadNews(getUrl);
 			}
 		});
 		
@@ -37,9 +39,7 @@ NUI.newList = {
 		this.$ele.append(this.$load);
 		$.post(url, function(data){
 			if($.trim(data) != "") {
-				if(typeof callBack == "function") {
-					callBack(data);
-				}
+				self.$ele.append(data);
 			}
 			self.$load.remove();
 			self.loading = false;
