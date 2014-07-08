@@ -5,42 +5,269 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="Description" content="魅力测试">
-	<meta name="Keywords" content="魅力测试">
+	<meta name="Description" content="魅力测试，十二道锋味">
+	<meta name="Keywords" content="魅力测试，十二道锋味">
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-	<title>魅力测试</title>
+	<title>魅力测试-十二道锋味</title>
 </head>
 <body>
-	<header class="g-banner">
+	<header class="g-banner" id="js-banners">
 		<img src="../images/banner_01.jpg" class="img-banner" />
+		<img src="../images/banner_02.jpg" class="img-banner img-hide" />
+		<img src="../images/banner_03.jpg" class="img-banner img-hide" />
+		<img src="../images/banner_04.jpg" class="img-banner img-hide" />
+		<img src="../images/banner_05.jpg" class="img-banner img-hide" />
+		<img src="../images/banner_06.jpg" class="img-banner img-hide" />
+		<img src="../images/banner_07.jpg" class="img-banner img-hide" />
+		<img src="../images/banner_08.jpg" class="img-banner img-hide" />
+		<img src="../images/banner_09.jpg" class="img-banner img-hide" />
+		<img src="../images/banner_10.jpg" class="img-banner img-hide" />
 	</header>
 	<article class="g-content">
 		<div class="desc">
-			要成为一个非凡的男性，首先要具有迷人的魅力。你了解自己对女性交往的艺术吗？只要回答一下测试题就能马上知道自己的魅力所在了。
+			要成为一个非凡的男性，首先要具有迷人的魅力。你了解自己对女性是否具有魅力吗？你知道成功地与女性交往的艺术吗？只要回答一下测试题就能马上知道自己的魅力所在了。
 		</div>
-		<div class="qa">
-			<h2 class="question">1.你对生活的态度</h2>
+		<div class="qa js-qa">
+			<h2 class="question">1. 你对生活的态度是：</h2>
 			<ul class="answer-list">
-				<li>
-					<input type="radio" id="glamour_1_1" name="glamour" value="20" />
-					<label for="glamour_1_1">充满热情</label>
+				<li qasn="1">
+					<label for="glamour_1_1">
+						<input type="radio" id="glamour_1_1" name="glamour" value="a" />
+						充满热情
+					</label>
 				</li>
-				<li>
-					<input type="radio" id="glamour_1_2" name="glamour" value="20" />
-					<label for="glamour_1_2">充满热情</label>
+				<li qasn="1">
+					<label for="glamour_1_2">
+						<input type="radio" id="glamour_1_2" name="glamour" value="b" />
+						冷静审世
+					</label>
 				</li>
-				<li>
-					<input type="radio" id="glamour_1_3" name="glamour" value="20" />
-					<label for="glamour_1_3">充满热情</label>
-				</li>
-				<li>
-					<input type="radio" id="glamour_1_4" name="glamour" value="20" />
-					<label for="glamour_1_4">充满热情</label>
+				<li qasn="1">
+					<label for="glamour_1_3">
+						<input type="radio" id="glamour_1_3" name="glamour" value="c" />
+						超尘脱俗
+					</label>
 				</li>
 			</ul>
 		</div>
+		
+		<div class="qa js-qa" style="display:none;">
+			<h2 class="question">2. 你对自我形象的感觉如何？</h2>
+			<ul class="answer-list">
+				<li qasn="2">
+					<label for="glamour_2_1">
+						<input type="radio" id="glamour_2_1" name="glamour" value="a" />
+						稍有完美的感觉
+					</label>
+				</li>
+				<li qasn="2">
+					<label for="glamour_2_2">
+						<input type="radio" id="glamour_2_2" name="glamour" value="b" />
+						稍有不完美的感觉
+					</label>
+				</li>
+				<li qasn="2">
+					<label for="glamour_2_3">
+						<input type="radio" id="glamour_2_3" name="glamour" value="c" />
+						没有认真思考过
+					</label>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="qa js-qa" style="display:none;">
+			<h2 class="question">3. 你认为男性魅力主要体现在：</h2>
+			<ul class="answer-list">
+				<li qasn="3">
+					<label for="glamour_3_1">
+						<input type="radio" id="glamour_3_1" name="glamour" value="a" />
+						个性和气质
+					</label>
+				</li>
+				<li qasn="3">
+					<label for="glamour_3_2">
+						<input type="radio" id="glamour_3_2" name="glamour" value="b" />
+						力与健美
+					</label>
+				</li>
+				<li qasn="3">
+					<label for="glamour_3_3">
+						<input type="radio" id="glamour_3_3" name="glamour" value="c" />
+						外貌英俊
+					</label>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="qa js-qa" style="display:none;">
+			<h2 class="question">4. 你与女性交往时的衣着打扮是：</h2>
+			<ul class="answer-list">
+				<li qasn="4">
+					<label for="glamour_4_1">
+						<input type="radio" id="glamour_4_1" name="glamour" value="a" />
+						稍作修饰
+					</label>
+				</li>
+				<li qasn="4">
+					<label for="glamour_4_2">
+						<input type="radio" id="glamour_4_2" name="glamour" value="b" />
+						整洁美观
+					</label>
+				</li>
+				<li qasn="4">
+					<label for="glamour_4_3">
+						<input type="radio" id="glamour_4_3" name="glamour" value="c" />
+						无所谓
+					</label>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="qa js-qa" style="display:none;">
+			<h2 class="question">5. 当你所感兴趣的女性注视你时，你的反应是：</h2>
+			<ul class="answer-list">
+				<li qasn="5">
+					<label for="glamour_5_1">
+						<input type="radio" id="glamour_5_1" name="glamour" value="a" />
+						与对方目光对视
+					</label>
+				</li>
+				<li qasn="5">
+					<label for="glamour_5_2">
+						<input type="radio" id="glamour_5_2" name="glamour" value="b" />
+						与对方稍稍对视
+					</label>
+				</li>
+				<li qasn="5">
+					<label for="glamour_5_3">
+						<input type="radio" id="glamour_5_3" name="glamour" value="c" />
+						避开对方视线
+					</label>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="qa js-qa" style="display:none;">
+			<h2 class="question">6.  你与女性交往的动机：</h2>
+			<ul class="answer-list">
+				<li qasn="6">
+					<label for="glamour_6_1">
+						<input type="radio" id="glamour_6_1" name="glamour" value="a" />
+						寻求友情
+					</label>
+				</li>
+				<li qasn="6">
+					<label for="glamour_6_2">
+						<input type="radio" id="glamour_6_2" name="glamour" value="b" />
+						寻求生活乐趣
+					</label>
+				</li>
+				<li qasn="6">
+					<label for="glamour_6_3">
+						<input type="radio" id="glamour_6_3" name="glamour" value="c" />
+						寻求恋人
+					</label>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="qa js-qa" style="display:none;">
+			<h2 class="question">7. 你与女性交谈的话题主要是：</h2>
+			<ul class="answer-list">
+				<li qasn="7">
+					<label for="glamour_7_1">
+						<input type="radio" id="glamour_7_1" name="glamour" value="a" />
+						情感心理方面
+					</label>
+				</li>
+				<li qasn="7">
+					<label for="glamour_7_2">
+						<input type="radio" id="glamour_7_2" name="glamour" value="b" />
+						人生追求方面
+					</label>
+				</li>
+				<li qasn="7">
+					<label for="glamour_7_3">
+						<input type="radio" id="glamour_7_3" name="glamour" value="c" />
+						社会现象方面
+					</label>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="qa js-qa" style="display:none;">
+			<h2 class="question">8. 你希望女性对你的感觉是：</h2>
+			<ul class="answer-list">
+				<li qasn="8">
+					<label for="glamour_8_1">
+						<input type="radio" id="glamour_8_1" name="glamour" value="a" />
+						随和亲切而自然
+					</label>
+				</li>
+				<li qasn="8">
+					<label for="glamour_8_2">
+						<input type="radio" id="glamour_8_2" name="glamour" value="b" />
+						值得崇拜和尊敬
+					</label>
+				</li>
+				<li qasn="8">
+					<label for="glamour_8_3">
+						<input type="radio" id="glamour_8_3" name="glamour" value="c" />
+						可依赖和顺从的
+					</label>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="qa js-qa" style="display:none;">
+			<h2 class="question">9. 你是否愿意告诉女友自己的内心世界？</h2>
+			<ul class="answer-list">
+				<li qasn="9">
+					<label for="glamour_9_1">
+						<input type="radio" id="glamour_9_1" name="glamour" value="a" />
+						毫无保留地倾诉内心情感
+					</label>
+				</li>
+				<li qasn="9">
+					<label for="glamour_9_2">
+						<input type="radio" id="glamour_9_2" name="glamour" value="b" />
+						可以告诉女友，但稍作保留
+					</label>
+				</li>
+				<li qasn="9">
+					<label for="glamour_9_3">
+						<input type="radio" id="glamour_9_3" name="glamour" value="c" />
+						不愿意对女友提及心中情感
+					</label>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="qa js-qa" style="display:none;">
+			<h2 class="question">10. 你的性格偏向于：</h2>
+			<ul class="answer-list">
+				<li qasn="10">
+					<label for="glamour_10_1">
+						<input type="radio" id="glamour_10_1" name="glamour" value="a" />
+						外向型
+					</label>
+				</li>
+				<li qasn="10">
+					<label for="glamour_10_2">
+						<input type="radio" id="glamour_10_2" name="glamour" value="b" />
+						适中型
+					</label>
+				</li>
+				<li qasn="10">
+					<label for="glamour_10_3">
+						<input type="radio" id="glamour_10_3" name="glamour" value="c" />
+						内向型
+					</label>
+				</li>
+			</ul>
+		</div>
+		
 	</article>
 </body>
-<script type="text/javascript" src="../js/zepto.min.js"></script>
-<script type="text/javascript" src="../js/game.js"></script>
+<script type="text/javascript" src="../js/channel/glamour.js"></script>
 </html>

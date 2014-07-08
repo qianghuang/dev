@@ -16,7 +16,7 @@
 		concat:{
 			//要合并的js文件
 			foo:{
-				src: ['./../common/js/libs/zepto.min.js'],
+				src: ['./../common/js/libs/zepto.min.js','js/channel/glamour.js'],
 				dest:'./../debug/dist/<%=pkg.name%>/js/channel/glamour.js'
 				
 			}

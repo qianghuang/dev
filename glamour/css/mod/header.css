@@ -1,8 +1,12 @@
 .g-banner {
     position:relative;
-    margin-bottom:4px;
+    margin-bottom:3px;
 }
 .g-banner .img-banner {
     width:100%;
     height:auto;
+    display:block;
+}
+.g-banner .img-hide {
+    display:none;
 }

@@ -9,16 +9,47 @@ html,body {
 }
 .g-content .desc {
     margin-bottom:20px;
-    font-size:20px;
+    font-size:18px;line-height:25px;color:#fff;
 }
 .g-content .question {
     margin-bottom:10px;
-    font-size:16px;
+    font-size:22px;color:#00afcc;
 }
 .g-content .answer-list li {
-    padding:10px 10px 10px 20px;
-    margin-bottom:10px;
+    padding:0 10px 0 20px;
+    margin-bottom:10px;height:45px;overflow:hidden;
     background-color:#94c3bc;
-    background-color:rgba(255,255,255,0.5);
-    font-size:16px;
+    background-color:rgba(255,255,255,0.3);
+    font-size:20px;color:#fff;line-height:45px;
+    cursor: pointer;
+}
+.g-content .answer-list label {
+    display:block;
+}
+/*result*/
+.s-result .result-content {
+    padding:16px 45px;
+    color:#fff;
+}
+.s-result .result-content .title {
+    padding-bottom:8px;
+    font-size:36px;text-align: center;
+}
+.s-result .result-content .desc {
+    padding-bottom:26px;
+    font-size:18px;
+}
+.s-result .result-content .enter {
+    width:297px;height:61px;overflow:hidden;margin:0 auto;
+    background:url(img/enter.png) no-repeat;display: block;
+    text-indent: -1000px;
+}
+.s-result-a {
+    background:#b66b3d;
+}
+.s-result-b {
+    background:#986f62;
+}
+.s-result-c {
+    background:#b66b3d;
 }
