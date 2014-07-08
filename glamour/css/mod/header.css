@@ -1,0 +1,8 @@
+.g-banner {
+    position:relative;
+    margin-bottom:4px;
+}
+.g-banner .img-banner {
+    width:100%;
+    height:auto;
+}

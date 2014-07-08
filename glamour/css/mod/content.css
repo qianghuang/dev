@@ -1,0 +1,24 @@
+html,body {
+    height:100%;
+}
+.g-content {
+    padding:20px 30px 40px;
+    min-height:70%;
+    background:url(img/body.jpg) no-repeat left bottom;
+    background-size:cover;
+}
+.g-content .desc {
+    margin-bottom:20px;
+    font-size:20px;
+}
+.g-content .question {
+    margin-bottom:10px;
+    font-size:16px;
+}
+.g-content .answer-list li {
+    padding:10px 10px 10px 20px;
+    margin-bottom:10px;
+    background-color:#94c3bc;
+    background-color:rgba(255,255,255,0.5);
+    font-size:16px;
+}

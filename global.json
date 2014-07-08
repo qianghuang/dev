@@ -1,0 +1,55 @@
+//全局的任务配置
+{
+	config:{
+		pkg:grunt.file.readJSON('package.json'),
+	    watch: {
+            src: {
+                files: ['**/css/**/*.css',"**/*.js",'**/img/**','views/**','!**/node_modules/**/*.js','!./../dist/**/*','!./../.build/**/*.js','!**/Gruntfile.js'],
+                options: {
+                    event: ['all', 'changed', 'added', 'deleted'],
+                    livereload: true
+                },
+                tasks:['cssjoin','cssmin','copy','concat','uglify']
+            }
+        },
+        
+		//复制css依赖的图片
+		copy: {
+			cssImg: {
+				files: [{
+					expand: true,
+					cwd: './',
+					src: ['css/img/**'],
+					dest: './../dist/<%= pkg.name %>/'
+				}]
+			},
+			images: {
+				files: [{
+					expand: true,
+					cwd: './',
+					src: ['images/**'],
+					dest: './../dist/<%= pkg.name %>/'
+				}]
+			},
+			demo: {
+				files: [{
+					expand: true,
+					cwd: './',
+					src: ['views/**'],
+					dest: './../dist/<%= pkg.name %>/'
+				}]
+			}
+		}
+		
+	},
+	
+	loadTask:function(){
+		grunt.loadNpmTasks('grunt-contrib-watch');
+		grunt.loadNpmTasks('grunt-contrib-copy');
+	},
+	
+	registerTask:function(){
+		grunt.registerTask('default', ['watch']);
+		grunt.registerTask("build",['cssjoin','cssmin','copy','concat','uglify']);
+	}
+}
