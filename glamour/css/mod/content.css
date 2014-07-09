@@ -1,26 +1,27 @@
 html,body {
     height:100%;
 }
-.g-content {
-    padding:20px 30px 40px;
-    min-height:70%;
-    background:url(img/body.jpg) no-repeat left bottom;
+.s-indexbg {
+	background:#0a0a0a url(img/body.jpg) no-repeat left bottom;
     background-size:cover;
 }
+.g-content {
+    padding:10px 14px 0;
+}
 .g-content .desc {
-    margin-bottom:20px;
-    font-size:18px;line-height:25px;color:#fff;
+    margin-bottom:10px;
+    font-size:14px;line-height:25px;color:#fff;
 }
 .g-content .question {
     margin-bottom:10px;
-    font-size:22px;color:#00afcc;
+    font-size:16px;color:#00afcc;
 }
 .g-content .answer-list li {
     padding:0 10px 0 20px;
-    margin-bottom:10px;height:45px;overflow:hidden;
+    margin-bottom:10px;height:30px;overflow:hidden;
     background-color:#94c3bc;
     background-color:rgba(255,255,255,0.3);
-    font-size:20px;color:#fff;line-height:45px;
+    font-size:14px;color:#fff;line-height:30px;
     cursor: pointer;
 }
 .g-content .answer-list label {
@@ -28,21 +29,20 @@ html,body {
 }
 /*result*/
 .s-result .result-content {
-    padding:16px 45px;
+    padding:14px 14px;
     color:#fff;
 }
 .s-result .result-content .title {
     padding-bottom:8px;
-    font-size:36px;text-align: center;
+    font-size:18px;text-align: center;
 }
 .s-result .result-content .desc {
     padding-bottom:26px;
-    font-size:18px;
+    font-size:14px;
 }
 .s-result .result-content .enter {
-    width:297px;height:61px;overflow:hidden;margin:0 auto;
-    background:url(img/enter.png) no-repeat;display: block;
-    text-indent: -1000px;
+	width:100%;
+    display: block;
 }
 .s-result-a {
     background:#b66b3d;
