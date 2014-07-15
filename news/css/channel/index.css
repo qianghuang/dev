@@ -45,10 +45,11 @@ body {
 .s-news-item .title {
 	margin-bottom:12px;
 	white-space:nowrap;overflow:hidden;word-wrap:normal;
-	text-overflow:ellipsis;
+	text-overflow:ellipsis;font-weight:bold;
 }
 .s-news-item .news-content {
 	margin-bottom:16px;
+	color:#959cac;
 }
 .s-news-item .rel-info {
 	padding-bottom:20px;

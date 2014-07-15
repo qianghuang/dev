@@ -142,8 +142,9 @@ a:hover {
 }
 .g-header .ct-logo .logo {
     overflow:hidden;
-    display:block;
-    line-height:50px;
+    height:50px;
+    display:block;background:url(../img/logo.png) no-repeat;
+    line-height:50px;text-indent:-999px;
 }
 .g-header .nav {
     float:left;
