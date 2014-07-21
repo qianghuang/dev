@@ -311,11 +311,13 @@
 	<script type="text/javascript" src="../js/mod/justify.js"></script>
 	-->
 	<script type="text/javascript" src="../js/mod/newslist.js"></script>
+	<script type="text/javascript" src="../js/mod/alert.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			NUI.newList.init($("#js-home-newlist"), {
 				url:"test/newslist.html?page"
 			});
+			NUI.win.alert("hello", "ok");
 		});
 	</script>
 </body>
