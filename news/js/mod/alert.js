@@ -43,18 +43,21 @@ NUI.win = {
 		}
 		$('#zmAlert').stop(true,true).slideDown(300);
 		that.closeAlert = setInterval(revoveTips,1000);
-		$('#zmAlert').die().live('mouseenter',function(){
-			clearInterval(that.closeAlert);
-		});
-		$('#zmAlert').live('mouseleave',function(){
-			that.closeAlert = setInterval(revoveTips,1000);
-		});
-		$('#zmAlert .alertclose').live('click',function(){
-			$("#zmAlert").stop(true,false).slideUp(300,function(){
-				if(callBack) {
-					callBack();
-				}
-			});
+		
+		$(document).delegate("#zmAlert", {
+			"mouseenter": function(){
+				clearInterval(that.closeAlert);
+			},
+			"mouseleave": function(){
+				that.closeAlert = setInterval(revoveTips,1000);
+			},
+			"click": function(){
+				$("#zmAlert").stop(true,false).slideUp(300,function(){
+					if(callBack) {
+						callBack();
+					}
+				});
+			}
 		});
 		function revoveTips() {
 			if(that.alertCount < 1){
@@ -70,4 +73,11 @@ NUI.win = {
 			that.alertCount--;
 		}
 	}
-}; 
+};
+
+/**
+ *  
+ */
+NUI.backTop = {
+	
+};

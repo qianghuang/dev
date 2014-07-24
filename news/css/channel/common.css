@@ -458,13 +458,13 @@ a:hover {
  * 全局alert样式 
  */
 .newalert {
-	position:fixed;top:50px;left:50%;margin-left:-225px;z-index:999;
+	position:fixed;top:0;left:50%;margin-left:-225px;z-index:999;
 	width:450px;border-radius:0 0 4px 4px;
 	background:url(../img/newalertbg.gif) no-repeat;display:none;
 	box-shadow:0 2px 0 rgba(0,0,0,0.15);
 }
 *html .newalert {
-	position:absolute;left:expression(document.documentElement.scrollLeft+50+"%");top:expression(eval(document.documentElement.scrollTop)+50+"px");
+	position:absolute;left:expression(document.documentElement.scrollLeft+50+"%");top:expression(eval(document.documentElement.scrollTop));
 }
 .newalert .alert-ico {
 	background:url(../img/newmark.png) no-repeat;
@@ -507,4 +507,48 @@ a:hover {
 	float:right;
 	opacity:0.5;filter:alpha(opacity=50);
 	width:60px;padding-top:5px;
+}
+/*返回顶部*/
+.g-backtop {
+	position:fixed;left:50%;bottom:20px;margin-left:500px;z-index:102;
+	width:56px;height:80px;
+}
+.g-backtop .a-scrolltop {
+	width:56px;height:80px;overflow:hidden;
+	text-align:center;
+	display:block;
+}
+.g-backtop .a-scrolltop .menu-arr {
+	width:56px;height:44px;padding-top:12px;
+	background:#f2f2f2;display:block;
+}
+.g-backtop .a-scrolltop .backtop-ico {
+	width:30px;height:30px;
+	background-position:-179px  -67px;
+}
+.g-backtop .a-scrolltop .menu-text {
+	display:none;
+}
+.g-backtop .a-scrolltop:hover {
+	color:#bbb;text-decoration:none;
+}
+.g-backtop .a-scrolltop:hover .menu-arr {
+	background:#ebebeb;
+}
+.g-backtop .a-scrolltop:hover .backtop-ico {
+	background-position:-179px  -34px;
+}
+.g-backtop .a-scrolltop:hover .menu-text {
+	display:inline;
+}
+.g-backtop .a-scrolltop:active .menu-arr {
+	background:#d2d2d2;
+}
+.g-backtop .a-scrolltop:active .backtop-ico {
+	background-position:-179px  0;
+}
+@media only screen and (max-width: 1146px) {
+	.g-backtop {
+		margin:0;left:100%;margin-left:-66px;
+	}
 }
