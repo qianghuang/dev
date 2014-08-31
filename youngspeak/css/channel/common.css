@@ -1,0 +1,116 @@
+/*
+ * reset css
+ * 2014.3.24
+ * qiang.huang
+ */
+html,body {
+    margin:0;padding:0;
+    color:#fff;
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+body {
+    font:14px/1.5 Arial,"微软雅黑","Microsoft Yahei";
+
+}
+h1,h2,h3,h4,h5,h6,
+div,ul,ol,dl,li,dt,dd,
+p,em,i,b,cite,del,strong,pre,code,address,
+form,fieldset,legend,input,textarea,select,
+table,caption,thead,th,tbody,td,tfoot,
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    margin:0;padding:0;
+    box-sizing:border-box;
+    font-size:100%;font-style:normal;font-weight:normal;word-wrap:break-word;
+    outline:none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    display:block;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+table {
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+li {
+    list-style:none;
+}
+img {
+    border:0;
+}
+input,textarea,select {
+    background:#fff;
+}
+a {
+    color:#333;text-decoration:none;outline:none;
+}
+a:hover {
+    color:#2072e9;text-decoration:none;
+}
+/*global css*/
+html {
+    height: 100%;
+    background:url(../img/screenbg.jpg) no-repeat center top fixed;
+    background-size:cover;
+}
+.g-clearfix {
+    *zoom:1;
+}
+.g-clearfix:after {
+  content: "";
+  height: 0;overflow:hidden;
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+/*header*/
+#header {
+    padding:30px 40px 0;
+    min-width:670px;
+}
+#header .ct-logo {
+    float:left;width:199px;height:63px;overflow:hidden;
+}
+#header .logo {
+    width:199px;height:63px;overflow:hidden;
+    display:block;background:url(../img/logo.png) no-repeat;
+    text-indent: -9999px;
+}
+#header .nav {
+    float:right;
+    height:63px;
+}
+#header .nav li {
+    float:left;
+}
+#header .nav a {
+    padding:0 25px;
+    color:#fff;line-height:63px;
+}
+#header .nav a:hover {
+    color:#2de1f4;text-decoration: none;
+}
+#header .nav a.current {
+    color:#2de1f4;
+}
+/*footer*/
+.g-footer-fixed {
+    position:fixed;z-index:10;
+    bottom:0;left:0;width:100%;
+}
+#footer {
+    padding-left:70px;min-width:670px;margin-top:30px;
+}
+#footer .inner {
+    position:relative;
+    height:26px;
+    background:#000;
+    text-align:center;color: #7d7d7d;font-size:13px;line-height:26px;
+}
+#footer .inner .arrow {
+    position:absolute;left:-15px;top:0;
+    width:15px;height:26px;
+    background:url(../img/common.png) no-repeat 0 0;display:block;
+}

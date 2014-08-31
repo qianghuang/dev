@@ -1,0 +1,18 @@
+.about-wrap {
+    width:940px;margin:140px auto 0;
+}
+.about-wrap .profile {
+    width:540px;float:left;margin-right:90px;
+}
+.about-wrap .profile .title {
+    width:330px;height:30px;margin-bottom:14px;
+    background:#000;
+    line-height:30px;font-size:18px;
+}
+.about-wrap .profile .desc {
+    font-size:16px;line-height:28px;
+}
+.about-wrap .contact {
+    padding-top:44px;
+    line-height:28px;font-size:16px;
+}

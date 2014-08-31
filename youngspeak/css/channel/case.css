@@ -1,0 +1,108 @@
+.case-wrap .case-list {
+    position: relative;
+    min-width:670px;margin-top:140px;
+}
+.case-wrap .case-list .case {
+    position: absolute;z-index: 2;
+    -webkit-transition:all 0.2s ease-in;
+       -moz-transition:all 0.2s ease-in;
+        -ms-transition:all 0.2s ease-in;
+         -o-transition:all 0.2s ease-in;
+            transition:all 0.2s ease-in;
+}
+.case-wrap .case-list .case:hover {
+    transform:scale(1.5);
+}
+.case-wrap .case-list .case-baidu {
+    left:50%;top:180px;margin-left:95px;
+}
+.case-wrap .case-list .case-smart {
+    left:50%;margin-left:-380px;top:-10px;
+}
+.case-wrap .case-list .case-nike {
+    left:50%;margin-left:-57px;
+}
+.case-wrap .case-list .case-xuebi {
+    left:50%;margin-left:-250px;top:170px;
+}
+.case-wrap .case-list .case-dell {
+    left:50%;margin-left:200px;
+}
+/*detail*/
+.s-case-detail {
+    width:1000px;margin:0 auto;padding-top:80px;
+}
+.case-detial {
+    float:left;
+}
+.case-detial .title {
+    margin:0 0 20px 45px;height:26px;overflow:hidden;width:87px;padding-left:12px;
+    background:#242424;
+    line-height:26px;color:#fff;
+}
+.case-detial .ell-show {
+    position:relative;
+    height:273px;width:753px;
+}
+.case-detial .ell-show .prev,
+.case-detial .ell-show .next {
+    position:absolute;top:100px;
+    width:25px;height:54px;
+    background:url(../img/common.png) no-repeat;display;block;
+    opacity:0.8;
+}
+.case-detial .ell-show .prev {
+    left:0;
+    background-position:0 -30px;
+}
+.case-detial .ell-show .next {
+    right:0;
+    background-position:-29px -30px;
+}
+.case-detial .ell-show .prev-disable,
+.case-detial .ell-show .next-disable {
+    opacity:0.3;
+}
+.case-detial .ell-show .container {
+    position:absolute;left:45px;
+    width:667px;height:273px;overflow:hidden;
+}
+.case-profile {
+    float:right;width:190px;
+}
+.case-profile .title {
+    margin-bottom:20px;height:26px;overflow:hidden;width:87px;padding-left:12px;
+    background:#242424;
+    line-height:26px;color:#fff;
+}
+.case-profile .item-title {
+    padding-bottom:10px;
+    font-size:30px;
+}
+.case-profile .item-title .title-text {
+    vertical-align: middle;
+}
+.case-profile .v-ico {
+    width:26px;height:26px;margin-left:5px;
+    background:url(../img/common.png) no-repeat 0 -88px;display: inline-block;
+    vertical-align: middle;
+}
+.case-profile .desc {
+    height:180px;
+}
+.case-profile .enter {
+    
+}
+.case-profile .enter .btn-enter {
+    position:relative;
+    height:40px;padding-left:20px;
+    display:block;background:#4d4d4d;
+    color:#fff;font-size:18px;line-height:40px;
+}
+.case-profile .enter .btn-enter .arrow {
+    position:absolute;right:20px;top:10px;
+    width:0;height:0;
+    border-style:solid;
+    border-width:10px;
+    border-color:transparent transparent transparent #fff;
+}
