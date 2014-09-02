@@ -114,3 +114,9 @@ html {
     width:15px;height:26px;
     background:url(../img/common.png) no-repeat 0 0;display:block;
 }
+/*contact*/
+.g-ys-layer {
+	position:absolute;left:0;right:0;top:0;bottom:0;
+	background:#000;
+	opacity: 0.5;filter: alpha(opacity=50);
+}

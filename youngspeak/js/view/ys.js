@@ -100,6 +100,27 @@ YS.showCase.prototype = {
 	}
 };
 
+YS.contact = {
+	init: function($ele){
+		var self = this;
+		$ele.click(function(){
+			self.open.call(self);
+		});
+	},
+	open: function(){
+		this.createLayer().show();
+	},
+	create: function(){
+		
+	},
+	createLayer: function(){
+		var $layer = $('<div class="g-ys-layer"></div>');
+		$layer.hide().appendTo('body');
+		return $layer;
+	}
+};
+
 $(function(){
 	new YS.showCase($("#js-slider"));
+	YS.contact.init($("#js-contact"));
 });
