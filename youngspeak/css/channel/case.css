@@ -54,18 +54,27 @@
 .case-detial .ell-show .prev {
     left:0;
     background-position:0 -30px;
+    cursor: pointer
 }
 .case-detial .ell-show .next {
     right:0;
     background-position:-29px -30px;
+    cursor: pointer
 }
 .case-detial .ell-show .prev-disable,
 .case-detial .ell-show .next-disable {
     opacity:0.3;
+    cursor: default;
 }
 .case-detial .ell-show .container {
     position:absolute;left:45px;
     width:667px;height:273px;overflow:hidden;
+}
+.case-detial .ell-show .container .list {
+    position:absolute;left:0;top:0;
+}
+.case-detial .ell-show .container li {
+    float:left;
 }
 .case-profile {
     float:right;width:190px;
