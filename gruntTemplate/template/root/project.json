@@ -1,0 +1,211 @@
+//当前项目配置
+{
+	config:{
+		cssjoin:{
+			join:{
+				//要合并的样式文件
+				files:{
+					// tpo听力练习
+					'./../debug/dist/<%=pkg.name%>/css/channel/listen_practice.css':['css/channel/listen_practice.css'],
+					
+					// 全屏播放器
+					'./../debug/dist/<%=pkg.name%>/css/channel/kmf-player.css':['css/channel/kmf-player.css'],
+					
+					// 练习结果页
+					'./../debug/dist/<%=pkg.name%>/css/channel/player-exam.css':['css/channel/player-exam.css'],
+					
+					// 练习结果页
+					'./../debug/dist/<%=pkg.name%>/css/channel/player-write.css':['css/channel/player-write.css'],
+					
+					// 小结
+					'./../debug/dist/<%=pkg.name%>/css/channel/listen-summary.css':['css/channel/listen-summary.css'],
+					
+					// 听力首页
+					'./../debug/dist/<%=pkg.name%>/css/channel/listen-index.css':['css/channel/listen-index.css'],
+					
+					// 我的记录
+					'./../debug/dist/<%=pkg.name%>/css/channel/record.css':['css/channel/record.css'],
+					
+					// 首页
+					'./../debug/dist/<%=pkg.name%>/css/channel/index.css':['css/channel/index.css'],
+					
+					// 专辑列表播放器
+					'./../debug/dist/<%=pkg.name%>/css/channel/player-album.css':['css/channel/player-album.css'],
+
+					// 听力清单详情页
+					'./../debug/dist/<%=pkg.name%>/css/channel/listen-list-details.css':['css/channel/listen-list-details.css'],
+
+					//阅读页面
+					'./../debug/dist/<%=pkg.name%>/css/channel/read-review.css':['css/channel/read-review.css'],
+					
+					//阅读结果
+					'./../debug/dist/<%=pkg.name%>/css/channel/read-result.css':['css/channel/read-result.css'],
+
+					//阅读列表
+					'./../debug/dist/<%=pkg.name%>/css/channel/read-list.css':['css/channel/read-list.css'],
+					
+					// 学习页面
+					'./../debug/dist/<%=pkg.name%>/css/channel/learn/learn-index.css':['css/channel/learn/learn-index.css'],
+					
+					// 学习终端页面
+					'./../debug/dist/<%=pkg.name%>/css/channel/learn/learn-detail.css':['css/channel/learn/learn-detail.css'],
+					
+					// 写作
+					'./../debug/dist/<%=pkg.name%>/css/channel/writing/writing.css':['css/channel/writing/writing.css']
+					
+				}
+			}
+		},
+	
+		concat:{
+			options:{
+				include: 'relative'
+			},
+			src:{
+				//要合并的js文件
+				files:{
+					// 听力播放器
+					'./../debug/dist/<%=pkg.name%>/js/channel/player_listen.js': ['./../.build/<%=pkg.name%>/js/channel/player_listen.js'],
+					
+					// 练习结果页
+					'./../debug/dist/<%=pkg.name%>/js/channel/player_result.js': ['./../.build/<%=pkg.name%>/js/channel/player_result.js'],
+					
+					// 听写
+					'./../debug/dist/<%=pkg.name%>/js/channel/player_write.js': ['./../.build/<%=pkg.name%>/js/channel/player_write.js'],
+					
+					// 听力练习
+					'./../debug/dist/<%=pkg.name%>/js/channel/practice_listen.js': ['./../.build/<%=pkg.name%>/js/channel/practice_listen.js'],
+					
+					// 练习-测试音量
+					'./../debug/dist/<%=pkg.name%>/js/channel/practise/test-volume.js': ['./../.build/<%=pkg.name%>/js/channel/practise/test-volume.js'],
+					
+					// 练习-测试音量
+					'./../debug/dist/<%=pkg.name%>/js/channel/record.js': ['./../.build/<%=pkg.name%>/js/channel/record.js'],
+					
+					// 小结
+					'./../debug/dist/<%=pkg.name%>/js/channel/summary.js': ['./../.build/<%=pkg.name%>/js/channel/summary.js'],
+					
+					// 听力导航页
+					'./../debug/dist/<%=pkg.name%>/js/channel/listen_index.js': ['./../.build/<%=pkg.name%>/js/channel/listen_index.js'],
+					
+					// 添加标签
+					'./../debug/dist/<%=pkg.name%>/js/channel/listen_tag.js': ['./../.build/<%=pkg.name%>/js/channel/listen_tag.js'],
+					
+					// 专辑
+					'./../debug/dist/<%=pkg.name%>/js/channel/player_albumlist.js': ['./../.build/<%=pkg.name%>/js/channel/player_albumlist.js'],
+
+					// 听力清单详情页
+					'./../debug/dist/<%=pkg.name%>/js/channel/listen_list_details.js': ['./../.build/<%=pkg.name%>/js/channel/listen_list_details.js'],
+
+					// 阅读
+					'./../debug/dist/<%=pkg.name%>/js/channel/read_list.js': ['./../.build/<%=pkg.name%>/js/channel/read_list.js'],
+					
+					// 阅读结果
+					'./../debug/dist/<%=pkg.name%>/js/channel/read_result.js': ['./../.build/<%=pkg.name%>/js/channel/read_result.js'],
+					
+					// 学习结果页
+					'./../debug/dist/<%=pkg.name%>/js/channel/learn/detail.js': ['./../.build/<%=pkg.name%>/js/channel/learn/detail.js'],
+					// 学习索引页面
+					'./../debug/dist/<%=pkg.name%>/js/channel/learn/index.js': ['./../.build/<%=pkg.name%>/js/channel/learn/index.js'],
+					
+					
+					// 写作
+					'./../debug/dist/<%=pkg.name%>/js/channel/writing/writing.js': ['./../.build/<%=pkg.name%>/js/channel/writing/writing.js']
+					
+					
+				}
+			}
+		},
+		
+		cssmin:{
+			cssfiles:{
+				expand : true,
+				cwd    : "./../debug/dist/<%=pkg.name%>/",
+				src    : "**/*.css",
+				dest   : "./../dist/<%=pkg.name%>/"
+			}
+		},
+		
+		uglify:{
+			libs:{
+				files:[{
+					//expand:true,
+					//cwd:'./../libs/',
+					//src:'**/*.js',
+					//dest:"./../dist/libs/"
+				}]
+			},
+		
+			foo:{
+				files:[{
+					expand:true,
+					cwd:'./../debug/dist/<%=pkg.name%>/js/channel/',
+					src:'**/*.js',
+					dest:"./../dist/<%=pkg.name%>/js/channel/"
+				}]
+			}
+		},
+		secret:grunt.file.readJSON("../secret.json"),
+		sftp:{
+			push:{
+				files:{
+					"common" : ["./**","!./node_modules/**","!./secret.json"],
+					"dist"   : ["./../dist/<%=pkg.name%>/**"],
+					//"demo"   : ["./../demo/<%=pkg.name%>/**"]
+				}
+			},
+			//开发时只上传压缩过的
+			dev:{
+				files:{
+					"dist"   : ["./../dist/<%=pkg.name%>/**"]
+				}
+			},
+			libs:{
+				files:{
+					"libs"   : ["./../libs/**"],
+					"dist"   : ["./../dist/libs/**"]
+				}
+			},
+			noimg:{
+				files:{
+					"common" : ["./**","!./node_modules/**","!./secret.json","!./css/img/**","!./images/**"],
+					"dist"   : ["./../dist/<%=pkg.name%>/**","!./../dist/<%=pkg.name%>/css/img/**","!./../dist/<%=pkg.name%>/images/**"],
+					//"demo"   : ["./../demo/<%=pkg.name%>/**"]
+				}
+			},
+			online: {
+				options : {
+					path:'<%=secret.path%>/<%=pkg.name%>'
+				},
+				files:{
+					"dist" : ["./../dist/<%=pkg.name%>/**"]
+				}
+			},
+			options:{
+				path:'<%=secret.testPath%>/<%=pkg.name%>',
+				host:'<%=secret.host%>',
+				username:'<%=secret.username%>',
+				password:'<%=secret.password%>',
+				port:'<%=secret.port%>',
+				createDirectories:true,
+				readyTimeout:'<%=secret.readyTimeout%>',
+				showProgress:true
+			}
+		}
+	},
+	
+	loadTask:function(){
+		grunt.loadNpmTasks('grunt-cssjoin');
+		grunt.loadNpmTasks('grunt-contrib-cssmin');
+		grunt.loadNpmTasks('grunt-cmd-concat');
+		grunt.loadNpmTasks('grunt-contrib-uglify');
+		grunt.loadNpmTasks('grunt-ssh');
+	},
+	registerTask:function(){
+		grunt.registerTask("push",["sftp:push"]);
+		grunt.registerTask("online",["sftp:online"]);
+		grunt.registerTask("push-lib",["sftp:libs"]);
+		grunt.registerTask("push-noimg",["sftp:noimg"]);
+		grunt.registerTask("push-dev",["sftp:dev"]);
+	}
+}
