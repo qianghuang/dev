@@ -1,0 +1,17 @@
+.home-wrap {
+    width:1093px;margin:0 auto;
+}
+.home-wrap .item {
+    display:none;
+}
+.home-wrap .wrapbg {
+    width:1093px;height:543px;margin:0 auto;
+    background:url(../img/ltie9.png) no-repeat center top;
+}
+.home-wrap .item-tag {
+    left:810px;margin-left:0;
+}
+.home-wrap .item-tag .tagbg {
+    border:0;
+    background:none;
+}

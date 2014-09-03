@@ -83,7 +83,17 @@ html {
     height:63px;
 }
 #header .nav li {
+    position:relative;
     float:left;
+}
+#header .nav .arrow {
+    display:none;
+}
+#header .nav .current .arrow {
+    position:absolute;left:50%;bottom:10px;margin-left:-5px;
+    width:0;height:0;
+    border-style:solid;border-width:5px;border-color:#2de1f4 transparent transparent;
+    display:inline;
 }
 #header .nav a {
     padding:0 25px;
@@ -91,6 +101,9 @@ html {
 }
 #header .nav a:hover {
     color:#2de1f4;text-decoration: none;
+}
+#header .nav .current a {
+    color:#2de1f4;
 }
 #header .nav a.current {
     color:#2de1f4;
@@ -116,12 +129,12 @@ html {
 }
 /*contact*/
 .g-ys-layer {
-	position:absolute;left:0;right:0;top:0;bottom:0;
+	position:fixed;left:0;right:0;top:0;bottom:0;z-index:200;
 	background:#000;
 	opacity: 0.5;filter: alpha(opacity=50);
 }
 .g-contact-weixin {
-    position: absolute;left:50%;top:40px;
+    position: absolute;left:50%;top:40px;margin-left:-306px;z-index:201;
     width:613px;height: 617px;
     background: url(../img/weixin.png) no-repeat;
 }

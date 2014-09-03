@@ -8,6 +8,10 @@
 	<meta name="Keywords" content="一派杨言">
 	<link rel="stylesheet" type="text/css" href="../css/channel/common.css" />
 	<link rel="stylesheet" type="text/css" href="../css/channel/index.css" />
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="../css/channel/index_ie.css" />
+	<![endif]-->
+	<script type="text/javascript" src="../js/libs/jquery-1.6.2.min.js"></script>
 	<title>首页 一派杨言</title>
 </head>
 <body>
@@ -15,31 +19,41 @@
 		<h1 class="ct-logo"><a class="logo" href="index.html">一派杨言</a></h1>
 		<div class="nav">
 			<ul class="list">
-				<li>
+				<li class="current">
 					<a href="index.html">首页</a>
+					<span class="arrow"></span>
 				</li>
 				<li>
 					<a href="case.html">案例</a>
+					<span class="arrow"></span>
 				</li>
 				<li>
 					<a href="aboutus.html">关于我们</a>
+					<span class="arrow"></span>
 				</li>
 				<li>
 					<a href="javascript:void(0)" id="js-contact">联系我们</a>
+					<span class="arrow"></span>
 				</li>
 			</ul>
 		</div>
 	</div>
 	<div id="content">
 		<div class="home-wrap">
+			<!--[if lt IE 9]>
+			<div class="wrapbg"></div>
+			<![endif]-->
 			<div class="item item-1">
 				<img src="../images/pic_01.jpg" class="avatar" />
+				<span class="slogan slogan-1"></span>
 			</div>
 			<div class="item item-2">
 				<img src="../images/pic_02.jpg" class="avatar" />
+				<span class="slogan slogan-2"></span>
 			</div>
 			<div class="item item-3">
 				<img src="../images/pic_03.jpg" class="avatar" />
+				<span class="slogan slogan-3"></span>
 			</div>
 			<div class="item-tag">
 				<div class="tagbg"></div>
@@ -70,5 +84,6 @@
 			<span>XXICP备XXXXXXXXX号</span>
 		</div>
 	</div>
+	<script type="text/javascript" src="../js/view/ys.js"></script>
 </body>
 </html>

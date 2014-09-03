@@ -106,6 +106,9 @@ YS.contact = {
 		$ele.click(function(){
 			self.open.call(self);
 		});
+		$(document).delegate(".g-ys-layer", "click", function(){
+			self.close.call(self);
+		});
 	},
 	open: function(){
         

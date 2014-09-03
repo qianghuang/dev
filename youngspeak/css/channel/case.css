@@ -63,7 +63,7 @@
 }
 .case-detial .ell-show .prev-disable,
 .case-detial .ell-show .next-disable {
-    opacity:0.3;
+    opacity:0.3;filter:alpha(opacity=30);
     cursor: default;
 }
 .case-detial .ell-show .container {

@@ -28,6 +28,37 @@
     z-index:3;
     transform:scale(2) rotate(-45deg);
 }
+.home-wrap .item .slogan {
+    -webkit-transform:scale(0.5) rotate(45deg);
+       -moz-transform:scale(0.5) rotate(45deg);
+        -ms-transform:scale(0.5) rotate(45deg);
+         -o-transform:scale(0.5) rotate(45deg);
+            transform: scale(0.5) rotate(45deg);
+    -webkit-transform-origin:center center;
+       -moz-transform-origin:center center;
+        -ms-transform-origin:center center;
+         -o-transform-origin:center center;
+            transform-origin:center center;
+     opacity: 0;
+}
+.home-wrap .item:hover .slogan {
+    opacity: 1;
+}
+.home-wrap .item .slogan-1 {
+    position:absolute;left:-100px;bottom:76px;
+    width:234px;height:103px;overflow:hidden;
+    background:url(../img/slogan_1.png) no-repeat;
+}
+.home-wrap .item .slogan-2 {
+    position:absolute;right:-155px;top:44px;
+    width:234px;height:103px;overflow:hidden;
+    background:url(../img/slogan_2.png) no-repeat;
+}
+.home-wrap .item .slogan-3 {
+    position:absolute;right:-155px;top:44px;
+    width:234px;height:103px;overflow:hidden;
+    background:url(../img/slogan_3.png) no-repeat;
+}
 .home-wrap .item-1 {
     left:50%;margin-left:-429px;
     top:239px;
