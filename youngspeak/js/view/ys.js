@@ -108,10 +108,29 @@ YS.contact = {
 		});
 	},
 	open: function(){
-		this.createLayer().show();
+        
+        if(!this.overLayer) {
+            this.overLayer = this.createLayer();
+        }
+        
+        
+        
+        if(!this.layer) {
+            this.layer = this.create();
+        }
+        
+        this.overLayer.show();
+        this.layer.show();
+        
 	},
+    close: function(){
+        this.layer.hide();
+        this.overLayer.hide();
+    },
 	create: function(){
-		
+		var $wxLayer = $('<div class="g-contact-weixin"></div>');
+        $wxLayer.hide().appendTo('body');
+        return $wxLayer;
 	},
 	createLayer: function(){
 		var $layer = $('<div class="g-ys-layer"></div>');

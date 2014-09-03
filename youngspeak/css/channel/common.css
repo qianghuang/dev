@@ -120,3 +120,8 @@ html {
 	background:#000;
 	opacity: 0.5;filter: alpha(opacity=50);
 }
+.g-contact-weixin {
+    position: absolute;left:50%;top:40px;
+    width:613px;height: 617px;
+    background: url(../img/weixin.png) no-repeat;
+}
