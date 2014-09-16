@@ -1,0 +1,75 @@
+@import url("../../common/css/channel/common.css");
+html {
+    background:#3b3c3e;
+}
+.sec-2,
+.sec-1,
+.sec-3,
+.sec {
+    width:100%;height:347px;overflow:hidden;
+    position:absolute;top:0;
+}
+.sec-1 {
+    z-index: 20;right:0;
+}
+.sec-1 .scene {
+    position:absolute;right:0;top:0;
+    height:320px;
+    background:url(img/scene_01.jpg) left top;
+    background-size:cover;
+}
+.sec-1 .aside {
+    position:absolute;left:0;top:0;z-index:1;
+    width:5px;height:320px;
+    background:url(img/aside_01.gif) no-repeat;
+}
+.sec-1 .walk {
+    position:absolute;left:0;top:0;z-index:2;
+    width:58px;height:347px;
+    background:url(img/p_to_r_d.png) no-repeat left bottom;
+    background-size:100% auto;
+}
+.sec-1 .walking {
+    background-image:url(img/p_to_r.gif)
+}
+.sec-2 {
+    z-index: 19;left:0;
+}
+.sec-2 .scene {
+    position:absolute;left:0;top:0;
+    height:320px;
+    background:url(img/scene_02.jpg) right top;
+    background-size:cover;
+}
+.sec-2 .aside {
+    position:absolute;right:0;top:0;z-index:1;
+    width:5px;height:320px;
+    background:url(img/aside_01.gif) no-repeat;display:none;
+}
+.sec-2 .walk {
+    position:absolute;right:0;top:0;
+    width:58px;height:347px;
+    background:url(img/p_to_l_d.png) no-repeat left bottom;display:none;
+    background-size:100% auto;
+}
+.sec-2 .walking {
+    background-image:url(img/p_to_l.gif)
+}
+.sec-3 {
+    z-index: 18;right:0;
+}
+.sec-3 .scene {
+    position:absolute;right:0;top:0;
+    height:320px;
+    background:url(img/scene_01.jpg) left top;
+    background-size:cover;
+}
+.sec-3 .walk {
+    position:absolute;left:0;top:0;
+    width:58px;height:347px;
+    background:url(img/p_to_r_d.png) no-repeat left bottom;display:none;
+    background-size:100% auto;
+}
+.sec-3 .walking {
+    background-image:url(img/p_to_r.gif)
+}
