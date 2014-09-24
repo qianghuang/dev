@@ -15,20 +15,30 @@ function initPage() {
     lineHeight = 832 * secHeight / pageHeight;
 	
 	animatePage(curPage);
+	showSlogan();
 }
 
 
 document.body.addEventListener('touchstart', function (e) {
+	if($(".container").hasClass("js-disabled-scroll")) {
+		return;
+	}
     //console.log("target:"+e.target.className);
     e = e.changedTouches[0];
     onStart(e);
 });
 
 document.body.addEventListener('touchmove', function (e) {
+	if($(".container").hasClass("js-disabled-scroll")) {
+		return;
+	}
     onMove(e.changedTouches[0], e);
 });
 
 document.body.addEventListener('touchend', function (e) {
+	if($(".container").hasClass("js-disabled-scroll")) {
+		return;
+	}
     onEnd(e.changedTouches[0]);
 });
 // 以下是拖动效果
@@ -141,8 +151,8 @@ function animatePage( newPage ){
     if(newPage<0){
         newPage = 0;
     }
-    if(newPage>$(".wrapper section").length-1){
-        newPage = $(".wrapper section").length-1;
+    if(newPage>6){
+        newPage = 6;
     }
 
     curPage = newPage;
@@ -171,28 +181,6 @@ function animatePage( newPage ){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*****************************************/
 var $sec1 = $(".sec-1")
 ,	$secBegin = $(".sec-begin")
@@ -206,7 +194,7 @@ var $sec1 = $(".sec-1")
 ,	score = 0;
 ;
 	
-$(".btn-pull").on("click",function(){
+$(".run").on("click",function(){
 	var $run = $sec1.find(".run")
 	,	$runing = $sec1.find(".running")
 	,	$logo = $sec1.find(".logo")
@@ -231,38 +219,21 @@ $(".btn-pull").on("click",function(){
 	$mask.animate({
 		left:pageW
 	},1000*8, function(){
+		$sec1.addClass("sec-showac1");
+		setTimeout(function(){
+			$sec1.addClass("sec-showac2");
+		}, 1000*2);
 		$arrow.show();
 	});
 	
 });
 
-$allArr.on("click",function(){
-	var $section = $(this).parents(".sec");
-	var $slogan = $(this).parents(".slogan");
-	
-	// 如果是过度页的话
-	if($section.hasClass("sec-switch")) {
-		showSlogan();
-		$section.hide();
-		showText($(".curSlogan").eq(0));
-	}
-	else if ($section.hasClass("sec-slogan")) {
-		showText($slogan.next(".curSlogan"));
-		if($slogan.hasClass("lastSlogan")) {
-			$section.hide();
-		} else {
-			$slogan.hide();
-		}
-	} else {
-		$section.hide();
-	}
+
+$(".btn-begin").on("click", function(){
+	animatePage(1);
 });
 
-$secBegin.find(".btn-enter").on("click", function(){
-	$secBegin.hide();
-});
-
-$secTest.find(".opts").on("click", function(){
+$secTest.find(".answer").on("click", function(){
 	var curScore = $(this).data("score");
 	var $que = $(this).parents(".que");
 	
@@ -271,6 +242,7 @@ $secTest.find(".opts").on("click", function(){
 	if($que.hasClass("last")) {
 		$secTest.hide();
 		showResult(score);
+		$(".container").removeClass("js-disabled-scroll");
 	} else {
 		$que.hide().next().show();
 	}
@@ -281,21 +253,28 @@ function showResult(score){
 	var rule = [23,33,43,53,61];
 	var styResult = ["result-r1","result-r2","result-r3","result-r4","result-r5"];
 	var $resultText = $secResult.find(".result");
+	var result = [
+		  '<p class="result-score">你的测试是'+score+'分<br> 压力指数20% </p> <p class="result-tips"> 只是一点小疲惫，你需要经常到户外散步或慢跑来让自己放松心情。 </p>'
+		, '<p class="result-score">你的测试是'+score+'分<br> 压力指数40% </p> <p class="result-tips"> 有些轻度疲惫，你需要每天坚持跑行锻炼20分钟，让自己缓解压力寻回健康。 </p>'
+		, '<p class="result-score">你的测试是'+score+'分<br> 压力指数60% </p> <p class="result-tips"> 疲惫的程度有些严重，每天跑步30分钟，呼吸些新鲜的空气。</p>'
+		, '<p class="result-score">你的测试是'+score+'分<br> 压力指数80% </p> <p class="result-tips"> 属于身心疲惫，每天慢速长跑45分钟，释放活力，寻回自我。 </p>'
+		, '<p class="result-score">你的测试是'+score+'分<br> 压力指数95% </p> <p class="result-tips"> 属于重度的身心疲惫，每天迎风奔跑1小时，烦恼将随风一起消逝。 </p>'
+	];
 	
-	$secResult.find(".score").text(score);
 	
 	for(var i=0,len=rule.length; i < len; i++) {
 		if(score < rule[i]) {
-			$resultText.addClass(styResult[i]);
+			$secResult.find(".result").html(result[i]);
+			//$resultText.addClass(styResult[i]);
 			break;
 		}
 	}
 }
 
 function showSlogan(MaxNum) {
-	var MaxNum = 9
+	var MaxNum = 6
 	,	ranNum = parseInt(Math.random()*(MaxNum+1))
-	,	$slogan = $secSlogan.find(".slogan")
+	,	$slogan = $secSlogan
 	,	i
 	,	len = 3
 	,	curIndex
@@ -313,7 +292,7 @@ function showSlogan(MaxNum) {
 		$curEle.addClass("curSlogan");
 	}
 	
-	$secSlogan.find(".curSlogan").eq(len-1).addClass("lastSlogan");
+	$(".curSlogan").eq(len-1).addClass("lastSlogan");
 	
 }
 function showText($ele) {

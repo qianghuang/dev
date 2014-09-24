@@ -12,22 +12,23 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="container">
+		<div class="container js-disabled-scroll">
 			<section class="sec sec-1">
 				<div class="ac-1">
 					<div class="top"></div>
 					<div class="mask"><div class="mask-bg"></div></div>
-					<div class="run"></div>
+					<div class="run">
+						<div class="run-light"></div>
+					</div>
 					<div class="running hide"></div>
 					<div class="logo"></div>
 					<div class="run-text"></div>
 					<div class="btn-pull"></div>
-					<article class="preface">
+					<article class="anim preface">
 						<p class="p1">上帝会偏爱那些勇敢的、多情的、始终坚定的人，你不要怀疑不要犹豫，只要攥紧梦想勇敢奔跑，总有一天会看到绿洲。</p>
 						<p class="p2">——惟念《哲思——攥紧梦想奔跑，总会看到绿州。》</p>
 					</article>
-					<div class="arrow hide"></div>
-					<div class="bottom"></div>
+					<div class="bottom anim"></div>
 				</div>
 				<div class="ac-2">
 					<div class="test-title"></div>
@@ -46,103 +47,200 @@
 				<div class="question">
 					<div class="que que-1">
 						<div class="q">
+							1. 你是否常觉得心情很烦闷？
+						</div>
+						<div class="opts">
+							<p>A.&nbsp;经常</p>
+							<p>B.&nbsp;普通</p>
+							<p>C.&nbsp;偶尔</p>
+						</div>
+						<div class="answer-list">
+							<a class="answer answer-a" data-score="5">A</a>
+							<a class="answer answer-b" data-score="3">B</a>
+							<a class="answer answer-c" data-score="1">C</a>
+						</div>
+					</div>
+					<div class="que que-2 hide">
+						<div class="q">
+							2. 你是否会自己一个人自言自语？
+						</div>
+						<div class="opts">
+							<p>A.&nbsp;经常</p>
+							<p>B.&nbsp;偶尔</p>
+							<p>C.&nbsp;不太会</p>
+						</div>
+						<div class="answer-list">
+							<a class="answer answer-a" data-score="5">A</a>
+							<a class="answer answer-b" data-score="3">B</a>
+							<a class="answer answer-c" data-score="1">C</a>
+						</div>
+					</div>
+					<div class="que que-3 hide">
+						<div class="q">
+							3. 心情不好的时候，你会到外头跑步透透气吗？
+						</div>
+						<div class="opts">
+							<p>A.&nbsp;会</p>
+							<p>B.&nbsp;偶尔会</p>
+							<p>C.&nbsp;几乎不会</p>
+						</div>
+						<div class="answer-list">
+							<a class="answer answer-a" data-score="1">A</a>
+							<a class="answer answer-b" data-score="3">B</a>
+							<a class="answer answer-c" data-score="5">C</a>
+						</div>
+					</div>
+					<div class="que que-4 hide">
+						<div class="q">
+							4. 你是否曾动过自杀的念头？
+						</div>
+						<div class="opts">
+							<p>A.&nbsp;经常</p>
+							<p>B.&nbsp;偶尔</p>
+							<p>C.&nbsp;不会</p>
+						</div>
+						<div class="answer-list">
+							<a class="answer answer-a" data-score="5">A</a>
+							<a class="answer answer-b" data-score="3">B</a>
+							<a class="answer answer-c" data-score="1">C</a>
+						</div>
+					</div>
+					<div class="que que-5 hide">
+						<div class="q">
+							5. 觉得电视上的综艺节目越来越无聊？
+						</div>
+						<div class="opts">
+							<p>A.&nbsp;很无聊</p>
+							<p>B.&nbsp;有些很无聊</p>
+							<p>C.&nbsp;都很有趣</p>
+						</div>
+						<div class="answer-list">
+							<a class="answer answer-a" data-score="5">A</a>
+							<a class="answer answer-b" data-score="3">B</a>
+							<a class="answer answer-c" data-score="1">C</a>
+						</div>
+					</div>
+					<div class="que que-6 hide">
+						<div class="q">
+							6. 即使到了度假胜地，依旧没有很开心的感觉？
+						</div>
+						<div class="opts">
+							<p>A.&nbsp;不会</p>
+							<p>B.&nbsp;还好，有时会很开心</p>
+							<p>C.&nbsp;几乎开心不起来</p>
+						</div>
+						<div class="answer-list">
+							<a class="answer answer-a" data-score="1">A</a>
+							<a class="answer answer-b" data-score="3">B</a>
+							<a class="answer answer-c" data-score="5">C</a>
+						</div>
+					</div>
+					<div class="que que-7 hide">
+						<div class="q">
+							7. 你有没有想起来很气的事，气到几乎想杀掉他人？
+						</div>
+						<div class="opts">
+							<p>A.&nbsp;2个以内</p>
+							<p>B.&nbsp;3~5个以内</p>
+							<p>C.&nbsp;超过5个</p>
+						</div>
+						<div class="answer-list">
+							<a class="answer answer-a" data-score="1">A</a>
+							<a class="answer answer-b" data-score="3">B</a>
+							<a class="answer answer-c" data-score="5">C</a>
+						</div>
+					</div>
+					<div class="que que-8 hide">
+						<div class="q">
+							8. 你是否觉得自己常常很慵懒、身体虚弱无力，可是到医院又检查不出毛病？
+						</div>
+						<div class="opts">
+							<p>A.&nbsp;常常会这样</p>
+							<p>B.&nbsp;有时会比较没干劲</p>
+							<p>C.&nbsp;不太会，常常充满活力</p>
+						</div>
+						<div class="answer-list">
+							<a class="answer answer-a" data-score="5">A</a>
+							<a class="answer answer-b" data-score="3">B</a>
+							<a class="answer answer-c" data-score="1">C</a>
+						</div>
+					</div>
+					<div class="que que-9 hide">
+						<div class="q">
+							9. 遇到路上横冲直撞、不守交通规则的驾驶人，你会有怎样的反应？
+						</div>
+						<div class="opts">
+							<p>A.&nbsp;真想毙了那些人渣</p>
+							<p>B.&nbsp;为什么我这么倒霉？</p>
+							<p>C.&nbsp;北京太挤了，真想移民到国外</p>
+						</div>
+						<div class="answer-list">
+							<a class="answer answer-a" data-score="5">A</a>
+							<a class="answer answer-b" data-score="3">B</a>
+							<a class="answer answer-c" data-score="1">C</a>
+						</div>
+					</div>
+					<div class="que que-10 hide">
+						<div class="q">
+							10. 觉得每天作同样的事(例如上班)是一件很烦人的事？
+						</div>
+						<div class="opts">
+							<p>A.&nbsp;实在很烦，有点不想上</p>
+							<p>B.&nbsp;不太会，一样能找到乐趣</p>
+							<p>C.&nbsp;和计划冲突时才会觉得烦</p>
+						</div>
+						<div class="answer-list">
+							<a class="answer answer-a" data-score="5">A</a>
+							<a class="answer answer-b" data-score="1">B</a>
+							<a class="answer answer-c" data-score="3">C</a>
+						</div>
+					</div>
+					<div class="que que-11 hide">
+						<div class="q">
+							11. 你最讨厌底下哪种类型的人？
+						</div>
+						<div class="opts">
+							<p>A.&nbsp;个性自私自利、小气抠门的人</p>
+							<p>B.&nbsp;喜欢夸大其实、一事无成的人</p>
+							<p>C.&nbsp;总是固执己见、不知变通的人</p>
+						</div>
+						<div class="answer-list">
+							<a class="answer answer-a" data-score="5">A</a>
+							<a class="answer answer-b" data-score="1">B</a>
+							<a class="answer answer-c" data-score="3">C</a>
+						</div>
+					</div>
+					<div class="que que-12 last hide">
+						<div class="q">
 							12. 你觉得自己是不是很容易陷入感情或友情的困扰？
 						</div>
 						<div class="opts">
-							<p>A.个性自私自利、小气抠门的人</p>
-							<p>B.喜欢夸大其实、一事无成的人</p>
-							<p>C.总是固执己见、不知变通的人</p>
+							<p>A.&nbsp;很容易，常常会这样</p>
+							<p>B.&nbsp;偶尔会，感情还不错</p>
+							<p>C.&nbsp;不太会，感情都很好</p>
 						</div>
 						<div class="answer-list">
-							<a class="answer answer-a">A</a>
-							<a class="answer answer-b">B</a>
-							<a class="answer answer-c">C</a>
+							<a class="answer answer-a" data-score="5">A</a>
+							<a class="answer answer-b" data-score="3">B</a>
+							<a class="answer answer-c" data-score="1">C</a>
 						</div>
 					</div>
 				</div>
 				<div class="logo"></div>
 			</section>
-			<section class="sec sec-begin">
-				<div class="top"></div>
-				<div class="bottom"></div>
-				<div class="btn-enter"></div>
-			</section>
-			<section class="sec sec-test">
-				<h2 class="title">压力测试</h2>
-				<div class="question">
-					<div class="que que-1">
-						<div class="opts opts-1" data-score="5"></div>
-						<div class="opts opts-2" data-score="3"></div>
-						<div class="opts opts-3" data-score="1"></div>
-					</div>
-					<div class="que que-2 hide">
-						<div class="opts opts-1" data-score="5"></div>
-						<div class="opts opts-2" data-score="3"></div>
-						<div class="opts opts-3" data-score="1"></div>
-					</div>
-					<div class="que que-3 hide">
-						<div class="opts opts-1" data-score="1"></div>
-						<div class="opts opts-2" data-score="3"></div>
-						<div class="opts opts-3" data-score="5"></div>
-					</div>
-					<div class="que que-4 hide">
-						<div class="opts opts-1" data-score="5"></div>
-						<div class="opts opts-2" data-score="3"></div>
-						<div class="opts opts-3" data-score="1"></div>
-					</div>
-					<div class="que que-5 hide">
-						<div class="opts opts-1" data-score="5"></div>
-						<div class="opts opts-2" data-score="3"></div>
-						<div class="opts opts-3" data-score="1"></div>
-					</div>
-					<div class="que que-6 hide">
-						<div class="opts opts-1" data-score="1"></div>
-						<div class="opts opts-2" data-score="3"></div>
-						<div class="opts opts-3" data-score="5"></div>
-					</div>
-					<div class="que que-7 hide">
-						<div class="opts opts-1" data-score="1"></div>
-						<div class="opts opts-2" data-score="3"></div>
-						<div class="opts opts-3" data-score="5"></div>
-					</div>
-					<div class="que que-8 hide">
-						<div class="opts opts-1" data-score="5"></div>
-						<div class="opts opts-2" data-score="3"></div>
-						<div class="opts opts-3" data-score="1"></div>
-					</div>
-					<div class="que que-9 hide">
-						<div class="opts opts-1" data-score="5"></div>
-						<div class="opts opts-2" data-score="3"></div>
-						<div class="opts opts-3" data-score="1"></div>
-					</div>
-					<div class="que que-10 hide">
-						<div class="opts opts-1" data-score="5"></div>
-						<div class="opts opts-2" data-score="1"></div>
-						<div class="opts opts-3" data-score="3"></div>
-					</div>
-					<div class="que que-11 hide">
-						<div class="opts opts-1" data-score="5"></div>
-						<div class="opts opts-2" data-score="1"></div>
-						<div class="opts opts-3" data-score="3"></div>
-					</div>
-					<div class="que que-12 hide last">
-						<div class="opts opts-1" data-score="5"></div>
-						<div class="opts opts-2" data-score="3"></div>
-						<div class="opts opts-3" data-score="1"></div>
-					</div>
-				</div>
-				<div class="logo-mini"></div>
-			</section>
 			<section class="sec sec-result">
-				<div class="result-bg">
-					<div class="result">
-						<span class="score"></span>
-					</div>
+				<div class="result-title"></div>
+				<div class="result">
+					<p class="result-score">
+						你的测试是20分<br>
+						压力指数95%
+					</p>
+					<p class="result-tips">
+						属于重度的身心疲惫，每天迎风奔跑1小时，烦恼将随风一起消逝。
+					</p>
 				</div>
-				<div class="result-arr">
-					<div class="arrow"></div>
-				</div>
-				<div class="logo-mini"></div>
+				<div class="arrow"></div>
+				<div class="logo"></div>
 			</section>
 			<section class="sec sec-switch">
 				<div class="text">
@@ -155,30 +253,30 @@
 				</div>
 				<div class="arrow"></div>
 			</section>
-			<section class="sec sec-slogan">
-				<div class="slogan slogan-1">
-					<div class="text">
-						<p>于是，</p>
-						<p>奔跑成为一种简单而可贵的姿势，</p>
-						<p>蕴涵着不可摧的力量，</p>
-						<p>那就是永远向前的勇气和信念。</p>
-						<p>人生要不断的向前，</p>
-						<p>人生便需要奔跑。</p>
-						<p>——《罗拉快跑》</p>
-					</div>
-					<div class="arrow"></div>
+			<section class="sec sec-slogan slogan-1 hide">
+				<div class="text">
+					<p>于是，</p>
+					<p>奔跑成为一种简单而可贵的姿势，</p>
+					<p>蕴涵着不可摧的力量，</p>
+					<p>那就是永远向前的勇气和信念。</p>
+					<p>人生要不断的向前，</p>
+					<p>人生便需要奔跑。</p>
+					<p>——《罗拉快跑》</p>
 				</div>
-				<div class="slogan slogan-2">
-					<div class="text">
-						<p>长跑后的慢走放松</p>
-						<p>是一种缓慢的奢侈，</p>
-						<p>一种带有深刻疼痛的满足感。</p>
-						<p>——《雨中的3分58秒》</p>
-					</div>
-					<div class="arrow"></div>
+				<div class="arrow"></div>
+			</section>
+			<section class="sec sec-slogan slogan-2 hide">
+				<div class="text">
+					<p>长跑后的慢走放松</p>
+					<p>是一种缓慢的奢侈，</p>
+					<p>一种带有深刻疼痛的满足感。</p>
+					<p>——《雨中的3分58秒》</p>
 				</div>
-				<div class="slogan slogan-3">
-					<div class="text">
+				<div class="arrow"></div>
+			</section>
+			<section class="sec sec-slogan slogan-3 hide">
+				<div class="text">
+					<div class="text-inner">
 						<p>孤灯夜下，一个人跑，表面上看，</p>
 						<p>似乎只有你一个人孤独地奔跑，但</p>
 						<p>是在你灵魂深处，你感觉到有许多</p>
@@ -188,10 +286,12 @@
 						<p>奋勇拼搏。</p>
 						<p>——赵星《挺住，意味着一切》</p>
 					</div>
-					<div class="arrow"></div>
 				</div>
-				<div class="slogan slogan-4">
-					<div class="text">
+				<div class="arrow"></div>
+			</section>
+			<section class="sec sec-slogan slogan-4 hide">
+				<div class="text">
+					<div class="text-inner">
 						<p>长跑选手倒像是冷静稳重的信差，奔</p>
 						<p>跑在田间小径和山林道路上，忍受长</p>
 						<p>达数小时的孤独，就为了执行自己的</p>
@@ -201,10 +301,12 @@
 						<p>年前就是这样，直到今天依旧如此。</p>
 						<p>——《雨中的3分58秒》</p>
 					</div>
-					<div class="arrow"></div>
 				</div>
-				<div class="slogan slogan-5">
-					<div class="text">
+				<div class="arrow"></div>
+			</section>
+			<section class="sec sec-slogan slogan-5 hide">
+				<div class="text">
+					<div class="text-inner">
 						<p>在他内心里，时光总是占据着一个</p>
 						<p>特定的角落——对他来说，一分钟</p>
 						<p>的消逝有各种不同的意义。一分钟</p>
@@ -213,10 +315,12 @@
 						<p>是一小瓢罢了。</p>
 						<p>——《雨中的3分58秒》</p>
 					</div>
-					<div class="arrow"></div>
 				</div>
-				<div class="slogan slogan-6">
-					<div class="text">
+				<div class="arrow"></div>
+			</section>
+			<section class="sec sec-slogan slogan-6 hide">
+				<div class="text">
+					<div class="text-inner">
 						<p>樱花落下的速度是每秒五厘米，雪</p>
 						<p>花落下的速度也是；而我，该用什</p>
 						<p>么样的速度去生活，才能赶上与你</p>
@@ -225,51 +329,21 @@
 						<p>近一厘米。</p>
 						<p>——新海诚《秒速5厘米》</p>
 					</div>
-					<div class="arrow"></div>
 				</div>
-				<div class="slogan slogan-7">
-					<div class="text">
-						<p>如果你不得不跪在地上，如果你承受</p>
-						<p>的压力无法使你站立，那就用双膝奔</p>
-						<p>跑吧。不要害怕双膝会被磨破。只要</p>
-						<p>你做好了所有的准备，幸福的结局就</p>
-						<p>一定会在你磨平双膝前找到你，并亲</p>
-						<p>自将你扶起。世界可能会无视你的独</p>
-						<p>一无二，也可能根本不会承认你的努</p>
-						<p>力，但只要你坚守，世界不可能永远</p>
-						<p>无视你的存在。</p>
-						<p>——《没有翅膀，所以努力奔跑》</p>
-					</div>
-					<div class="arrow"></div>
-				</div>
-				<div class="slogan slogan-8">
-					<div class="text">
-						<p>跑步是一种独特的体验，它融合了人</p>
-						<p>类的两种原始冲动：恐惧与快感。无</p>
-						<p>论是害怕了还是快活了，我们都会去</p>
-						<p>跑步。既是奔跑着逃开不幸，也是奔</p>
-						<p>跑着追寻幸福。</p>
-						<p>——克里斯托弗•麦克杜格尔《天生</p>
-						<p>就会跑》</p>
-					</div>
-					<div class="arrow"></div>
-				</div>
-				<div class="slogan slogan-9">
-					<div class="text">
-						<p>青春是丛林，</p>
-						<p>是荒原，</p>
-						<p>是阳光炙热的奔跑，</p>
-						<p>是大雨滂沱的伫立。</p>
-						<p>——张嘉佳《从你的全世界路过》</p>
-					</div>
-					<div class="arrow"></div>
-				</div>
+				<div class="arrow"></div>
 			</section>
 			<section class="sec sec-end">
-				<div class="end-top"></div>
+				<div class="run-text"></div>
+				<div class="end-desc">
+					释放青春，欢笑为伴，<br>
+					浙江卫视《奔跑吧兄弟》<br>
+					十月开跑，<br>
+					您，准备好了吗？
+				</div>
 				<div class="end-main"></div>
 				<div class="end-run"></div>
 				<div class="end-wx"></div>
+				<div class="end-share">分享朋友圈</div>
 			</section>
 			
 		</div>
