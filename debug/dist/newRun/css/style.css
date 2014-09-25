@@ -1,4 +1,54 @@
-@import url("../../common/css/channel/common.css");
+/*
+ * reset css
+ * 2014.3.24
+ */
+html,body {
+    margin:0;padding:0;
+    color:#333;
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+body {
+    font:14px/1.5 Arial,"微软雅黑","Microsoft Yahei";
+
+}
+h1,h2,h3,h4,h5,h6,
+div,ul,ol,dl,li,dt,dd,
+p,em,i,b,cite,del,strong,pre,code,address,
+form,fieldset,legend,input,textarea,select,
+table,caption,thead,th,tbody,td,tfoot,
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    margin:0;padding:0;
+    box-sizing:border-box;
+    font-size:100%;font-style:normal;font-weight:normal;word-wrap:break-word;
+    outline:none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    display:block;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+table {
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+li {
+    list-style:none;
+}
+img {
+    border:0;
+}
+input,textarea,select {
+    background:#fff;
+}
+a {
+    color:#333;text-decoration:none;outline:none;
+}
+a:hover {
+    color:#2072e9;text-decoration:none;
+}
+
 html,body {background:#666;}
 .wrapper {
     position:relative;
@@ -23,7 +73,7 @@ html,body {background:#666;}
 .sec .arrow {
     position:absolute;bottom:30px;left:50%;
     width:17px;height:11px;margin-left:-13px;
-    background:url(img/arrow_2.png) no-repeat;
+    background:url("img/arrow_2.png") no-repeat;
     -webkit-animation: arrow 2s infinite;
     -moz-animation: arrow 2s infinite;
     -ms-animation: arrow 2s infinite;
@@ -79,18 +129,18 @@ html,body {background:#666;}
 }
 /***/
 .sec-1 {
-    background:url(img/sec01.jpg) no-repeat;
+    background:url("img/sec01.jpg") no-repeat;
     background-size:cover;
 }
 .sec-1 .top {
     position:absolute;top:0;left:0;z-index:4;
     height:61px;width:100%;
-    background:url(img/top.png) repeat-x;
+    background:url("img/top.png") repeat-x;
 }
 .sec-1 .bottom {
     position:absolute;bottom:0;left:0;z-index:2;top:340px;right:0;
     width:100%;
-    background:url(img/board.jpg) no-repeat;
+    background:url("img/board.jpg") no-repeat;
     background-size: cover;
 }
 .sec-1 .mask {
@@ -100,18 +150,18 @@ html,body {background:#666;}
 .sec-1 .mask .mask-bg {
     position: absolute;z-index:3;left:-60px;top:0;
     width:150%;height:360px;
-    background:url(img/mu_2.png) no-repeat left bottom;
+    background:url("img/mu_2.png") no-repeat left bottom;
     background-size:auto 100%;
 }
 .sec-1 .run {
     position:absolute;left:-10px;top:0;z-index:5;
     width:99px;height:370px;
-    background:url(img/run.png) no-repeat left bottom;
+    background:url("img/run.png") no-repeat left bottom;
 }
 .sec-1 .run-light {
     position:absolute;left:0;top:0;z-index:5;
     width:99px;height:370px;
-    background:url(img/run_light.png) no-repeat left bottom;
+    background:url("img/run_light.png") no-repeat left bottom;
     -webkit-animation: man 0.5s infinite;
     -moz-animation: man 0.5s infinite;
     -ms-animation: man 0.5s infinite;
@@ -141,17 +191,17 @@ html,body {background:#666;}
 .sec-1 .running {
     position:absolute;left:-10px;top:0;z-index:5;
     width:99px;height:370px;
-    background:url(img/run.gif) no-repeat left bottom;
+    background:url("img/run.gif") no-repeat left bottom;
 }
 .sec-1 .logo {
     position:absolute;left:50%;z-index:5;
     width:111px;height:58px;margin-left:-56px;
-    background:url(img/logo_mini.png) no-repeat;
+    background:url("img/logo_mini.png") no-repeat;
 }
 .sec-1 .run-text {
     position:absolute;left:50%;top:150px;z-index:5;
     width:212px;height:71px;margin-left:-106px;overflow:hidden;
-    background:url(img/run_text.png) no-repeat;
+    background:url("img/run_text.png") no-repeat;
 }
 .sec-1 .run-text .light-outer {
     position: absolute; left: 8px; top: 5px;
@@ -195,7 +245,7 @@ html,body {background:#666;}
 .sec-showac2 .test-title {
     position:absolute;top:30px;left:50%;
     width:195px;height:62px;margin-left:-98px;
-    background:url(img/test_title.png) no-repeat;
+    background:url("img/test_title.png") no-repeat;
     -webkit-animation: testtitle 2s;
     -moz-animation: testtitle 2s;
     -ms-animation: testtitle 2s;
@@ -205,7 +255,7 @@ html,body {background:#666;}
 .sec-1 .logo-mini {
     position:absolute;left:50%;z-index:5;bottom:20px;
     width:111px;height:58px;margin-left:-56px;
-    background:url(img/logo_mini.png) no-repeat;
+    background:url("img/logo_mini.png") no-repeat;
 }
 @-webkit-keyframes testtitle {
     0% {-webkit-transform: translateY(-120px);}
@@ -367,18 +417,18 @@ html,body {background:#666;}
 }
 /**/
 .sec-test {
-    background:url(img/sec_test.jpg) no-repeat;
+    background:url("img/sec_test.jpg") no-repeat;
     background-size:cover;
 }
 .sec-test .test-title {
     position:absolute;top:30px;left:50%;
     width:195px;height:62px;margin-left:-98px;
-    background:url(img/test_title.png) no-repeat;
+    background:url("img/test_title.png") no-repeat;
 }
 .sec-test .logo {
     position:absolute;left:50%;z-index:5;bottom:20px;
     width:111px;height:58px;margin-left:-56px;
-    background:url(img/logo_mini.png) no-repeat;
+    background:url("img/logo_mini.png") no-repeat;
 }
 .sec-test .question {
     padding-top:110px;
@@ -405,13 +455,13 @@ html,body {background:#666;}
 }
 /**/
 .sec-result {
-    background:url(img/sec_result.jpg) no-repeat;
+    background:url("img/sec_result.jpg") no-repeat;
     background-size:cover;
 }
 .sec-result .result-title {
     position:absolute;top:30px;left:50%;
     width:195px;height:62px;margin-left:-98px;
-    background:url(img/result_title.png) no-repeat;
+    background:url("img/result_title.png") no-repeat;
 }
 .sec-result .result {
     padding-top:110px;
@@ -428,11 +478,11 @@ html,body {background:#666;}
 .sec-result .logo {
     position:absolute;left:50%;z-index:5;bottom:90px;
     width:111px;height:58px;margin-left:-56px;
-    background:url(img/logo_mini.png) no-repeat;
+    background:url("img/logo_mini.png") no-repeat;
 }
 /**/
 .sec-switch {
-    background:url(img/sec_switch.jpg) no-repeat;
+    background:url("img/sec_switch.jpg") no-repeat;
     background-size:cover;
 }
 .sec-switch .text {
@@ -444,7 +494,7 @@ html,body {background:#666;}
 }
 /***/
 .slogan-1 {
-    background:url(img/slogan1.jpg) no-repeat;
+    background:url("img/slogan1.jpg") no-repeat;
     background-size:cover;
 }
 .slogan-1 .text {
@@ -453,7 +503,7 @@ html,body {background:#666;}
     color:#fff;text-align:center;
 }
 .slogan-2 {
-    background:url(img/slogan2.jpg) no-repeat;
+    background:url("img/slogan2.jpg") no-repeat;
     background-size:cover;
 }
 .slogan-2 .text {
@@ -462,7 +512,7 @@ html,body {background:#666;}
     color:#fff;text-align:center;
 }
 .slogan-3 {
-    background:url(img/slogan3.jpg) no-repeat;
+    background:url("img/slogan3.jpg") no-repeat;
     background-size:cover;
 }
 .slogan-3 .text {
@@ -475,7 +525,7 @@ html,body {background:#666;}
     text-align: left;
 }
 .slogan-4 {
-    background:url(img/slogan4.jpg) no-repeat;
+    background:url("img/slogan4.jpg") no-repeat;
     background-size:cover;
 }
 .slogan-4 .text {
@@ -488,7 +538,7 @@ html,body {background:#666;}
     text-align: left;
 }
 .slogan-5 {
-    background:url(img/slogan5.jpg) no-repeat;
+    background:url("img/slogan5.jpg") no-repeat;
     background-size:cover;
 }
 .slogan-5 .text {
@@ -501,7 +551,7 @@ html,body {background:#666;}
     text-align: left;
 }
 .slogan-6 {
-    background:url(img/slogan6.jpg) no-repeat;
+    background:url("img/slogan6.jpg") no-repeat;
     background-size:cover;
 }
 .slogan-6 .text {
@@ -515,13 +565,13 @@ html,body {background:#666;}
 }
 /****/
 .sec-end {
-    background:url(img/sec_end.jpg) no-repeat;
+    background:url("img/sec_end.jpg") no-repeat;
     background-size:cover;
 }
 .sec-end .run-text {
     position:absolute;left:50%;top:10px;
     width:186px;height:65px;margin-left:-93px;
-    background:url(img/end-logo.png) no-repeat;
+    background:url("img/end-logo.png") no-repeat;
 }
 .sec-end .end-desc {
     padding:80px 0 4px;
@@ -530,12 +580,12 @@ html,body {background:#666;}
 .sec-end .end-main {
     position:relative;
     width:100%;height:110px;margin-bottom:5px;
-    background:url(img/end_main.jpg) no-repeat center top;
+    background:url("img/end_main.jpg") no-repeat center top;
     background-size:cover;
 }
 .sec-end .end-wx {
     width:100%;height:100px;margin-bottom:5px;
-    background:url(img/end_wx2.png) no-repeat center top;
+    background:url("img/end_wx2.png") no-repeat center top;
 }
 .sec-end .end-share {
     width: 97px; height: 32px;margin:0 auto;
@@ -548,7 +598,7 @@ html,body {background:#666;}
 .sec-end .end-run {
     position:absolute;bottom:-20px;
     width:100%;height:57px;
-    background:url(img/end_run.png) no-repeat center top;
+    background:url("img/end_run.png") no-repeat center top;
     -webkit-animation: runText 0.5s infinite;
     -moz-animation: runText 0.5s infinite;
     -ms-animation: runText 0.5s infinite;
@@ -583,7 +633,7 @@ html,body {background:#666;}
 /**/
 .share-mask {
     position:fixed;left:0;right:0;top:0;bottom:0;z-index:200;
-    background:rgba(0,0,0,0.85) url(img/share_tips.png) no-repeat right top;
+    background:rgba(0,0,0,0.85) url("img/share_tips.png") no-repeat right top;
     display: none;
 }
 .music {

@@ -1,0 +1,54 @@
+//当前项目配置
+{
+	config:{
+		cssjoin:{
+			join:{
+				//要合并的样式文件
+				files:{
+					// test
+					'./../debug/dist/<%=pkg.name%>/css/style.css':['css/style.css']
+					
+					
+				}
+			}
+		},
+	
+		concat:{
+			//要合并的js文件
+			foo:{
+				src: ['js/channel/zepto.js','js/channel/touch.js','js/channel/fx.js','js/channel/run.js'],
+				dest:'./../debug/dist/<%=pkg.name%>/js/channel/run.js'
+				
+			}
+		},
+		
+		cssmin:{
+			cssfiles:{
+				expand : true,
+				cwd    : "./../debug/dist/<%=pkg.name%>/",
+				src    : "**/*.css",
+				dest   : "./../dist/<%=pkg.name%>/"
+			}
+		},
+		
+		uglify:{
+			foo:{
+				files:[{
+					expand:true,
+					cwd:'./../debug/dist/<%=pkg.name%>/js/channel/',
+					src:'**/*.js',
+					dest:"./../dist/<%=pkg.name%>/js/channel/"
+				}]
+			}
+		}
+	},
+	
+	loadTask:function(){
+		grunt.loadNpmTasks('grunt-cssjoin');
+		grunt.loadNpmTasks('grunt-contrib-cssmin');
+		grunt.loadNpmTasks('grunt-contrib-concat');
+		grunt.loadNpmTasks('grunt-contrib-uglify');
+	},
+	registerTask:function(){
+	}
+}

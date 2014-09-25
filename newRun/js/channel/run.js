@@ -106,15 +106,14 @@ function onMove (e, oe) {
         var temp = margin + e.pageY - startY;
         var diff = e.pageY - startY;
         var zoom=1;
-        console.info(curPage);
         if(diff > 0) {
 			zoom -= diff/pageHeight*0.4;
-	        $(".js-scroll").eq(curPage-1).css("-webkit-transform", "scale("+zoom+")");
-	        $(".js-scroll").eq(curPage-1).css("-webkit-transform-origin", "center top");
+	        $(".js-scroll").eq(curPage).css("-webkit-transform", "scale("+zoom+")");
+	        $(".js-scroll").eq(curPage).css("-webkit-transform-origin", "center top");
         } else {
         	zoom -= -diff/pageHeight*0.4;
-	        $(".js-scroll").eq(curPage-1).css("-webkit-transform", "scale("+zoom+")");
-	        $(".js-scroll").eq(curPage-1).css("-webkit-transform-origin", "center bottom");
+	        $(".js-scroll").eq(curPage).css("-webkit-transform", "scale("+zoom+")");
+	        $(".js-scroll").eq(curPage).css("-webkit-transform-origin", "center bottom");
         }
         
         
@@ -183,7 +182,8 @@ function animatePage( newPage ){
     movePrevent = true;
     setTimeout(function(){
     	movePrevent=false;
-    	$(".js-scroll").css("-webkit-transform","scale(1)");
+    	$(".js-scroll").attr("style","");
+    	$(".js-scroll").css("height",pageHeight);
     }, 300 );
 
     // 每页动画
@@ -306,7 +306,7 @@ function showResult(score){
 }
 
 function showSlogan(MaxNum) {
-	var MaxNum = 6
+	var MaxNum = MaxNum || 6
 	,	ranNum = parseInt(Math.random()*(MaxNum+1))
 	,	$slogan = $secSlogan
 	,	i
@@ -318,9 +318,9 @@ function showSlogan(MaxNum) {
 	for(i=0; i<len; i++) {
 		curIndex = ranNum + i;
 		if(curIndex < MaxNum) {
-			$curEle = $slogan.eq(curIndex).show();
+			$curEle = $slogan.eq(curIndex).show().removeClass("hide");
 		} else {
-			$curEle= $slogan.eq(curIndex - MaxNum).show();
+			$curEle= $slogan.eq(curIndex - MaxNum).show().removeClass("hide");
 		}
 		
 		$curEle.addClass("curSlogan");
@@ -347,15 +347,20 @@ function showText($ele) {
 	},(i+1)*500);
 }
 
+function getDesc(){
+	var desc = mainDesc= shareDesc || "释放青春，欢笑为伴，浙江卫视《奔跑吧兄弟》十月开跑，你，准备好了吗？";
+	return desc;
+}
 function onBridgeReady() {
 	var t = new Date().getTime(),
 		mainTitle="奔跑吧兄弟",
 	    mainDesc= shareDesc || "释放青春，欢笑为伴，浙江卫视《奔跑吧兄弟》十月开跑，你，准备好了吗？",
-	    mainURL="http://dev.hotkeypower.com/lfhtml/running/views/run.html?v=" + t,
-	    mainImgUrl= "http://dev.hotkeypower.com/lfhtml/running/images/run_share.jpg";
+	    mainURL="http://dev.hotkeypower.com/lfhtml/newRun/views/run.html",
+	    mainImgUrl= "http://dev.hotkeypower.com/lfhtml/newRun/images/run_share.jpg";
 	
 	//转发朋友圈
 	WeixinJSBridge.on("menu:share:timeline", function(e) {
+		mainDesc = getDesc();
 	    var data = {
 	        img_url:mainImgUrl,
 	        img_width: "120",
@@ -371,6 +376,7 @@ function onBridgeReady() {
 	});
 	//同步到微博
 	WeixinJSBridge.on("menu:share:weibo", function() {
+		mainDesc = getDesc();
 	    WeixinJSBridge.invoke("shareWeibo", {
 	        "content": mainDesc,
 	        "url": mainURL
@@ -380,6 +386,7 @@ function onBridgeReady() {
 	});
 	//分享给朋友
 	WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+		mainDesc = getDesc();
 	    WeixinJSBridge.invoke("sendAppMessage", {
 	        img_url: mainImgUrl,
 	        img_width: "120",
