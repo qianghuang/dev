@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="container js-disabled-scroll">
+		<div class="container js-disabled-scroll"><!-- js-disabled-scroll-->
 			<section class="sec sec-1">
 				<div class="ac-1">
 					<div class="top"></div>
@@ -22,7 +22,11 @@
 					</div>
 					<div class="running hide"></div>
 					<div class="logo"></div>
-					<div class="run-text"></div>
+					<div class="run-text">
+						<div class="light-outer">
+							<div class="sec-light"></div>
+						</div>
+					</div>
 					<div class="btn-pull"></div>
 					<article class="anim preface">
 						<p class="p1">上帝会偏爱那些勇敢的、多情的、始终坚定的人，你不要怀疑不要犹豫，只要攥紧梦想勇敢奔跑，总有一天会看到绿洲。</p>
@@ -39,7 +43,7 @@
 						你的疲惫究竟达到什么程度了？来做个测试看看吧 !
 					</div>
 					<div class="btn-begin">开始测试</div>
-					<div class="logo"></div>
+					<div class="logo-mini"></div>
 				</div>
 			</section>
 			<section class="sec sec-test">
@@ -228,7 +232,7 @@
 				</div>
 				<div class="logo"></div>
 			</section>
-			<section class="sec sec-result">
+			<section class="sec sec-result js-scroll">
 				<div class="result-title"></div>
 				<div class="result">
 					<p class="result-score">
@@ -242,7 +246,7 @@
 				<div class="arrow"></div>
 				<div class="logo"></div>
 			</section>
-			<section class="sec sec-switch">
+			<section class="sec sec-switch  js-scroll">
 				<div class="text">
 					<p><span class="hl">奔跑，</span></p>
 					<p>是一种行为，</p>
@@ -318,7 +322,7 @@
 				</div>
 				<div class="arrow"></div>
 			</section>
-			<section class="sec sec-slogan slogan-6 hide">
+			<section class="sec sec-slogan slogan-6">
 				<div class="text">
 					<div class="text-inner">
 						<p>樱花落下的速度是每秒五厘米，雪</p>
@@ -332,7 +336,7 @@
 				</div>
 				<div class="arrow"></div>
 			</section>
-			<section class="sec sec-end">
+			<section class="sec sec-end js-scroll">
 				<div class="run-text"></div>
 				<div class="end-desc">
 					释放青春，欢笑为伴，<br>
@@ -340,13 +344,17 @@
 					十月开跑，<br>
 					您，准备好了吗？
 				</div>
-				<div class="end-main"></div>
-				<div class="end-run"></div>
+				<div class="end-main">
+					<div class="end-run"></div>
+				</div>
 				<div class="end-wx"></div>
-				<div class="end-share">分享朋友圈</div>
+				<div class="end-share" id="js-share-button">分享朋友圈</div>
 			</section>
 			
 		</div>
+	</div>
+	<div id="shareMask" class="share-mask">
+		
 	</div>
 	<script type="text/javascript" src="../js/channel/zepto.js"></script>
 	<script type="text/javascript" src="../js/channel/touch.js"></script>

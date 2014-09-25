@@ -104,6 +104,20 @@ function onMove (e, oe) {
     event.preventDefault();
     if( scrollPrevent==false && e.pageY!=startY){
         var temp = margin + e.pageY - startY;
+        var diff = e.pageY - startY;
+        var zoom=1;
+        console.info(curPage);
+        if(diff > 0) {
+			zoom -= diff/pageHeight*0.4;
+	        $(".js-scroll").eq(curPage-1).css("-webkit-transform", "scale("+zoom+")");
+	        $(".js-scroll").eq(curPage-1).css("-webkit-transform-origin", "center top");
+        } else {
+        	zoom -= -diff/pageHeight*0.4;
+	        $(".js-scroll").eq(curPage-1).css("-webkit-transform", "scale("+zoom+")");
+	        $(".js-scroll").eq(curPage-1).css("-webkit-transform-origin", "center bottom");
+        }
+        
+        
         $(".container").css("-webkit-transform", "matrix(1, 0, 0, 1, 0, "+temp+")");
         var b =  lineHeight / secHeight * temp;
         $(".line").css("-webkit-transform", "matrix(1, 0, 0, 1, 0, "+b+")");
@@ -167,7 +181,10 @@ function animatePage( newPage ){
     });
 
     movePrevent = true;
-    setTimeout("movePrevent=false;", 300 );
+    setTimeout(function(){
+    	movePrevent=false;
+    	$(".js-scroll").css("-webkit-transform","scale(1)");
+    }, 300 );
 
     // 每页动画
     /*
@@ -191,7 +208,10 @@ var $sec1 = $(".sec-1")
 ,	$secEnd = $(".sec-end")
 ,	pageW = $(window).width()
 ,	$allArr = $(".arrow")
-,	score = 0;
+,	score = 0
+,	shareDesc
+,	$shareMask = $("#shareMask")
+,	$shareBtn = $("#js-share-button")
 ;
 	
 $(".run").on("click",function(){
@@ -215,10 +235,10 @@ $(".run").on("click",function(){
 	},500);
 	$runing.animate({
 		left:pageW
-	},1000*8);
+	},1000*5);
 	$mask.animate({
 		left:pageW
-	},1000*8, function(){
+	},1000*5, function(){
 		$sec1.addClass("sec-showac1");
 		setTimeout(function(){
 			$sec1.addClass("sec-showac2");
@@ -231,6 +251,12 @@ $(".run").on("click",function(){
 
 $(".btn-begin").on("click", function(){
 	animatePage(1);
+});
+$shareBtn.on("touchstart", function(){
+	$shareMask.show();	
+});
+$shareMask.on("touchstart", function(){
+	$shareMask.hide();
 });
 
 $secTest.find(".answer").on("click", function(){
@@ -260,11 +286,19 @@ function showResult(score){
 		, '<p class="result-score">你的测试是'+score+'分<br> 压力指数80% </p> <p class="result-tips"> 属于身心疲惫，每天慢速长跑45分钟，释放活力，寻回自我。 </p>'
 		, '<p class="result-score">你的测试是'+score+'分<br> 压力指数95% </p> <p class="result-tips"> 属于重度的身心疲惫，每天迎风奔跑1小时，烦恼将随风一起消逝。 </p>'
 	];
+	var desc =[
+		  '我的压力指数是20%,只是一点小疲惫，你需要经常到户外散步或慢跑来让自己放松心情。'
+		, '我的压力指数是40%,有些轻度疲惫，你需要每天坚持跑行锻炼20分钟，让自己缓解压力寻回健康。'
+		, '我的压力指数是60%,疲惫的程度有些严重，每天跑步30分钟，呼吸些新鲜的空气。'
+		, '我的压力指数是80%,属于身心疲惫，每天慢速长跑45分钟，释放活力，寻回自我。'
+		, '我的压力指数是95%,属于重度的身心疲惫，每天迎风奔跑1小时，烦恼将随风一起消逝。'
+	];
 	
 	
 	for(var i=0,len=rule.length; i < len; i++) {
 		if(score < rule[i]) {
 			$secResult.find(".result").html(result[i]);
+			shareDesc = desc[i];
 			//$resultText.addClass(styResult[i]);
 			break;
 		}
@@ -290,6 +324,7 @@ function showSlogan(MaxNum) {
 		}
 		
 		$curEle.addClass("curSlogan");
+		$curEle.addClass("js-scroll");
 	}
 	
 	$(".curSlogan").eq(len-1).addClass("lastSlogan");
@@ -315,9 +350,9 @@ function showText($ele) {
 function onBridgeReady() {
 	var t = new Date().getTime(),
 		mainTitle="奔跑吧兄弟",
-	    mainDesc="《奔跑吧兄弟》是浙江卫视全新推出的大型户外竞技真人秀节目",
+	    mainDesc= shareDesc || "释放青春，欢笑为伴，浙江卫视《奔跑吧兄弟》十月开跑，你，准备好了吗？",
 	    mainURL="http://dev.hotkeypower.com/lfhtml/running/views/run.html?v=" + t,
-	    mainImgUrl= "http://dev.hotkeypower.com/lfhtml/running/images/run_share.png";
+	    mainImgUrl= "http://dev.hotkeypower.com/lfhtml/running/images/run_share.jpg";
 	
 	//转发朋友圈
 	WeixinJSBridge.on("menu:share:timeline", function(e) {
