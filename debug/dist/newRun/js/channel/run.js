@@ -2042,7 +2042,6 @@ function animatePage( newPage ){
     if(newPage>6){
         newPage = 6;
     }
-    console.info(curPage);
     curPage = newPage;
     var newMarginTop = newPage * (-pageHeight);
     $(".container").css({
@@ -2133,13 +2132,13 @@ $(".btn-pull").on("click",function(){
 $(".btn-begin").on("click", function(){
 	animatePage(2);
 });
-$shareBtn.on("touchstart", function(){
+$shareBtn.on("click", function(){
 	$shareMask.show();	
 });
-$shareMask.on("touchstart", function(){
+$shareMask.on("click", function(){
 	$shareMask.hide();
 });
-$("#musicPlay").on("touchstart", function(){
+$("#musicPlay").on("click", function(){
 	var bgMusic = document.getElementById("bgMusic");
 	if($(this).hasClass("music-ico-on")) {
 		bgMusic.pause();
