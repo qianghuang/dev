@@ -21,7 +21,7 @@ html,body {background:#666;}
 }
 .drag{-webkit-transition:none;transition:none;}
 .sec .arrow {
-    position:absolute;bottom:30px;left:50%;
+    position:absolute;bottom:30px;left:50%;z-index:6;
     width:17px;height:11px;margin-left:-13px;
     background:url(img/arrow_2.png) no-repeat;
     -webkit-animation: arrow 2s infinite;
@@ -90,7 +90,8 @@ html,body {background:#666;}
     to {-webkit-transform:rotateZ(-360deg)}
 }
 /***/
-.sec-1 {
+.sec-1,
+.sec-2 {
     background:url(img/sec01.jpg) no-repeat;
     background-size:cover;
 }
@@ -184,6 +185,9 @@ html,body {background:#666;}
     width:100%;padding:0 40px;
     color:#fff;
     opacity:0;
+}
+.sec-1 .arrow {
+    display:none;
 }
 .sec-1 .preface .p1 {
     padding-bottom:20px;
@@ -381,7 +385,7 @@ html,body {background:#666;}
 .sec-showac2 .btn-begin {
     position:absolute;bottom:100px;left:50%;z-index:5;
     border:1px solid rgba(255,255,255,0.8);border-radius:4px;
-    width:96px;height:30px;margin-left:-48px;
+    width:96px;height:30px;margin-left:-48px;overflow:hidden;
     display:block;
     color:#fff;line-height:28px;font-size:18px;text-align:center;
 }

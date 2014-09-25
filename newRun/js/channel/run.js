@@ -107,6 +107,7 @@ function onMove (e, oe) {
         var diff = e.pageY - startY;
         var zoom=1;
         if(diff > 0) {
+        	if(curPage == 2) return;
 			zoom -= diff/pageHeight*0.4;
 	        $(".js-scroll").eq(curPage).css("-webkit-transform", "scale("+zoom+")");
 	        $(".js-scroll").eq(curPage).css("-webkit-transform-origin", "center top");
@@ -140,6 +141,9 @@ function onEnd (e) {
             animatePage(curPage);
         }else{
         	if(endY>startY){
+        		if(curPage == 2) {
+        			return;
+        		}
         		prevPage();
         	}else{
         		nextPage();
@@ -167,7 +171,7 @@ function animatePage( newPage ){
     if(newPage>6){
         newPage = 6;
     }
-
+    console.info(curPage);
     curPage = newPage;
     var newMarginTop = newPage * (-pageHeight);
     $(".container").css({
@@ -181,6 +185,9 @@ function animatePage( newPage ){
 
     movePrevent = true;
     setTimeout(function(){
+    	if(curPage == 1) {
+    		$(".container").addClass("js-disabled-scroll");
+    	}
     	movePrevent=false;
     	$(".js-scroll").attr("style","");
     	$(".js-scroll").css("height",pageHeight);
@@ -243,16 +250,17 @@ $(".btn-pull").on("click",function(){
 	},1000*5, function(){
 		$sec1.addClass("sec-showac1");
 		setTimeout(function(){
-			$sec1.addClass("sec-showac2");
+			//$sec1.addClass("sec-showac2");
 		}, 1000*2);
 		$arrow.show();
+		$(".container").removeClass("js-disabled-scroll");
 	});
 	
 });
 
 
 $(".btn-begin").on("click", function(){
-	animatePage(1);
+	animatePage(2);
 });
 $shareBtn.on("touchstart", function(){
 	$shareMask.show();	
@@ -299,8 +307,8 @@ function showResult(score){
 		, '<p class="result-score">你的测试是'+score+'分<br> 压力指数95% </p> <p class="result-tips"> 属于重度的身心疲惫，每天迎风奔跑1小时，烦恼将随风一起消逝。 </p>'
 	];
 	var desc =[
-		  '我的压力指数是20%,只是一点小疲惫，你需要经常到户外散步或慢跑来让自己放松心情。'
-		, '我的压力指数是40%,有些轻度疲惫，你需要每天坚持跑行锻炼20分钟，让自己缓解压力寻回健康。'
+		  '我的压力指数是20%,只是一点小疲惫，我需要经常到户外散步或慢跑来让自己放松心情。'
+		, '我的压力指数是40%,有些轻度疲惫，我需要每天坚持跑行锻炼20分钟，让自己缓解压力寻回健康。'
 		, '我的压力指数是60%,疲惫的程度有些严重，每天跑步30分钟，呼吸些新鲜的空气。'
 		, '我的压力指数是80%,属于身心疲惫，每天慢速长跑45分钟，释放活力，寻回自我。'
 		, '我的压力指数是95%,属于重度的身心疲惫，每天迎风奔跑1小时，烦恼将随风一起消逝。'
@@ -322,7 +330,7 @@ function showSlogan(MaxNum) {
 	,	ranNum = parseInt(Math.random()*(MaxNum+1))
 	,	$slogan = $secSlogan
 	,	i
-	,	len = 3
+	,	len = 2
 	,	curIndex
 	,	$curEle
 	;
