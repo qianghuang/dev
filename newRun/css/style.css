@@ -77,6 +77,18 @@ html,body {background:#666;}
     20%  {left:110%;opacity:0.5}
     to   {left:110%;opacity: 0;}
 }
+.music-ico {
+    position:fixed;right:10px;top:10px;z-index:100;
+    width:27px;height:28px;
+    background:url(img/music_ico.png) no-repeat;
+}
+.music-ico-on {
+    -webkit-animation: music 1.5s linear infinite;
+}
+@-webkit-keyframes music {
+    from {-webkit-transform:rotateZ(0deg)}
+    to {-webkit-transform:rotateZ(-360deg)}
+}
 /***/
 .sec-1 {
     background:url(img/sec01.jpg) no-repeat;
@@ -158,9 +170,14 @@ html,body {background:#666;}
     width: 195px; height: 56px;overflow:hidden;
 }
 .sec-1 .btn-pull {
-    position:absolute;left:50%;bottom:20px;z-index: 5;
-    width:123px;height:45px;margin-left:-61px;
+    position:absolute;left:50%;bottom:40px;z-index: 5;
+    width:107px;height:40px;margin-left:-54px;
     background:url(img/btn_pull.png) no-repeat;
+}
+.sec-1 .sub-title {
+    position:absolute;left:0;top:220px;z-index:5;
+    width:100%;
+    text-align:center;font-size:18px;font-weight:bold;color:#fff;
 }
 .sec-1 .preface {
     position:absolute;top:120px;z-index:2;
@@ -187,6 +204,9 @@ html,body {background:#666;}
 }
 .sec-showac2 .bottom {
     transform:translateY(90px);
+    opacity: 0;
+}
+.sec-showac2 .sub-title {
     opacity: 0;
 }
 .sec-showac2 .ac-2 {
@@ -590,6 +610,9 @@ html,body {background:#666;}
 	width:0;height:0;overflow:hidden;
 }
 @media screen and (min-height:481px) and (max-height:640px) {
+    .sec-1 .btn-pull {
+        bottom:60px;
+    }
     .sec-1 .mask {
         height:410px;
     }

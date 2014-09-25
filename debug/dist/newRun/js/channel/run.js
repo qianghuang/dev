@@ -2085,18 +2085,20 @@ var $sec1 = $(".sec-1")
 ,	$shareBtn = $("#js-share-button")
 ;
 	
-$(".run").on("click",function(){
+$(".btn-pull").on("click",function(){
 	var $run = $sec1.find(".run")
 	,	$runing = $sec1.find(".running")
 	,	$logo = $sec1.find(".logo")
 	,	$runText = $sec1.find(".run-text")
 	,	$mask = $sec1.find(".mask")
 	,	$arrow = $sec1.find(".arrow")
+	,	$subTitle = $sec1.find(".sub-title")
 	;
 	
 	$(this).hide();
 	$run.hide();
 	$runing.show();
+	$subTitle.css({"opacity":0});
 	
 	$logo.animate({
 		top:-700
@@ -2128,6 +2130,16 @@ $shareBtn.on("touchstart", function(){
 });
 $shareMask.on("touchstart", function(){
 	$shareMask.hide();
+});
+$("#musicPlay").on("touchstart", function(){
+	var bgMusic = document.getElementById("bgMusic");
+	if($(this).hasClass("music-ico-on")) {
+		bgMusic.pause();
+		$(this).removeClass("music-ico-on");		
+	} else {
+		$(this).addClass("music-ico-on");		
+		bgMusic.play();
+	}
 });
 
 $secTest.find(".answer").on("click", function(){
