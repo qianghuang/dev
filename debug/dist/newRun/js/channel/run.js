@@ -2245,8 +2245,8 @@ function onBridgeReady() {
 	var t = new Date().getTime(),
 		mainTitle="奔跑吧兄弟",
 	    mainDesc= shareDesc || "释放青春，欢笑为伴，浙江卫视《奔跑吧兄弟》十月开跑，你，准备好了吗？",
-	    mainURL="http://dev.hotkeypower.com/lfhtml/newRun/views/run.html",
-	    mainImgUrl= "http://dev.hotkeypower.com/lfhtml/newRun/images/run_share.jpg";
+	    mainURL="http://dev.hotkeypower.com/lfhtml/run3/views/run.html",
+	    mainImgUrl= "http://dev.hotkeypower.com/lfhtml/run3/images/run_share.jpg";
 	
 	//转发朋友圈
 	WeixinJSBridge.on("menu:share:timeline", function(e) {
