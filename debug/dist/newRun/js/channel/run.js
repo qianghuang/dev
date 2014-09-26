@@ -2177,11 +2177,11 @@ function showResult(score){
 		, '<p class="result-score">你的测试是'+score+'分<br> 压力指数95% </p> <p class="result-tips"> 属于重度的身心疲惫，每天迎风奔跑1小时，烦恼将随风一起消逝。 </p>'
 	];
 	var desc =[
-		  '我的压力指数是20%,只是一点小疲惫，我需要经常到户外散步或慢跑来让自己放松心情。'
-		, '我的压力指数是40%,有些轻度疲惫，我需要每天坚持跑行锻炼20分钟，让自己缓解压力寻回健康。'
-		, '我的压力指数是60%,疲惫的程度有些严重，每天跑步30分钟，呼吸些新鲜的空气。'
-		, '我的压力指数是80%,属于身心疲惫，每天慢速长跑45分钟，释放活力，寻回自我。'
-		, '我的压力指数是95%,属于重度的身心疲惫，每天迎风奔跑1小时，烦恼将随风一起消逝。'
+		  '我的压力指数是20%,只是一点小疲惫，需要经常到户外散步或慢跑来让自己放松心情。'
+		, '我的压力指数是40%,有些轻度疲惫，需要每天坚持跑行锻炼20分钟，让自己缓解压力寻回健康。'
+		, '我的压力指数是60%,疲惫的程度有些严重，需要每天跑步30分钟，呼吸些新鲜的空气。'
+		, '我的压力指数是80%,属于身心疲惫，需要每天慢速长跑45分钟，释放活力，寻回自我。'
+		, '我的压力指数是95%,属于重度的身心疲惫，需要每天迎风奔跑1小时，烦恼将随风一起消逝。'
 	];
 	
 	
@@ -2238,13 +2238,13 @@ function showText($ele) {
 }
 
 function getDesc(){
-	var desc = mainDesc= shareDesc || "释放青春，欢笑为伴，浙江卫视《奔跑吧兄弟》十月开跑，你，准备好了吗？";
+	var desc = mainDesc= shareDesc || "测测你是不是一个容易崩溃的人";
 	return desc;
 }
 function onBridgeReady() {
 	var t = new Date().getTime(),
 		mainTitle="奔跑吧兄弟",
-	    mainDesc= shareDesc || "释放青春，欢笑为伴，浙江卫视《奔跑吧兄弟》十月开跑，你，准备好了吗？",
+	    mainDesc= shareDesc || "测测你是不是一个容易崩溃的人",
 	    mainURL="http://dev.hotkeypower.com/lfhtml/run3/views/run.html",
 	    mainImgUrl= "http://dev.hotkeypower.com/lfhtml/run3/images/run_share.jpg";
 	
