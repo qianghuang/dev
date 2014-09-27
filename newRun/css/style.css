@@ -572,7 +572,7 @@ html,body {background:#666;}
 .sec-end .end-run {
     position:absolute;bottom:-20px;
     width:100%;height:57px;
-    background:url(img/end_run.png) no-repeat center top;
+    background:url(img/end_run_2.png) no-repeat center top;
     -webkit-animation: runText 0.5s infinite;
     -moz-animation: runText 0.5s infinite;
     -ms-animation: runText 0.5s infinite;

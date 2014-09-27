@@ -374,7 +374,7 @@ function onBridgeReady() {
 	var t = new Date().getTime(),
 		mainTitle="奔跑吧兄弟",
 	    mainDesc= shareDesc || "测测你是不是一个容易崩溃的人",
-	    mainURL="http://dev.hotkeypower.com/lfhtml/run3/views/run.html?v7",
+	    mainURL="http://dev.hotkeypower.com/lfhtml/run3/views/run.html?v8",
 	    mainImgUrl= "http://dev.hotkeypower.com/lfhtml/run3/images/run_share.jpg";
 	
 	//转发朋友圈
