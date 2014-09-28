@@ -2251,6 +2251,7 @@ function onBridgeReady() {
 	//转发朋友圈
 	WeixinJSBridge.on("menu:share:timeline", function(e) {
 		mainDesc = getDesc();
+		var tlDesc = "奔跑吧兄弟:" + getDesc();
 	    var data = {
 	        img_url:mainImgUrl,
 	        img_width: "120",
@@ -2258,10 +2259,10 @@ function onBridgeReady() {
 	        link: mainURL,
 	        //desc这个属性要加上，虽然不会显示，但是不加暂时会导致无法转发至朋友圈，
 	        desc: mainDesc,
-	        title: mainTitle
+	        title: tlDesc
 	    };
 	    WeixinJSBridge.invoke("shareTimeline", data, function(res) {
-	        WeixinJSBridge.log(res.err_msg)
+	        WeixinJSBridge.log(res.err_msg);
 	    });
 	});
 	//同步到微博

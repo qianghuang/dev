@@ -279,7 +279,7 @@ html,body {background:#666;}
 .sec-1 .logo-mini {
     position:absolute;left:50%;z-index:5;bottom:20px;
     width:111px;height:58px;margin-left:-56px;
-    background:url(img/logo_mini.png) no-repeat;
+    background:url("img/logo_mini.png") no-repeat;
 }
 @-webkit-keyframes testtitle {
     0% {-webkit-transform: translateY(-120px);}
@@ -447,12 +447,12 @@ html,body {background:#666;}
 .sec-test .test-title {
     position:absolute;top:30px;left:50%;
     width:195px;height:62px;margin-left:-98px;
-    background:url(img/test_title.png) no-repeat;
+    background:url("img/test_title.png") no-repeat;
 }
 .sec-test .logo {
     position:absolute;left:50%;z-index:5;bottom:20px;
     width:111px;height:58px;margin-left:-56px;
-    background:url(img/logo_mini.png) no-repeat;
+    background:url("img/logo_mini.png") no-repeat;
 }
 .sec-test .question {
     padding-top:110px;
@@ -502,7 +502,7 @@ html,body {background:#666;}
 .sec-result .logo {
     position:absolute;left:50%;z-index:5;bottom:90px;
     width:111px;height:58px;margin-left:-56px;
-    background:url(img/logo_mini.png) no-repeat;
+    background:url("img/logo_mini.png") no-repeat;
 }
 /**/
 .sec-switch {
