@@ -158,8 +158,8 @@ html,body {background:#666;}
 }
 .sec-1 .logo {
     position:absolute;left:50%;z-index:5;
-    width:111px;height:58px;margin-left:-56px;
-    background:url(img/logo_mini.png) no-repeat;
+    width:155px;height:82px;margin-left:-78px;
+    background:url(img/logo_m.png) no-repeat;
 }
 .sec-1 .run-text {
     position:absolute;left:50%;top:150px;z-index:5;

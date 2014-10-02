@@ -1,6 +1,24 @@
+function winSize() {
+	var _width = window.innerWidth,
+		_height = window.innerHeight;
+	if(typeof _width != "number") {
+		if(document.compatMode == "CSS1Compat") {
+			_width=document.documentElement.clientWidth;
+			_height=document.documentElement.clientHeight;
+		} else {
+			_width=document.body.clientWidth;
+			_height=document.body.clientHeight;
+		}
+	}
+	return {
+		width:_width,
+		height:_height
+	};
+}
+var winS = winSize();
 function initPage() {
-	var pageWidth = $(window).width();
-	var pageHeight = $(window).height();
+	var pageWidth = winS.width;//$(window).width();
+	var pageHeight = winS.height;//$(window).height();
 	$(".wrapper").css({
 		height:pageHeight
 	});
@@ -17,8 +35,6 @@ function initPage() {
 	animatePage(curPage);
 	showSlogan();
 }
-
-
 document.body.addEventListener('touchstart', function (e) {
 	if($(".container").hasClass("js-disabled-scroll")) {
 		return;
@@ -47,8 +63,8 @@ var startX = 0,
     margin = 0;
 var pages = null;
 var curPage = 0;
-var pageWidth = $(window).width(),
-    pageHeight = $(window).height();
+var pageWidth = winS.width;//$(window).width(),
+    pageHeight = winS.height;//$(window).height();
 var lineHeight = 0, secHeight = 0;
 var targetElement = null;
 var scrollPrevent = false, movePrevent = false, touchDown = false;
@@ -212,7 +228,7 @@ var $sec1 = $(".sec-1")
 ,	$secSwitch = $(".sec-switch")
 ,	$secSlogan = $(".sec-slogan")
 ,	$secEnd = $(".sec-end")
-,	pageW = $(window).width()
+,	pageW = winS.width //$(window).width()
 ,	$allArr = $(".arrow")
 ,	score = 0
 ,	shareDesc
@@ -374,7 +390,7 @@ function onBridgeReady() {
 	var t = new Date().getTime(),
 		mainTitle="奔跑吧兄弟",
 	    mainDesc= shareDesc || "测测你是不是一个容易崩溃的人",
-	    mainURL="http://dev.hotkeypower.com/lfhtml/run3/views/run.html?v9",
+	    mainURL="http://dev.hotkeypower.com/lfhtml/run3/views/run.html?v10",
 	    mainImgUrl= "http://dev.hotkeypower.com/lfhtml/run3/images/run_share.jpg";
 	
 	//转发朋友圈
