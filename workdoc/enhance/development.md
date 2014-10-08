@@ -5,13 +5,13 @@
 	require("./mod/msg.js");
 	
 + msg.js
-
+-------
 	define(function(require, exports, module) {
 		exports.msg = function(message){
-			alert(message);
+		alert(message);
 		};
 	}
-
+	
 + 加载页面时会每个模块分别加载，增加多个请求数
 
 通过合并来减少请求数
