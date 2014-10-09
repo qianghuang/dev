@@ -33,7 +33,9 @@
 ```javascript
 seajs.use("gmat.js");
 ```
-<p>优点：减少请求数，缓存</p>
+<p>
+优点：减少请求数，首次请求后缓存js文件,模块化开发的优点
+</p>
 <p>
 缺点：对于开发增加难度，由于seajs的调用模块的特点，不同页面使用相应的模块，这种统一合并后，无法正常使用，gmat根据不同url加载不同的模块来解决这个问题，但还是过于依赖url,如果人员变动，新人的学习成本相对较高
 </p>
@@ -41,4 +43,34 @@ seajs.use("gmat.js");
 ```javascript
 seajs.use(["common/js/channel/common","toefl/js/channel/toefl"]);
 ```
-优点：
+<p>
+优点：条理相对清晰，方便给后端提供接口方法
+</p>
+<p>
+缺点：在js与css合并的配置上不是很方便，有待于改善
+</p>
++ toefl项目新增加了ssh任务、监听任务与拷贝任任
+<p>
+提交代码命令
+</p>
+```
+ grunt push-dev    #上传开发机
+ grunt online      #上传线上
+```
++ toefl项目的源代码与输出文件是完全分开，包括图片，js及样式文件，而gmat图片是公用的
++ 其它的细微差别在于grunt任务的配置上
+<p>
+grunt-cmd-transport
+</p>
+<p>
+grunt-cmd-concat
+</p>
++ 调试
+<p>
+toefl项目方式 的开发环境，需要在本地搭建web服务器，也是为了方便测试与调试，gmat在这调试方面不是很方便，特别是在线上环境，如果将来增加测试环境更是如此
+</p>
+####讨论####
+提出几个问题，大家可以讨论一下
++ 如果按gmat项目的方式，然后拆分样式与js会怎么样？
++ cssmin,uglify,ssh任务是否放到公用配置中？
++ 是否要在项目中使用less?
