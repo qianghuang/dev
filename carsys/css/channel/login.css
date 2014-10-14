@@ -1,0 +1,72 @@
+@import url("../../../common/css/mod/reset.css");
+.g-login-wrapper {
+    position:absolute;left:0;top:50%;margin-top:-206px;
+    height:413px;width:100%;
+    background:#3582c0;
+}
+.g-login-wrapper .outer {
+    position:relative;
+    width:1180px;height:413px;overflow:hidden;margin:0 auto;
+    background:url(img/loginbg.jpg) no-repeat center top;
+}
+.g-login-wrapper .logo {
+    position:absolute;left:62px;top:30px;
+    color:#fff;font-family:"微软雅黑";font-size:38px;
+}
+.g-login-wrapper .mask {
+    position:absolute;right:0;top:0;z-index:2;
+    width:495px;height:413px;
+    background:#fff;
+    opacity: 0.56;filter:alpha(opacity=56);
+}
+.g-login-wrapper .maincol {
+    position:absolute;right:60px;top:26px;z-index:3;
+    width:375px;
+}
+.g-login-wrapper .maincol dt {
+    padding-top:10px;
+    display:block;
+    color:#000;font-size:14px;font-weight:bold;
+}
+.g-login-wrapper .maincol dd {
+    padding-top:8px;
+}
+.g-login-wrapper .maincol .dd-vcode {
+    padding-top:20px;
+}
+.g-login-wrapper .maincol .in-pub {
+    border:1px solid #3582c0;padding:8px 0 8px 6px;
+    background:#fff;
+}
+.g-login-wrapper .maincol .in-username,
+.g-login-wrapper .maincol .in-pass,
+.g-login-wrapper .maincol .in-corp {
+    width:367px;
+}
+.g-login-wrapper .maincol .in-vcode {
+    width:180px;margin-right:20px;
+    vertical-align: middle;
+}
+.g-login-wrapper .maincol .img-vcode {
+    vertical-align: middle;
+}
+.g-login-wrapper .maincol .in-remember {
+    vertical-align: middle;
+}
+.g-login-wrapper .maincol .label-remember {
+    font-size:14px;font-weight:bold;vertical-align: middle;color:#3582c0;
+}
+.g-login-wrapper .maincol .btn-login {
+    width:375px;height:37px;border:0;
+    background:#3582c0;
+    font:24px/37px "微软雅黑";color:#fff;
+    cursor:pointer;
+}
+.g-login-wrapper .maincol .btn-login:hover {
+    opacity:0.9;
+}
+@media screen and (max-height:413px) {
+    .g-login-wrapper {
+        margin-top:0;top:0;
+    }
+}
