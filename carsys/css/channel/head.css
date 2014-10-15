@@ -10,7 +10,7 @@ html {
     float:left;
     width:364px;height:68px;
     border-right:1px solid #468cc5;
-    background:url(img/logo.png) no-repeat center 12px;
+    background:url(../img/logo.png) no-repeat center 12px;
 }
 #header .nav-list {
     float:right;
@@ -22,7 +22,7 @@ html {
 #header .nav-list a {
     float:left;margin-right:35px;
     padding-left:60px;height:50px;
-    background:url("img/nav_icon.png") no-repeat;display:block;
+    background:url(../img/nav_icon.png) no-repeat;display:block;
     color:#fff;font:14px/50px "宋体";
 }
 #header .nav-list a:hover {
@@ -62,7 +62,7 @@ html {
     color:#fff;line-height:37px;
 }
 .g-iconbg {
-    background:url(img/common_icon.png) no-repeat;display:inline-block;
+    background:url(../img/common_icon.png) no-repeat;display:inline-block;
     vertical-align: middle;
 }
 .smile-ico {

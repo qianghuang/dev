@@ -19,7 +19,6 @@ form,fieldset,legend,input,textarea,select,
 table,caption,thead,th,tbody,td,tfoot,
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
     margin:0;padding:0;
-    box-sizing:border-box;
     font-size:100%;font-style:normal;font-weight:normal;word-wrap:break-word;
     outline:none;
 }
@@ -49,3 +48,4 @@ a:hover {
     color:#2072e9;text-decoration:none;
 }
 
+@import url("../mod/widget.css");

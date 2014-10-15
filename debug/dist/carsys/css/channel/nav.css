@@ -19,7 +19,6 @@ form,fieldset,legend,input,textarea,select,
 table,caption,thead,th,tbody,td,tfoot,
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
     margin:0;padding:0;
-    box-sizing:border-box;
     font-size:100%;font-style:normal;font-weight:normal;word-wrap:break-word;
     outline:none;
 }
@@ -49,3 +48,50 @@ a:hover {
     color:#2072e9;text-decoration:none;
 }
 
+html {
+    height:100%;
+    border-right:1px solid #e3e3e3;
+    background:#eff5fb;
+}
+.g-navigator .title {
+    height:50px;padding-left:28px;
+    background:#1b64aa;
+    color:#fff;line-height:50px;
+}
+.g-navigator .title .arrow {
+    position:absolute;right:16px;top:22px;
+    width:0;height:0;
+    border-color:#fff transparent transparent;
+    border-style:solid;
+    border-width:8px;
+}
+.g-navigator .nav-list {
+    overflow:hidden;
+}
+.g-navigator .split {
+    position:absolute;left:4px;top:4px;
+    width:5px;height:38px;overflow:hidden;
+    background:#3582c0;display:none;
+}
+.g-navigator .normal {
+    position:relative;
+    height:46px;overflow:hidden;
+    border-top:1px solid #e3e3e3;
+}
+.g-navigator .normal .menu {
+    height:46px;overflow:hidden;
+    display:block;
+    line-height:46px;text-align:center;color:#3582c0;
+}
+.g-navigator .normal .menu:hover {
+    text-decoration: underline;
+}
+.g-navigator .current .split {
+    display:block;
+}
+.g-navigator .current .menu {
+    background:#fff;
+}
+.g-navigator .current .menu:hover {
+    text-decoration: none;
+}
