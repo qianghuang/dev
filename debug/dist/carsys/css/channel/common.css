@@ -48,4 +48,178 @@ a:hover {
     color:#2072e9;text-decoration:none;
 }
 
-@import url("../mod/widget.css");
+/*
+ * base css
+ */
+.g-clearfix {
+    *zoom:1;
+}
+.g-clearfix:after {
+    content:'';
+    display:block;
+    clear: both; height:0;
+    overflow: hidden;visibility: hidden;
+}
+/*
+ * form
+ * 
+ */
+.g-btn-normal {
+    height:30px;width:120px;
+    display:inline-block;background:#1b64aa;
+    border:0;
+    text-align:center;line-height:30px;color:#fff;vertical-align:middle;
+    cursor:pointer;
+}
+.g-btn-normal:hover {
+    opacity:0.9;
+    text-decoration: none;color:#fff;
+}
+.g-btn-highlight {
+    height:30px;width:120px;
+    display:inline-block;background:#e7562a;
+    border:0;
+    text-align:center;line-height:30px;color:#fff;vertical-align:middle;
+    cursor:pointer;
+}
+.g-btn-highlight:hover {
+    opacity:0.9;
+    text-decoration: none;color:#fff;
+}
+.g-btn-page {
+    width:90px;height:30px;border:0;
+    background:#1ac3cd;display:inline-block;
+    text-align:center;line-height:30px;color:#fff;vertical-align:middle;
+}
+.g-btn-page:hover {
+    opacity:0.9;
+    text-decoration: none;color:#fff;
+}
+.g-btn-search {
+    width:119px;height:30px;border:0;
+    background:url("../img/btn-search.png") no-repeat;display:inline-block;
+}
+.g-btn-search:{
+    opacity:0.9;
+    text-decoration:none;
+}
+.g-btn-adaptive {
+    width:auto;padding:0 20px;
+}
+.g-select-normal {
+    height:30px;width:180px;
+    border-style:solid;border-width:1px 1px 2px;border-color:#0099cc #7fcae5 #0099cc;
+    background:#fff;
+    vertical-align: middle;
+}
+.g-select-adaptive {
+    width:auto;
+}
+.g-input {
+    height:28px;padding-left:8px;
+    border:1px solid #e2e2e2;
+    vertical-align: middle;
+}
+.g-input:focus {
+    border:1px solid #7fcae5;
+    box-shadow:0 0 2px rgba(127,202,229, 0.6);
+}
+.g-input-normal {
+    width:220px;
+}
+/**form ends**/
+/*
+ * table
+ * 默认单元格居中显示
+ */
+.g-table {
+    border:1px solid #73d8df;width:100%;margin-bottom:10px;
+    background:#fff;
+}
+.g-table th {
+    padding:6px 10px;
+    background:#1ac3cd;
+    color:#fff;text-align:center;
+}
+.g-table tr:nth-child(even) {
+    background:#f5f5f5;
+}
+.g-table tbody tr:hover {
+    background:#1ac3cd;
+    color:#fff;
+}
+.g-table td {
+    padding:6px 10px;
+    text-align:center;
+}
+.g-table th.tb-align-left,
+.g-table td.tb-align-left {
+    text-align:left;
+}
+.g-table th.tb-align-right,
+.g-table td.tb-align-right {
+    text-align:right;
+}
+/**/
+.g-mod {
+    padding:16px 20px;margin-bottom:5px;
+    border:1px solid #e2e2e2;
+    background:#eff5fb;
+}
+/*
+ * 搜索区域
+ */
+.g-search-wrap {
+    padding:16px 0 16px 30px;margin-bottom:5px;
+    border:1px solid #e2e2e2;
+    background:#eff5fb;
+}
+.g-search-wrap dl {
+    padding-bottom:15px;
+}
+.g-search-wrap .search-label {
+    padding-right:8px;
+}
+.g-search-wrap .g-input {
+    margin-right:22px;
+}
+.g-search-wrap .more {
+    padding-top:5px;
+    display:inline-block;
+}
+.g-search-wrap .g-btn-search {
+    margin-right:18px;
+}
+.g-search-wrap .g-select-normal {
+    margin-right:10px;
+}
+.g-search-wrap dd,
+.g-search-wrap dt {
+    float:left;
+}
+.g-search-wrap .search-tag a {
+    color:#0099cc;
+}
+.g-search-wrap .search-tag a:hover {
+    text-decoration: underline;
+}
+.g-search-wrap .search-tag .split-y {
+    padding:0 5px;
+    color:#0099cc;
+}
+
+html {
+    background:#f5f5f5;
+}
+body {
+    padding-left:5px;
+}
+.g-operate {
+    margin-bottom:10px;
+}
+.g-operate .g-btn-normal {
+    margin-right:5px;
+}
+.s-page .g-btn-page {
+    margin-right:5px;
+}
