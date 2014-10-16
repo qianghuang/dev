@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width; initial-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="../../css/channel/common.css" />
 	<style type="text/css">
-		h2 {
+		.demo-title {
 			padding-bottom:10px;
 			font-size:16px;
 		}
@@ -19,7 +19,7 @@
 </head>
 <body>
 	<div class="sec">
-		<h2>button-理念上支持大部分常用标签：&lt;input type="submit" /&gt; &lt;button&gt; &lt;a&gt;</h2>
+		<h2 class="demo-title">button-理念上支持大部分常用标签：&lt;input type="submit" /&gt; &lt;button&gt; &lt;a&gt;</h2>
 		<p>
 			常用按钮:g-btn-normal<br />
 			自适宽度：g-btn-normal g-btn-adaptive<br />
@@ -46,7 +46,7 @@
 		</p>
 	</div>
 	<div class="sec">
-		<h2>select</h2>
+		<h2 class="demo-title">select</h2>
 		<p>
 			正常固定宽度：g-select-normal
 			自适应宽度：g-select-normal g-select-adaptive
@@ -71,7 +71,7 @@
 		</p>
 	</div>
 	<div class="sec">
-		<h2>输入框</h2>
+		<h2 class="demo-title">输入框</h2>
 		<p>
 			系统默认应宽度：g-input<br>
 			固定宽度：g-input g-input-normal
@@ -82,7 +82,7 @@
 		</p>
 	</div>
 	<div class="sec">
-		<h2>表格：目前只有一种格式</h2>
+		<h2 class="demo-title">表格：目前只有一种格式</h2>
 		<p>
 			默认单元格居中显示<br />
 			居左：tb-align-left<br>
@@ -129,6 +129,54 @@
 				</tr>
 			</tbody>
 		</table>
+	</div>
+	<div class="sec" style="position: relative;height:140px;">
+		<div class="g-dialog">
+			<div class="dialog-wrapper dialog-alert"><!--不同类型的弹层  更换不同的样式：dialog-alert-->
+				<h2 class="dialog-topbar">
+					<span class="title">弹层标题</span>
+					<a class="dia-close">关闭</a>
+				</h2>
+				<div class="dialog-body">
+					<div class="g-iconbg g-error-ico"></div>
+					<div class="message">
+						<p>对不起！操作失败！</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="sec" style="position: relative;height:140px;">
+		<div class="g-dialog">
+			<div class="dialog-wrapper dialog-alert"><!--不同类型的弹层  更换不同的样式：dialog-alert-->
+				<h2 class="dialog-topbar">
+					<span class="title">弹层标题</span>
+					<a class="dia-close">关闭</a>
+				</h2>
+				<div class="dialog-body">
+					<div class="g-iconbg g-success-ico"></div>
+					<div class="message">
+						<p>操作成功</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="sec" style="position: relative;height:140px;">
+		<div class="g-dialog">
+			<div class="dialog-wrapper dialog-alert"><!--不同类型的弹层  更换不同的样式：dialog-alert-->
+				<h2 class="dialog-topbar">
+					<span class="title">弹层标题</span>
+					<a class="dia-close">关闭</a>
+				</h2>
+				<div class="dialog-body">
+					<div class="g-iconbg g-warn-ico"></div>
+					<div class="message">
+						<p>对不起！操作失败！</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

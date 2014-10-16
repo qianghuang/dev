@@ -11,6 +11,25 @@
     overflow: hidden;visibility: hidden;
 }
 /*
+ * ico
+ * 
+ */
+.g-iconbg {
+    background:url(../img/common_icon.png) no-repeat;display:inline-block;
+}
+.g-error-ico {
+    width:20px;height:20px;
+    background-position:0 -98px;
+}
+.g-success-ico {
+    width:27px;height:20px;
+    background-position:0 -125px;
+}
+.g-warn-ico {
+    width:20px;height:28px;
+    background-position:2px -151px;
+}
+/*
  * form
  * 
  */

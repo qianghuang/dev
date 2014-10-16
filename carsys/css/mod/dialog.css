@@ -1,0 +1,38 @@
+.g-dialog {
+    position:absolute;left:50%;margin-left:-174px;z-index:9999;
+    width:348px;
+}
+.g-dialog .dialog-wrapper {
+    border:1px solid #1b64aa;
+    background:#fff;
+}
+.g-dialog .dialog-topbar {
+    height:30px;
+    background:#1b64aa;
+    color:#fff;line-height:30px;
+}
+.g-dialog .dialog-topbar .title {
+    padding-left:13px;
+}
+.g-dialog .dialog-topbar .dia-close {
+    position:absolute;top:7px;right:10px;
+    width:18px;height:18px;overflow:hidden;
+    background:url(../img/common_icon.png) no-repeat 4px -190px;display:block;
+    text-indent:-1000px;
+    cursor:pointer;
+}
+.g-dialog .dialog-body {
+    background:#fff;
+}
+.g-dialog .dialog-alert .dialog-body {
+    position:relative;
+    padding:5px 0 5px 67px;
+}
+.g-dialog .dialog-alert .g-iconbg {
+    position:absolute;left:24px;top:20px;
+}
+.g-dialog .dialog-alert .message {
+    padding:14px 0 16px 20px;
+    min-height:60px;
+    border-left:1px solid #1ac3cd;
+}

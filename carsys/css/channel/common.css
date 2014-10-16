@@ -1,5 +1,6 @@
 @import url("../mod/reset.css");
 @import url("../mod/widget.css");
+@import url("../mod/dialog.css");
 html {
     background:#f5f5f5;
 }
