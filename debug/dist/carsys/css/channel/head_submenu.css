@@ -67,7 +67,8 @@ html {
     padding-top:12px;
 }
 #header .nav-list li {
-    float:left;
+    float:left;position: relative;
+    height:68px;
 }
 #header .nav-list a {
     float:left;margin-right:35px;
@@ -92,6 +93,24 @@ html {
 }
 #header .nav-list .nav-system {
     background-position: 0 -318px;
+}
+#header .nav-list .sub-menu {
+    position: absolute;left:50px;top:68px;
+    width:80px;
+    background:#3582c0;display:none;
+}
+#header .nav-list li:hover .sub-menu {
+    display:block;
+}
+#header .nav-list .sub-menu a {
+    float:none;
+    height:31px;padding:0 0 0 10px;overflow:hidden;margin:0;
+    border-bottom:1px solid #1ac3cd;
+    display:block;background:none;
+    color:#fff;font:14px/31px "宋体";
+}
+#header .nav-list .sub-menu a:hover {
+    background:#1ac3cd;
 }
 .g-userbar {
     height:37px;

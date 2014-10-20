@@ -7,6 +7,7 @@
 				files:{
 					  // head
 					  './../debug/dist/<%=pkg.name%>/css/channel/head.css':['css/channel/head.css']
+					, './../debug/dist/<%=pkg.name%>/css/channel/head_submenu.css':['css/channel/head_submenu.css']
 					, './../debug/dist/<%=pkg.name%>/css/channel/nav.css':['css/channel/nav.css']
 					, './../debug/dist/<%=pkg.name%>/css/channel/common.css':['css/channel/common.css']
 					, './../debug/dist/<%=pkg.name%>/css/channel/login.css':['css/channel/login.css']
