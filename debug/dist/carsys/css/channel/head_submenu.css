@@ -67,35 +67,47 @@ html {
 }
 #header .nav-list li {
     float:left;position: relative;
-    height:55px;padding-top:5px;
+    height:60px;
 }
 #header .nav-list a {
-    float:left;margin-right:35px;
-    padding-left:60px;height:50px;
+    float:left;margin-right:25px;
+    padding:0 10px 0 60px;height:60px;overflow:hidden;
     background:url("../img/nav_icon.png") no-repeat;display:block;
-    color:#fff;font:14px/50px "宋体";
+    color:#fff;font:14px/60px "宋体";
+}
+#header .nav-list li:hover .nav-dispatch,
+#header .nav-list li:hover .nav-carservice,
+#header .nav-list li:hover .nav-operation,
+#header .nav-list li:hover .nav-report,
+#header .nav-list li:hover .nav-system ,
+#header .nav-list li.current .nav-dispatch,
+#header .nav-list li.current .nav-carservice,
+#header .nav-list li.current .nav-operation,
+#header .nav-list li.current .nav-report,
+#header .nav-list li.current .nav-system {
+    background-color:#1ac3cd;
 }
 #header .nav-list a:hover {
     opacity:0.9;
 }
 #header .nav-list .nav-dispatch {
-    background-position: 0 0;
+    background-position: 5px 5px;
 }
 #header .nav-list .nav-carservice {
-    background-position: 0 -79px;
+    background-position: 5px -74px;
 }
 #header .nav-list .nav-operation {
-    background-position: 0 -158px;
+    background-position: 5px -153px;
 }
 #header .nav-list .nav-report {
-    background-position: 0 -238px;
+    background-position: 5px -233px;
 }
 #header .nav-list .nav-system {
-    background-position: 0 -318px;
+    background-position: 5px -313px;
 }
 #header .nav-list .sub-menu {
-    position: absolute;left:50px;top:60px;
-    width:80px;
+    position: absolute;left:0;top:60px;
+    width:126px;
     background:#3582c0;display:none;
 }
 #header .nav-list li:hover .sub-menu {
@@ -103,13 +115,13 @@ html {
 }
 #header .nav-list .sub-menu a {
     float:none;
-    height:31px;padding:0 0 0 10px;overflow:hidden;margin:0;
+    height:31px;overflow:hidden;margin:0;padding:0;
     border-bottom:1px solid #1ac3cd;
     display:block;background:none;
-    color:#fff;font:14px/31px "宋体";
+    color:#fff;font:14px/31px "宋体";text-align:center;
 }
 #header .nav-list .sub-menu a:hover {
-    background:#1ac3cd;
+    background:#5ba3dd;
 }
 .g-userbar {
     height:37px;
