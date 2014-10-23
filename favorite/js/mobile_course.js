@@ -4,16 +4,16 @@
  * 直接使用pc端的开发方案
  * 
  */
-define(function(require, exports, module){
-	var $ = require("zepto")
+//define(function(require, exports, module){
+	var temp//$ = require("zepto")
 	,	UA = navigator.userAgent
 	,	isMobile = /mobile/i.test(UA)
-	,	pcUrl = "http://toefl.kaomanfen.com"
+	,	pcUrl = "http://toefl.kaomanfen.com/html/course/toefl_public_1.html"
 	;
 	
 	if(!isMobile) {
 		location.href = pcUrl;
-		return;
+		//return;
 	}
 	
 	var appCover = {
@@ -22,17 +22,23 @@ define(function(require, exports, module){
 			moving   : false,
 			startX   : 0,
 			startY   : 0,
-			distance : 0
+			distance : 0,
+			boxLeft  : 0
 		},
 		init: function($ele){
 			this.$ele = $ele;
 			this.$sec = $ele.find(".sec");
+			this.$page = $(".g-m-cover-page .page");
+			this.timmer = null;
+			this.duration = 300;
 			this.coverNum = this.$sec.length;
+			this.coverWidth = $(window).width();
+			
 			this.initPage();
 			this.setup();
 		},
 		initPage: function(){
-			var coverWidth = $(window).width()
+			var coverWidth = this.coverWidth
 			,	allWidth
 			,	$ele = this.$ele
 			;
@@ -43,6 +49,9 @@ define(function(require, exports, module){
 			});
 			this.$sec.css({
 				"width":coverWidth
+			});
+			$(".g-m-wrapper").css({
+				display:"block"
 			});
 		},
 		setup:function(){
@@ -62,37 +71,68 @@ define(function(require, exports, module){
 			
 		},
 		fnStart: function(event){
-			for(var porp in event) {
-				//console.info(porp);
+			var status = this.status;
+			if(status.moving) {
+				return;
 			}
 			
 			this.status.startX = event.touches[0].pageX;
 			this.status.moving = true;
-			
-			//console.info(event.touches[0].screenX);
-			console.info(event.touches[0].pageX);
 		},
 		fnMove: function(event){
+			event.preventDefault();
 			this.status.distance = event.touches[0].pageX - this.status.startX;
-			this.fnSetSty();
+			this.fnSetSty(true);
 		},
 		fnEnd: function(){
-			this.status.moving = false;
+			if(this.status.moving) {
+				return;
+			}
+			if(this.status.distance < 0) {
+				this.next.call(this);
+			} else if (this.status.distance > 0) {
+				this.prev.call(this);
+			}
 		},
-		fnSetSty : function(){
-	        var x = this.status.distance
-	        ,	time = 300
+		next: function(){
+			if(this.status.curCover < this.coverNum - 1) {
+				this.status.curCover++;
+			}
+			this.status.boxLeft = -1 * this.coverWidth * this.status.curCover;
+			this.status.distance = 0;
+			this.fnSetSty();
+		},
+		prev: function() {
+			if(this.status.curCover > 0) {
+				this.status.curCover--;
+			}
+			this.status.boxLeft = -1 * this.coverWidth * this.status.curCover;
+			this.status.distance = 0;
+			this.fnSetSty();
+		},
+		fnSetSty : function(flag){
+	        var self = this
+	        ,	status = this.status
+	        ,	time = flag ? 0 : this.duration
+	        ,	dist = this.status.boxLeft + this.status.distance;
 	       	;
+	       	
+	       	
 	        this.$ele.css({
 	            '-webkit-transition':'-webkit-transform '+time+'ms',
-	            '-webkit-transform':'translate3d('+x+'px,0,0)',
+	            '-webkit-transform':'translate3d('+dist+'px,0,0)',
 	            '-webkit-backface-visibility': 'hidden',
 	            'transition':'transform '+time+'ms',
-	            'transform':'translate3d('+x+'px,0,0)'
+	            'transform':'translate3d('+dist+'px,0,0)'
 	        });
+	        setTimeout(function(){
+	        	self.status.moving = false;
+	        	self.$page.removeClass("curpage");
+	        	self.$page.eq(self.status.curCover).addClass("curpage");
+	        }, time);
 	    }
 	};
 	
 	appCover.init($(".g-m-cover"));
 	
-});
+//});
