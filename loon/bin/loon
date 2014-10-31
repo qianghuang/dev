@@ -1,6 +1,20 @@
 #!/usr/bin/env node
 var program = require("commander");
 var loon = require("./..");
+process.title = "LOON";
+
+for(var i in program) {
+	//console.log(i);
+}
+
+//console.log(process.argv);
+
+program.version(loon.version)
+       .option("dev", "develop [project name]")
+       .parse(process.argv)
+;
+
+/*
 console.log(loon);
 program
   .version('0.0.1')
@@ -15,3 +29,4 @@ if (program.peppers) console.log('  - peppers');
 if (program.pineapple) console.log('  - pineapple');
 if (program.bbq) console.log('  - bbq');
 console.log('  - %s cheese', program.cheese);
+*/
