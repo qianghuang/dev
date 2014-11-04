@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 var program = require("commander");
 var loon = require("./..");
+var spawn = require("child_process").spawn;
+var fs = require('fs');
+var path = require("path");
 process.title = "LOON";
 
 for(var i in program) {
@@ -13,9 +16,45 @@ program.version(loon.version)
        .option("dev", "develop [project name]")
        .parse(process.argv)
 ;
+var subcmd = program.args[0];
+var action=program.args[1];
+var projectDir = path.join(process.cwd(), program.args[0],"/");
+var args = process.argv.slice(3);
 
+if(/^(git-flow|git|flow)$/ig.test(subcmd)) {
+	subcmd="git-flow";
+	//var filetype=laser.isWin?".bat":".sh"
+	// 在git bash 下可以执行shell脚本
+	var filetype=".sh"
+	var bin = executable(subcmd+"-"+action+filetype);
+	if (bin) {
+		args.shift();
+		//laser.runExeFile(bin,args);						
+	}	
+}else{
+	var bin = executable(subcmd,"/grunt.bat");
+	if (bin) {
+		spawn(bin, args, {
+			stdio: 'inherit',
+			customFds: [0, 1, 2]
+		});
+	}	
+	
+}
+function executable(subcmd,prefix){
+	var prefix=prefix||"";
+	var bin=subcmd + prefix ;	
+	var local=path.join(__dirname,"../",bin);
+	return local;
+	if(fs.existsSync(local)){
+		return local;
+	}else{
+		console.log(" Bad command!");
+		process.exit();
+	}
+
+}
 /*
-console.log(loon);
 program
   .version('0.0.1')
   .option('-p, --peppers', 'Add peppers')
