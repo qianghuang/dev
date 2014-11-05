@@ -247,6 +247,7 @@ section{display: block;}
 @-webkit-keyframes start {0%,30% {opacity: 0;-webkit-transform: rotate(180deg) translate(0,-10px);}60% {opacity: 1;-webkit-transform: rotate(180deg) translate(0,0);}100% {opacity: 0;-webkit-transform: rotate(180deg) translate(0,5px);}}
 @keyframes start {0%,30% {opacity: 0;transform: rotate(180deg) translate(0,-10px);}60% {opacity: 1;transform: rotate(180deg) translate(0,0);}100% {opacity: 0;transform: rotate(180deg) translate(0,5px);}}
 
+/*new*/
 .sec02 .clock {
     position:absolute;left:50%;top:50%;margin-left:-96px;margin-top:-170px;
     width:41px;height:40px;
@@ -273,7 +274,49 @@ section{display: block;}
     -webkit-animation:opa 1.5s linear;
     animation: opa 1.5s linear;
 }
-
+/**/
+.sec03 .plane {
+    position:absolute;left:50%;top:50%;margin-top:-120px;
+    width:28px;height:17px;overflow:hidden;
+    background:url(../img/sec3_01.png) no-repeat -14px 0;
+}
+.sec03 .plane-1 {
+    
+}
+.sec03 .plane-2 {
+    
+}
+.sec03 .children {
+    position:absolute;left:50%;top:50%;margin-top:-80px;margin-left:-100px;
+    width:124px;height:64px;overflow:hidden;
+    background:url(../img/sec3_01.png) no-repeat 0 -91px;
+}
+.sec03 .monther {
+    position:absolute;left:50%;top:50%;margin-top:-145px;margin-left:32px;
+    width:76px;height:104px;overflow:hidden;
+    background:url(../img/sec3_01.png) no-repeat -131px -26px;
+}
+.sec03 .profile {
+    position:absolute;left:50%;top:50%;margin-top:-30px;margin-left:-114px;
+    width:254px;height:155px;
+    background:url(../img/sec3_02.png) no-repeat;
+}
+/**/
+.sec04 .picbg {
+    position:absolute;
+    background:url(../img/sec4_01.png) no-repeat;display:block;
+}
+.sec04 .ill {
+    left:50%;top:50%;
+    background-position:0 0;
+}
+.sec04 .title {
+    background-position:0 0;
+}
+.sec04 .profile {
+    background-position:0 0;
+}
+/*************************************************/
 
 
 .sec02 .p,
