@@ -52,23 +52,22 @@ html {
     background:#f5f5f5;
 }
 #header {
-    height:80px;padding-top:15px;
+    height:60px;
     background:#3582c0;
 }
 #header .logo {
     float:left;
-    width:330px;height:62px;padding:6px 0 0;padding-right:34px;
+    width:330px;height:42px;padding:6px 0 0;padding-right:34px;
     border-right:1px solid #468cc5;
     background:url("../img/logo.png") no-repeat 34px 12px;
     text-align: right;font-size:34px;color:#fff;
 }
 #header .nav-list {
     float:right;
-    padding-top:12px;
 }
 #header .nav-list li {
     float:left;position: relative;
-    height:68px;
+    height:55px;padding-top:5px;
 }
 #header .nav-list a {
     float:left;margin-right:35px;
@@ -95,7 +94,7 @@ html {
     background-position: 0 -318px;
 }
 #header .nav-list .sub-menu {
-    position: absolute;left:50px;top:68px;
+    position: absolute;left:50px;top:60px;
     width:80px;
     background:#3582c0;display:none;
 }
