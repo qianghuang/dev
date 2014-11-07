@@ -681,7 +681,7 @@ section{display: block;}
 /**/
 .sec12 .picbg {
     position:absolute;
-    background:url(../img/sec12_01.png) no-repeat;display:block;
+    background:url(../img/sec12_01.png?v2) no-repeat;display:block;
 }
 .sec12 .ill {
     left:50%;top:50%;margin-left:-125px;margin-top:-148px;
