@@ -7,12 +7,12 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="Description" content="新东方在线考研">
 	<meta name="Keywords" content="新东方在线考研">
-	<link rel="stylesheet" type="text/css" href="css/invite.css?v0.2" />
-	<title>新东方在线考研</title>
+	<link rel="stylesheet" type="text/css" href="css/invite.css?v1.1" />
+	<title>挺到今天的考研大神，给跪了！</title>
 </head>
 <body>
     <div class="wrap" id="scene">
-        <h1>新东方在线考研</h1>
+        <h1>挺到今天的考研大神，给跪了！</h1>
         <div class="sec">
             <div class="bg">
                 <div class="bg_sec bg01"></div>
@@ -35,14 +35,9 @@
             <section class="sec01" style="display:;">
                 <h2 class="title title-1"></h2>
                 <div class="title title-2"></div>
-                <div class="layer" data-depth="0.75">
-                    <span class="map"></span>
-                    <span class="target"></span>
-                </div>
-                <div class="layer" data-depth="1.2">
-                    <span class="ico_tri04"></span><span class="ico_tri05"></span><span class="ico_tri06"></span>
-                </div>
-                <span class="start"><b><img src="img/arrow.png" /></b><em class="start-tips">向上滑动</em></span>
+                <span class="map"></span>
+                <span class="target"></span>
+                <span class="start"><b><img src="img/arrow.png" /></b><em class="start-tips">向上拱</em></span>
             </section>
             <section class="sec02 " style="display:;">
             	<div class="clock"></div>
@@ -117,7 +112,7 @@
             <section class="sec12" style="display:;">
             	<div class="picbg ill">
             		<img src="img/sec12_02.png" class="weixin" />
-            		<a class="btn-follow" href="http://mp.weixin.qq.com/s?__biz=MjM5OTAzMjc4MA==&mid=201654180&idx=2&sn=46e242ddcda243b17be1cbf63f5f9955&scene=1&key=f22fd2fbab4acbb7309d83b9bccd6a230f02d70fd4b43ce0ce3fdfe4c7b143aa605a3e67a209bf16596dff258ee65bee&ascene=1&uin=MTEzMDAwOTE0MA%3D%3D&devicetype=webwx&version=70000001&pass_ticket=S35KYoQTbof7T0Yuh2S9Ky9ralY4nBHciPFOQKYXAB%2FrhQ8wc9K0KxR0UL13YvYD"></a>
+            		<a class="btn-follow" href="http://mp.weixin.qq.com/s?__biz=MzA4ODcwNjUzMA==&mid=201529108&idx=1&sn=b0d568d5f85e3392e3a1b2dec7d6df45&scene=1&key=f22fd2fbab4acbb76361cc1c6c52dcddb7964a8e8ff2e0bb6b358b5e9db67b7b2a4942b26c50af5c32e3dbd567820396&ascene=1&uin=MTEzMDAwOTE0MA%3D%3D&devicetype=webwx&version=70000001&pass_ticket=%2BZYnhZvcPb%2Bd5HGGgrIDI5Qxn0th7xvySOVavmds8n7qLwz56Iogn7Pwancftg54"></a>
             		<a id="js-share-button" class="btn-share"></a>
             	</div>
                 <span class="start"><b><img src="img/arrow.png" /></b></span>
@@ -125,6 +120,8 @@
             
     </div>
     <div id="shareMask" class="share-mask">
+	</div>
+    <div id="shareMask2" class="share-mask2">
 	</div>
 	<div class="music">
 		<audio src="img/bgmusic.mp3" autoplay="autoplay" preload="metadata" loop="loop" id="bgMusic"></audio>
@@ -150,18 +147,21 @@ var jumpPc = IsPC();
 if(jumpPc!=false){
 //window.location.href = "http://up.qq.com";
 }
-
+var timmer = null;
 document.body.addEventListener('touchstart', function (e) {
     //console.log("target:"+e.target.className);
+    if(timmer) return;
     e = e.changedTouches[0];
     onStart(e);
 });
 
 document.body.addEventListener('touchmove', function (e) {
+	if(timmer) return;
     onMove(e.changedTouches[0], e);
 });
 
 document.body.addEventListener('touchend', function (e) {
+	if(timmer) return;
     onEnd(e.changedTouches[0]);
 });
 
@@ -180,7 +180,8 @@ function initPage(){
         "height":pageHeight+"px"
     });
     //$(".wrap").height($(".wrap").height());
-
+	$("#scene").css({"visibility":"visible"});
+	
     secHeight = pageHeight * $(".wrap section").length;
     lineHeight = 832 * secHeight / pageHeight;
 
@@ -205,10 +206,6 @@ var pageWidth = 0,
 var lineHeight = 0, secHeight = 0;
 var targetElement = null;
 var scrollPrevent = false, movePrevent = false, touchDown = false;
-
-$(document).ready(function(){
-	initPage();
-});
 
 function onStart (e) {
     if(movePrevent == true){
@@ -297,6 +294,14 @@ function prevPage(){
 }
 function nextPage(){
     var newPage = curPage + 1;
+    if(newPage == 11) {
+    	$("#shareMask2").show();
+    	timmer = setTimeout(function(){
+    		$("#shareMask2").hide();
+    		clearTimeout(timmer);
+    		timmer = null;
+    	},1000*5);
+    }
     animatePage(newPage);
 }
 
@@ -336,9 +341,9 @@ function animatePage( newPage ){
 var scene = document.getElementById('scene');
 var parallax = new Parallax(scene);
 function onBridgeReady() {
-    var mainTitle="当考验还剩50天..新东方在线",
-        mainDesc="新东方在线考研服务为您加油 转发抽奖+考上心仪大学",
-        mainURL="http://dev.hotkeypower.com/lfhtml/graduate/index.html?v0.2",
+    var mainTitle="挺到今天的考研大神，给跪了！",
+        mainDesc="一定要对考研人好！一定要请考研人吃饭！一定要给考研人留宿舍门！！…",
+        mainURL="http://dev.hotkeypower.com/lfhtml/graduate/index.html?v1.1",
         mainImgUrl= "http://dev.hotkeypower.com/lfhtml/graduate/img/wx_thumb.jpg";
 
     //转发朋友圈
@@ -397,13 +402,47 @@ $shareBtn.on("touchstart", function(){
 	$shareMask.show();	
 });
 $shareMask.on("touchstart", function(){
+	if(timmer) return;
 	$shareMask.hide();
 });
 document.addEventListener('WeixinJSBridgeReady', function() {
     onBridgeReady();
 });
-$(function(){
-	$("#scene").css({"visibility":"visible"});
+var wxApp = {
+	count:0,
+	loaded: function(imgs, callBack){
+		var len = imgs.length
+		,	i
+		,	self = this
+		;
+		
+		this.totalCount = len;
+		for(var i=0; i<len; i++) {
+			this.loadImage(imgs[i], function(){
+				self.count++;
+				if(self.count == self.totalCount) {
+					if(callBack) {
+						callBack();
+					}
+				}
+			});
+		}
+	},
+	loadImage: function(url, callBack){
+		var img = new Image()
+		,	self = this
+		;
+		img.src = url;
+		img.onload = function(){ 
+		   callBack.call(self);
+		};
+	}
+};
+$(document).ready(function(){
+	var images = ["img/sec7_01.png","img/sec8_01.png","img/sec9_01.png","img/sec10_01.png","img/bg01.jpg"];
+	wxApp.loaded(images, function(){
+		initPage();
+	});
 });
 </script>
 </html>
