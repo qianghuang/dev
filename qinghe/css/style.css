@@ -1,0 +1,50 @@
+/*
+ * reset css
+ * 2014.3.24
+ */
+html,body {
+    margin:0;padding:0;
+    color:#333;
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+body {
+    font:14px/1.5 Arial,"微软雅黑","Microsoft Yahei";
+
+}
+h1,h2,h3,h4,h5,h6,
+div,ul,ol,dl,li,dt,dd,
+p,em,i,b,cite,del,strong,pre,code,address,
+form,fieldset,legend,input,textarea,select,
+table,caption,thead,th,tbody,td,tfoot,
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    margin:0;padding:0;
+    box-sizing:border-box;
+    font-size:100%;font-style:normal;font-weight:normal;word-wrap:break-word;
+    outline:none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    display:block;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+table {
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+li {
+    list-style:none;
+}
+img {
+    border:0;
+}
+input,textarea,select {
+    background:#fff;
+}
+a {
+    color:#333;text-decoration:none;outline:none;
+}
+a:hover {
+    color:#2072e9;text-decoration:none;
+}
