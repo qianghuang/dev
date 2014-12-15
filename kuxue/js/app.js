@@ -171,7 +171,7 @@ var appCover = {
 function onBridgeReady() {
 	var mainTitle="全国土豪办最新发布：考研10大黄金专业！有你没你？谁最任性？",
 	    mainDesc="身为考研多年的读输人,本专业若不幸名落3甲,我便弃考！嫁给你呀！我是男的！~*^__^*",
-	    mainURL="http://www.024360.com/hq/kuxue/views/index2.html?v2",
+	    mainURL="http://www.024360.com/hq/kuxue/views/index_v3.html?v3",
 	    mainImgUrl= "http://www.024360.com/hq/kuxue/images/wx.jpg";
 	
 	//转发朋友圈

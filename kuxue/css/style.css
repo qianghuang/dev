@@ -681,8 +681,8 @@ html,body {
 }
 .g-m-cover .sec8 .logo {
 	position:absolute;left:50%;bottom:40px;
-	width:54px;height:17px;margin-left:-27px;
-	background-position: -75px 0;
+	width:133px;height:36px;margin-left:-66px;
+	background:url(img/logo.jpg?v2) no-repeat center top;
 }
 .g-m-cover .sec8 .g-arrow {
 	bottom:40px;
