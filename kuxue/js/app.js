@@ -149,7 +149,7 @@ var appCover = {
 					}
 					layerTimmer = setTimeout(function(){
 						$("#js-layer-share").hide();
-					}, 3e3);
+					}, 4e3);
         		}, 1e3);
 	        } else {
 	        	if(self.layerT) {
