@@ -4,6 +4,7 @@
 + grunt-cli的安装
 + grunt-init 的安装
 + 创建项目
+
 ###common.css###
 ####base.css####
 + 字体大小12-15px,16-36px偶数值:  .g-f12,g-f13,...
