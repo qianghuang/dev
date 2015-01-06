@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>前端工作现状及问题</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/moon.css">
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>考满分-前端</h2>
+				<p>2014-6-30</p>
+				<p>黄强</p>
+			</section>
+			<section>
+				<section>
+					<h3>我们有哪些工作？——四大科目</h3>
+					<ol>
+						<li class="fragment">
+							<span class="highlight-green">gmat:seajs+jquery</span><br />
+							功能最全，但风格与其它不统一
+						</li>
+						<li class="fragment">
+							司法：jquery<br />
+							没有用任何框架
+						</li>
+						<li class="fragment">
+							gre:seajs+backbone+jquery<br/>
+							样式上，想做一个响应式布局，结果做成半调子，想公用全站统一的样式难度最大
+						</li>
+						<li class="fragment">
+							toefl:seajs+jquery <br />
+							选择与gmat类似的方式，想加入MVC框架比较容易，而且backbone也不是很适合所有栏目开发，暂时保留意见
+						</li>
+					</ol>
+				</section>
+				<section>
+					<h3>公共模块的静态项目</h3>
+					<ol>
+						<li class="fragment highlight-green">
+							passport.kaomanfen.com
+						</li>
+						<li class="fragment highlight-green">
+							pay.kaomanfen.com
+						</li>
+						<li class="fragment highlight-green">
+							msg.kaomanfen.com
+						</li>
+						<li class="fragment highlight-green">
+							common
+						</li>
+					</ol>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>前端工作(近期小结)</h3>
+					<ol>
+						<li>Gmat,gre项目的迭代开发工作</li>
+						<li>toelf项目的开发及迭代工作</li>
+						<li><a href="http://con.enhance.cn:8081/pages/viewpage.action?pageId=4751477" target="_blank">工作流的优化</a></li>
+						<li>common项目的建立与整理</li>
+					</ol>
+				</section>
+				<section>
+					<h3>公用项目整理-common</h3>
+					<p>为了减少重复工作，并为将来前端统一开发流程做准备</p>
+					<ul>
+						<li>
+							登录弹层，<a target="_blank" href="http://con.enhance.cn:8081/pages/viewpage.action?pageId=4751564">查看详细</a>
+						</li>
+					</ul>
+					<p>调用方式（-）</p>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+<a class="js-kmf-login" href="javascript:void(0)"></a>
+					</code></pre>
+					<p>调用方式（二）</p>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+var login = require('../../../common/js/util/dialog-login.js');
+// 初始化弹层并打
+var layer = login(function(){
+    layer.dialog('close');// 登录后关闭弹层
+}).dialog('open');
+					</code></pre>
+				</section>
+				<section>
+					<ul>
+						<li>
+							alert与confim，<a target="_blank" href="http://con.enhance.cn:8081/pages/viewpage.action?pageId=4751615">查看详细</a>
+						</li>
+					</ul>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+alert("您好！");
+alert({
+    title:"标题",
+    message:"提示内容"，
+    alertClass:"",
+    confirm:{
+        text:"开始"，
+        callBack:function(){
+            // doing something
+        }
+    }
+});
+confirm("您好！");
+confirm({
+    title:"标题",
+    message:"提示内容"，
+    alertClass:"",
+    confirm:{ 
+        text:"确定"，
+        callBack:function(){
+            // doing something
+        },
+    cancel:{
+        text:"取消"，
+        callBack:function(){
+            // doing something
+        }
+    }
+ 
+});
+					</code></pre>
+				</section>
+				
+				<section>
+					<ul>
+						<li>
+							自定义的alt与title提示，<a target="_blank" href="http://con.enhance.cn:8081/pages/viewpage.action?pageId=4751601">查看详细</a>
+						</li>
+					</ul>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+<a href="javascript:void(0);" class="js-kmf-tips" data-msg="快捷键：]">
+	跳过此句
+</a>
+					</code></pre>
+					<ul>
+						<li>
+							全站强提醒，<a target="_blank" href="http://con.enhance.cn:8081/pages/viewpage.action?pageId=4751584">查看详细</a>
+						</li>
+					</ul>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+seajs.use("common/js/channel/common", function(common){
+    common.warn.init({
+        url:"data/warntips.html"  // 强提醒的后端接口，直接返回dom或空
+    });
+});
+					</code></pre>
+					
+				</section>
+				<section>
+					<ul>
+						<li>
+							全站公用的样式组成部分
+						</li>
+					</ul>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+/* reset css */
+@import url("./mod/reset.css");
+/* 全站常用的样式 */
+@import url("./mod/base.css");
+
+/* 全站通用的图标样式 */
+@import url("./mod/icons.css");
+/* 全站通用的按钮样式 */
+@import url("./mod/buttons.css");
+/* 全站通用的表单样式 */
+@import url("./mod/form.css");
+/*常用的小组件*/
+@import url("./mod/widget.css");
+
+/* 全站通用的页码样式 */
+@import url("./mod/page.css");
+/* 全站通用的弹窗样式 */
+@import url("./mod/dialog.css");
+/* 全站通用的header样式 */
+@import url("./mod/header.css");
+/* 科目的header样式 */
+@import url("./mod/subject-header.css");
+/* 全局的头部导航 */
+@import url("./mod/navigator.css");
+/* 全站通用的footer-service样式 */
+@import url("./mod/footer-service.css");
+/* 全站通用的footer样式 */
+@import url("./mod/footer.css");
+/* 全站通用的简易footer样式 */
+@import url("./mod/footer-simple.css");
+					</code></pre>
+				</section>
+			</section>
+			
+			<section>
+				<h3>前端工作的问题</h3>
+				<ol>
+					<li>
+						多人共同开发同一项目的问题——罗总帮忙解决
+					</li>
+					<li>
+						版本的问题，如何回滚版本
+					</li>
+					<li>
+						项目间的依赖关系或复制来解除依赖？
+					</li>
+				</ol>
+				
+			</section>
+			<section>
+				<h3>
+					the end
+				</h3>
+				<p>
+					thanks
+				</p>
+			</section>
+		</div>
+	</div>
+	<script type="text/javascript" src="lib/js/head.min.js"></script>
+	<script type="text/javascript" src="js/reveal.min.js"></script>
+	<script type="text/javascript">
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+				{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			]
+		});
+	</script>
+</body>
+</html>
