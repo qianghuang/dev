@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+var commander = require("commander");
+
+commander
+  .version("0.0.2")
+  .option('size', "get file size")
+  .command('size')
+  .description('Get sea.js file size')
+  .action(function(){
+    console.log("size");
+  })
+  ;
+  
+  commander.parse(process.argv)

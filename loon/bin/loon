@@ -16,10 +16,15 @@ program.version(loon.version)
        .option("dev", "develop [project name]")
        .parse(process.argv)
 ;
+      
+program.parse(process.argv);
+
 var subcmd = program.args[0];
 var action=program.args[1];
 var projectDir = path.join(process.cwd(), program.args[0],"/");
 var args = process.argv.slice(3);
+
+console.log(program.args,/^(dev)$/ig.test(subcmd));
 
 if(/^(git-flow|git|flow)$/ig.test(subcmd)) {
 	subcmd="git-flow";
@@ -31,7 +36,7 @@ if(/^(git-flow|git|flow)$/ig.test(subcmd)) {
 		args.shift();
 		//laser.runExeFile(bin,args);						
 	}	
-}else{
+}else if(/^(dev)$/ig.test(action)){
 	var bin = executable(subcmd,"/grunt.bat");
 	if (bin) {
 		spawn(bin, args, {
