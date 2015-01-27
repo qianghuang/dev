@@ -2,7 +2,7 @@
 var commander = require("commander");
 var inquirer  = require("inquirer");
 
-
+/*
 inquirer.prompt([{
     type: 'confirm',
     name: 'compass',
@@ -11,7 +11,7 @@ inquirer.prompt([{
   }], function (props) {
 		pushDev();
   });
-
+*/
 function pushDev() {
 	inquirer.prompt([{
 	    type: 'checkbox',
@@ -45,16 +45,39 @@ function pushDev() {
 	  });
 }
 
-/*
+var fs = require("fs");
+var cwd = process.cwd();
+var dirs = fs.readdirSync(cwd);
+var dirList = [];
+
+dirs.forEach(function(d){
+	var staSync = fs.statSync(cwd + "/" + d);
+	if(staSync.isFile()) {
+		console.log("file   " + d);
+	} else if(staSync.isDirectory) {
+		dirList.push(d);
+		console.log("dir    " + d);
+	}
+});
+
 commander
   .version("0.0.2")
-  .option('size', "get file size")
-  .command('size')
-  .description('Get sea.js file size')
-  .action(function(){
-    console.log("size");
+  .option('create [env]', "create new project")
+  .command('create')
+  .description('create new project')
+  .action(function(dir){
+  	console.log("dir:",dir);
   })
   ;
   
-  commander.parse(process.argv)
-  */
+commander
+  .command('setup [env]')
+  .description('run setup commands for all envs')
+  .option("-s, --setup_mode [mode]", "Which setup mode to use")
+  .action(function(env, options){
+    var mode = options.setup_mode || "normal";
+    env = env || 'all';
+    console.log('setup', env, mode);
+  })
+  ;
+commander.parse(process.argv);
