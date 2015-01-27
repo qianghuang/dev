@@ -1,6 +1,51 @@
 #!/usr/bin/env node
 var commander = require("commander");
+var inquirer  = require("inquirer");
 
+
+inquirer.prompt([{
+    type: 'confirm',
+    name: 'compass',
+    message: 'Would you like to use Sass (with Compass)?',
+    default: true
+  }], function (props) {
+		pushDev();
+  });
+
+function pushDev() {
+	inquirer.prompt([{
+	    type: 'checkbox',
+	    name: 'devProject',
+	    message: '请选择您要上传的项目：',
+	    choices: [
+	    {
+	    	value:"common",
+	    	name :"common pro",
+	    	checked: false
+	    },
+	    {
+	    	value:"toefl",
+	    	name :"toefl pro",
+	    	checked: false
+	    },
+	    {
+	    	value:"toefl_exam",
+	    	name :"toefl exam pro",
+	    	checked: false
+	    },
+	    {
+	    	value:"toefl_spoken",
+	    	name :"toefl spoken pro",
+	    	checked: false
+	    }
+	    ],
+	    default: true
+	  }], function (devProject) {
+			//console.log(devProject);
+	  });
+}
+
+/*
 commander
   .version("0.0.2")
   .option('size', "get file size")
@@ -12,3 +57,4 @@ commander
   ;
   
   commander.parse(process.argv)
+  */

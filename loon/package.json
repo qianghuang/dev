@@ -12,7 +12,8 @@
   "author": "qiang.huang",
   "license": "ISC",
   "dependencies": {
-    "commander": "^2.5.0"
+    "commander": "^2.5.0",
+    "inquirer": "^0.8.0"
   },
   "devDependencies": {}
 }
