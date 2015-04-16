@@ -2,7 +2,7 @@
 var commander = require("commander");
 var inquirer  = require("inquirer");
 
-/*
+
 inquirer.prompt([{
     type: 'confirm',
     name: 'compass',
@@ -11,7 +11,7 @@ inquirer.prompt([{
   }], function (props) {
 		pushDev();
   });
-*/
+
 function pushDev() {
 	inquirer.prompt([{
 	    type: 'checkbox',
