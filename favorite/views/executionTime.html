@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>代码执行</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		* {
+			font:14px/1.5 consolas, arial,"microsoft Yahei";
+			box-sizing: border-box;
+		}
+		.g-wraper {
+			width:80%;margin:0 auto;
+		}
+		.g-wraper:after {
+			content:'';
+			height:0;overflow:hidden;clear:both;
+			display:block;
+		}
+		.g-wraper .item {
+			width:49%;
+		}
+		.g-wraper .master {
+			float: left;
+		}
+		.g-wraper .branch {
+			float: right;
+		}
+		.g-wraper .in-code {
+			width:100%;height:400px;
+		}
+		.g-wraper .show {
+			padding-left:5px;
+			color:#f60;font-size:16px;
+		}
+	</style>
+</head>
+<body>
+	<div class="g-wraper" id="js-code-wraper">
+		<div class="master item">
+			<h3>代码一<span class="show"></span></h3>
+			<textarea class="in-code"></textarea>
+		</div>
+		<div class="branch item">
+			<h3>代码二<span class="show"></span></h3>
+			<textarea class="in-code"></textarea>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/executionTime.js"></script>
+</body>
+</html>
