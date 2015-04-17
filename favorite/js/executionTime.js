@@ -9,23 +9,37 @@ $codeEditor.on({
 		var a = performance.now();
 	},
 	"blur": function(){
-		var that = $(this)
-		,	_code = $.trim(that.val())
-		,	_beginCode = 'var beginTime = performance.now();'
-		,	_endCode = 'var endTime = performance.now(); var totalTime = endTime - beginTime;'
-		,	_newCode
-		;
-		
-		if(_code === "") {
-			return;
-		}
-		_newCode = [_beginCode, _code, _endCode].join("");
-		try {
-			eval(_newCode);
-			that.parents(cssSelItem).find(cssSelShow).html(totalTime.toFixed(2) + "ms");
-		} catch(e) {
-			that.parents(cssSelItem).find(cssSelShow).html("error!");
-		}
+		$codeEditor.each(function(){
+			var that = $(this)
+			,	_code = $.trim(that.val())
+			,	_beginCode = 'var execuBeginTime = performance.now();'
+			,	_endCode = 'var execuEndTime = performance.now(); var execuTotalTime = execuEndTime - execuBeginTime;'
+			,	_newCode
+			,	_total
+			;
+			
+			if(_code === "") {
+				that.parents(cssSelItem).find(cssSelShow).html("");
+				return;
+			}
+			_newCode = [_beginCode, _code, _endCode].join(";");
+			
+			_total = execu(_newCode);
+			if(_total > -1) {
+				that.parents(cssSelItem).find(cssSelShow).html(_total.toFixed(2) + "ms");
+			} else if (_total == -1){
+				that.parents(cssSelItem).find(cssSelShow).html("error!");
+			}
+		});
 		
 	}
 });
+
+function execu(codeStr){
+	try {
+		eval(codeStr);
+		return execuTotalTime;
+	} catch(e) {
+		return -1;
+	}
+}
